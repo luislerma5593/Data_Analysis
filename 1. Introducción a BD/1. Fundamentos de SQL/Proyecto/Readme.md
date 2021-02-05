@@ -10,22 +10,35 @@ USE kavak;
 SELECT * FROM region;
 
 #3. Obtén una tabla con el nombre de los autos, su modelo y su precio.
-SELECT name, model, price FROM car;
+SELECT name, model, price 
+FROM car;
 
 #4. Muestra el nombre y modelo de los autos que sean para 5 pasajeros.
-SELECT name, model, passengers FROM car WHERE passengers = 5;
+SELECT name, model, passengers 
+FROM car 
+WHERE passengers = 5;
 
 #5. Muestra el nombre, modelo y año de los autos que apliquen para Uber.
-SELECT name, model, apply_uber, year FROM car WHERE apply_uber = 1;
+SELECT name, model, apply_uber, year 
+FROM car 
+WHERE apply_uber = 1;
 
 #6. Muestra el nombre todos los autos cuyo año sea menor al 2015.
-SELECT name, year FROM car WHERE year < 2015;
+SELECT name, year 
+FROM car
+WHERE year < 2015;
 
 #7. Muestra el nombre todos los autos que sean del año 2016 o 2018.
-SELECT * FROM kavak.car WHERE year=2018 OR year=2016;
+SELECT * 
+FROM kavak.car
+WHERE year=2018 
+   OR year=2016;
 
 #8. Muestra los todos los autos de cuyo precio sea mayor o igual a los 100000 pesos, menor a los 150000 y que tengan menos de 50000 km.
-SELECT * FROM car WHERE price >=100000 AND price < 150000 AND km < 50000;
+SELECT * 
+FROM car 
+WHERE price >=100000 
+AND price < 150000 AND km < 50000;
 
 #9. Muestra los autos de modelo Aveo que sean de color AZUL, BLANCO, ROJO o GRIS.
 SELECT * FROM car
