@@ -3,7 +3,8 @@
 #1. Dentro del mismo servidor de bases de datos, conéctate al esquema kavak.
 
 ```sql
-USE kavak;```
+USE kavak;
+```
 
 #2. Obtén una tabla con sólo los nombres de las regiones en donde se venden autos.
 
