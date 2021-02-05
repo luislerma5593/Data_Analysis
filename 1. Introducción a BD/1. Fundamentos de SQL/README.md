@@ -1,6 +1,6 @@
 ## Fundamentos de SQL
 
-- [Proyecto](Proyecto/Readme.md)
+- [Proyecto](Proyecto)
 - [Prework](Prework/Readme.md)
 - [Work](Work/Readme.md)
 
