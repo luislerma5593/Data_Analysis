@@ -4,7 +4,7 @@
 
 ```sql
 USE kavak;
-```
+
 
 #2. Obtén una tabla con sólo los nombres de las regiones en donde se venden autos.
 
@@ -98,3 +98,4 @@ WHERE body_type_id IN
     AND transmission != "Automática"
 ORDER BY price ASC
 LIMIT 3;
+```
