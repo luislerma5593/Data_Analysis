@@ -1,8 +1,8 @@
 ## Proyecto 1
 
-#1. Dentro del mismo servidor de bases de datos, conéctate al esquema kavak.
 
 ```sql
+#1. Dentro del mismo servidor de bases de datos, conéctate al esquema kavak.
 USE kavak;
 
 
