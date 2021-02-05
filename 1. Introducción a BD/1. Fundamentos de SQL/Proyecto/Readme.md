@@ -2,7 +2,8 @@
 
 #1. Dentro del mismo servidor de bases de datos, conéctate al esquema kavak.
 
-USE kavak;
+```sql
+USE kavak;```
 
 #2. Obtén una tabla con sólo los nombres de las regiones en donde se venden autos.
 
@@ -25,6 +26,7 @@ SELECT name, model, apply_uber, year FROM car WHERE apply_uber = 1;
 SELECT name, year FROM car WHERE year < 2015;
 
 #7. Muestra el nombre todos los autos que sean del año 2016 o 2018.
+
 SELECT * FROM kavak.car WHERE year=2018 OR year=2016;
 
 #8. Muestra los todos los autos de cuyo precio sea mayor o igual a los 100000 pesos, menor a los 150000 y que tengan menos de 50000 km.
