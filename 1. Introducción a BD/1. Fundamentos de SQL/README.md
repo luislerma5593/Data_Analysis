@@ -1,7 +1,7 @@
 ## Fundamentos de SQL
 
-- [Proyecto](Proyecto)
 - [Prework](Prework)
 - [Work](Work)
-- [Postwork](Postwork)
+- [x] [Proyecto](Proyecto)
+- [x] [Postwork](Postwork)
 
