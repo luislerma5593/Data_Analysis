@@ -5,13 +5,13 @@ A lo largo del programa deberás desarrollar un proyecto. En este postwork, debe
 
 Si haces uso de los datos públicos a continuación algunas sugerencias para buscar y descargar conjuntos de datos
 
-- https://datos.gob.mx
+`https://datos.gob.mx`
 
-- https://grouplens.org
+`https://grouplens.org`
 
-- https://www.kaggle.com
+`https://www.kaggle.com`
 
-- https://archive.ics.uci.edu/ml/datasets.php
+`https://archive.ics.uci.edu/ml/datasets.php`
 
 Te recomendamos descargar archivos en alguno de los siguientes formatos:
 
