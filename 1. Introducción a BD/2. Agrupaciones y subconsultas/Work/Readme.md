@@ -97,18 +97,29 @@ GROUP BY model;
 #select * from kavak.car where passengers is null;
 #select passengers, count(*) from kavak.car group by passengers;
 #select count(*) from kavak.car where passengers is null;
+```
 
-#	EJEMPLO 4
+###	EJEMPLO 4
 
+## Subconsulta simple
+
+Dentro del WHERE, es para filtrar registros.
+
+```sql
 SELECT * FROM tienda.puesto WHERE nombre = 'Junior Executive';
 
-# Es la subconsulta simple, va dentro del WHERE (Filtrar registros)
+#Subconsulta simple
+
 SELECT * 
 FROM tienda.empleado 
 WHERE id_puesto IN (
 	SELECT id_puesto FROM tienda.puesto WHERE nombre = "Junior Executive");
-    
-# Es la subconsulta correlacionada, va dentro del SELECT (Agregar campos)
+```
+## Subconsulta correlacionada
+
+Dentro del SELECT, es para agregar campos.
+
+```sql
 SELECT salario FROM tienda.puesto WHERE id_puesto=235 ;   
 SELECT * FROM tienda.empleado;
 #--> Conocer el salario de Enriqueta
@@ -119,14 +130,22 @@ nombre,
 (SELECT salario FROM tienda.puesto WHERE empleado.id_puesto=puesto.id_puesto) AS salario,
 (SELECT nombre FROM tienda.puesto WHERE empleado.id_puesto=puesto.id_puesto) AS puesto
  FROM tienda.empleado;
+```
 
-# Es la subconsulta de vista, va dentro del FROM (Una consulta sobre una consulta realizada)
+## Subconsulta de vista
 
+Dentro del FROM, es para hacer una consulta sobre una consulta realizada previamente.
+
+```sql
 SELECT nombre, AVG(salario) AS salario FROM tienda.puesto GROUP BY nombre;
 
 SELECT MAX(salario), MIN(salario) FROM(
 SELECT nombre, AVG(salario) AS salario FROM tienda.puesto GROUP BY nombre) AS subconsulta;
+```
 
+### Reto 4
+
+```sql
 # 	RETO 4 - https://github.com/MarioHdpz/21-01-Introduccion-a-Bases-de-Datos-2020/blob/main/Sesion-02/Reto-04/Readme.md
 
 # 1. Muestra cuántos autos se venden en total en la Ciudad de México y Guadalajara.
