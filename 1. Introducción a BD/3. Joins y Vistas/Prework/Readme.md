@@ -78,7 +78,8 @@ Un join derecho es inverso al join izquierdo, relaciona dos tablas siempre y cua
 Por ejemplo, la consulta:
 SELECT * FROM persona RIGHT JOIN mascota ON persona.id = mascota.id_persona;
 Obtiene una tabla con todos los registros de la tabla mascota, pero sólo aquellos de la tabla persona en donde el id de persona sea igual.
-Vistas
+
+## Vistas
 
 A diferencia de una tabla, una vista es la representación virtual de una consulta en formato de tabla o dicho de otro modo, es el resultado de guardar una consulta para poder consultarla como a cualquier otra tabla. Son útiles cuando el tiempo de procesamiento de una consulta es alto y por lo tanto no tenemos que ejecutarla una y otra vez pues estará disponible.
 
