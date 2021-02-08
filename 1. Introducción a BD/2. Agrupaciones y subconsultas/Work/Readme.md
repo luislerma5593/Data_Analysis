@@ -99,9 +99,9 @@ GROUP BY model;
 #select count(*) from kavak.car where passengers is null;
 ```
 
-###	EJEMPLO 4
+##	EJEMPLO 4
 
-## Subconsulta simple
+### Subconsulta simple
 
 Dentro del WHERE, es para filtrar registros.
 
@@ -115,7 +115,7 @@ FROM tienda.empleado
 WHERE id_puesto IN (
 	SELECT id_puesto FROM tienda.puesto WHERE nombre = "Junior Executive");
 ```
-## Subconsulta correlacionada
+### Subconsulta correlacionada
 
 Dentro del SELECT, es para agregar campos.
 
@@ -132,7 +132,7 @@ nombre,
  FROM tienda.empleado;
 ```
 
-## Subconsulta de vista
+### Subconsulta de vista
 
 Dentro del FROM, es para hacer una consulta sobre una consulta realizada previamente.
 
@@ -143,7 +143,7 @@ SELECT MAX(salario), MIN(salario) FROM(
 SELECT nombre, AVG(salario) AS salario FROM tienda.puesto GROUP BY nombre) AS subconsulta;
 ```
 
-### Reto 4
+## Reto 4
 
 ```sql
 # 	RETO 4 - https://github.com/MarioHdpz/21-01-Introduccion-a-Bases-de-Datos-2020/blob/main/Sesion-02/Reto-04/Readme.md
