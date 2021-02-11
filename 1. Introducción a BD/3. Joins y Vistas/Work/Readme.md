@@ -86,6 +86,6 @@ CREATE VIEW kavak.body_type_count3 AS
 	JOIN kavak.region
 	ON car.region_id = region.id
 	GROUP BY region_id;
-  ```
-
+  
 #DROP VIEW kavak.body_type_count3
+```
