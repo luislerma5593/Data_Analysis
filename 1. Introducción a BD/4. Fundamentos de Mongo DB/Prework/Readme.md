@@ -44,25 +44,33 @@ Este tipo de bases de datos sólo permiten relaciones binarias, pues un vértice
 ## Conexión a una base de datos MongoDB
 
 Al igual que con las bases de datos relacionales, es común que los datos se encuentren en servidores, por lo tanto, se necesitan los mismos datos para realizar la conexión con un servidor de bases de datos:
-La dirección del servidor, también llamada host.
-El usuario con el cual nos vamos a conectar.
-Una contraseña de acceso y el puerto a través del cual realizaremos la conexión.
+
+- La dirección del servidor, también llamada host.
+
+- El usuario con el cual nos vamos a conectar.
+
+- Una contraseña de acceso y el puerto a través del cual realizaremos la conexión.
+
 En esta segunda parte del módulo, usaremos como cliente a MongoDB Compass. MongoDB Compass es un cliente de MongoDB que permite conectarse con servidores de bases de datos para crear nuevas bases de datos, hacer consultas, crear documentos, entre muchas otras tareas.
 Para conectarse a un servidor de bases de datos. Compass provee la siguiente pantalla:
 
 Una vez que nos conectemos al servidor de bases de datos, podemos encontrar muchas bases dentro del mismo, por ejemplo, si fuera un servidor de bases de datos para un restaurante, podríamos encontrar una base de datos para el inventario, otra para la nómina de los empleados, otra para el menú, entre muchas otras.
 Elementos de MongoDB
 MongoDB es un Gestor de Bases de Datos no relacionales orientado a documentos que también hace uso de la orientación llave/valor. Su nombre proviene del inglés humongous y usa el formato BSON (JSON compilador) para almacenar datos. Es uno de los gestores más conocidos, al mismo nivel que MySQL de las bases de datos relacionales. A continuación se listan algunas definiciones básicas de este gestor.
-Definición 1. (JSON) Es un formato compacto de representación de objetos. Es un formato de intercambio de información y su uso nació del lenguaje JavaScript.
-Definición 2. (Documento) Es un conjunto de datos semiestructurados, que contienen parejas de la forma llave/valor, usando BSON como formato de almacenamiento.
-Definición 3. (Colección) Es un conjunto de documentos.
+
+- Definición 1. (JSON) Es un formato compacto de representación de objetos. Es un formato de intercambio de información y su uso nació del lenguaje JavaScript.
+
+- Definición 2. (Documento) Es un conjunto de datos semiestructurados, que contienen parejas de la forma llave/valor, usando BSON como formato de almacenamiento.
+
+- Definición 3. (Colección) Es un conjunto de documentos.
+
 Podemos dar una comparación de esta terminología con las bases de datos relacionales:
 
-### Tabla -> Colección
+-  Tabla -> Colección
 
-### Registro -> Documento
+-  Registro -> Documento
 
-### Columna -> Llave
+-  Columna -> Llave
 
 ## Documentos JSON
 
