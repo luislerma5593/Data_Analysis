@@ -30,7 +30,11 @@ Por ejemplo, el siguiente documento almacena los datos de una persona en formato
 Al usar JSON se usa un modelo llave/valor. Esto es equivalente al valor de una columna en una base de datos relacional.
 Bases de datos orientadas a llave/valor
 Este tipo de bases de datos es muy similar a las bases de datos basadas en documentos, pues se usan documentos para almacenar información, la diferencia radica en que estos documentos se almacenan en una llave, con la cual puede recuperarse el documento. Por ejemplo, el siguiente documento se almacena en una llave persona1.
+
+```json
 persona1 => { id: 1, nombre: “Mauricio Escutia”, edad: 24, peso: 65.0, estatus: 1.75 }
+```
+
 De esta forma cambia ligeramente el modo de recuperar información y de hecho puede usarse a la par con bases de datos orientadas a documentos, lo cual es posible mediante el uso de Sistemas Gestores de Bases de Datos híbridos.
 Bases de Datos Orientadas a Gráficas
 Este tipo de bases de datos tratan los datos mediante lo que se conoce en matemáticas como gráfica y se manipulan según dicta la Teoría de Gráficas. Cada
