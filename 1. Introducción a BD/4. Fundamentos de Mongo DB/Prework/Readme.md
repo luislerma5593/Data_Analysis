@@ -79,7 +79,10 @@ Objetos. Son conjuntos desordenados de pares llave/valor. Cada objeto inicia con
 Valores. Pueden ser cadenas, números, booleanos, null, objetos o arreglos. Estos pueden anidarse.
 Arreglos. Son una colección de valores. Comienzan con un corchete izquierdo [ y finalizan con un corchete derecho ]. Cada valor se separa por una coma.
 Por ejemplo, se tiene el siguiente documento JSON con los datos de un Pokémon.
+
+```json
 { id: 1, nombre: “Bulbasaur”, tipo: [“Hierba”, “Venenoso”] }
+```
 
 ## Consultas
 
