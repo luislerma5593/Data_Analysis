@@ -10,6 +10,18 @@ PASS:  *9ak/oVTwtY_eI:.
 
 PORT: 27017
 
+## Nuevo Servidor
+
+Les dejo los datos del nuevo servidor:
+
+HOST: ec2-52-26-187-36.us-west-2.compute.amazonaws.com
+
+USER: root
+
+PASS: *9ak/oVTwtY_eI:.
+
+PORT: 27017
+
 ## Ejercicio 1
 ```json
 {
