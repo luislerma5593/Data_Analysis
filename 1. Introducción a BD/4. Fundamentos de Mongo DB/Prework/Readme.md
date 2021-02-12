@@ -22,7 +22,11 @@ Existen distintos tipos de bases de datos no relacionales, a continuación se de
 Bases de datos orientada a documentos Este tipo de base de datos se basan en la definición de lo que se conoce como Documento que sigue un formato específico. Los formatos más utilizados son JSON y BSON. Cada documento es similar a un registro en una base de datos relacional, sin embargo, dos documentos, no tienen porqué tener un esquema idéntico aunque almacene la misma colección de datos.
 
 Por ejemplo, el siguiente documento almacena los datos de una persona en formato JSON.
+
+```json
 { id: 1, nombre: “Mauricio Escutia”, edad: 24, peso: 65.0, estatus: 1.75 }
+```
+
 Al usar JSON se usa un modelo llave/valor. Esto es equivalente al valor de una columna en una base de datos relacional.
 Bases de datos orientadas a llave/valor
 Este tipo de bases de datos es muy similar a las bases de datos basadas en documentos, pues se usan documentos para almacenar información, la diferencia radica en que estos documentos se almacenan en una llave, con la cual puede recuperarse el documento. Por ejemplo, el siguiente documento se almacena en una llave persona1.
