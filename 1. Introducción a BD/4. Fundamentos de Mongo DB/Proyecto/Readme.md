@@ -2,46 +2,61 @@
 
 Las consultas se realizarán sobre la base sample_training.
 Todas las consultas que realices deberás mantenerlas dentro del MongoDB Compass. Para hacer esto, da clic en el botón con los puntos ··· y en Toogle Query History. Busca la última consulta y agregala a favoritos presionando el íncono con la estrella ⭐.
-Obtén los datos de contacto de cada compañía.
+
+1. Obtén los datos de contacto de cada compañía.
+```json
 PROJECT
 {"email_address": 1, "phone_number": 1, "_id":0}
-Obtén la fuente de cada tweet.
+```
+2. Obtén la fuente de cada tweet.
+```json
 PROJECT
 {"source": 1 }
-Obtén el nombre de todas las compañías fundadas en octubre.
+```
+3. Obtén el nombre de todas las compañías fundadas en octubre.
+```json
 FILTER
 {"founded_month":10}
 PROJECT
 {"founded_month":1,"created_at":1} 
  {"$or":[{"founded_month":10}, {"founded_month":9}]} (Septiembre u Octubre)
-Obtén el nombre de todas las compañías fundadas en 2008.
+ ```
+4. Obtén el nombre de todas las compañías fundadas en 2008.
+```json
 FILTER
 {"founded_year":2008}
- 
-Obtén todos los post del autor machine.
+ ```
+5. Obtén todos los post del autor machine.
+```json
 FILTER
 {"author":"machine"}
- 
-Obtén todos los tweets provenientes de la web.}
+ ```
+6. Obtén todos los tweets provenientes de la web.}
+```json
 FILTER
 {source:"web"}
- 
-Obtén todas las compañías fundadas en octubre del 2008.
+ ```
+7. Obtén todas las compañías fundadas en octubre del 2008.
+```json
 FILTER
 {"founded_year":2008,"founded_month":10}
- 
-Obtén todas las compañías con más de 50 empleados.
+ ```
+8. Obtén todas las compañías con más de 50 empleados.
+```json
 FILTER
 {"number_of_employees":{"$gte":50}}
 SORT
 {"number_of_employees":1}
-Obtén las historias con número de comentarios entre 10 y 30.
+```
+9. Obtén las historias con número de comentarios entre 10 y 30.
+```json
 FILTER
 {"$and":[{"comments":{"$gte":10}},{"comments":{"$lte":30}}]}
 SORT
 {"comments":1}
- 
-Obtén la empresa con el menor número de empleados.
+ ```
+10. Obtén la empresa con el menor número de empleados.
+```json
 FILTER
 {"number_of_employees":{"$ne":null}}
 PROJECT
@@ -50,8 +65,9 @@ SORT
 {"number_of_employees":1}
 LIMIT  
 1
- 
-Obtén la empresa con el mayor número de empleados.
+ ```
+11. Obtén la empresa con el mayor número de empleados.
+```json
 FILTER
 {"number_of_employees":{"$ne":null}}
 PROJECT
@@ -60,20 +76,22 @@ SORT
 {"number_of_employees":-1}
 LIMIT  
 1
- 
-Obtén la historia más comentada.
+ ```
+12. Obtén la historia más comentada.
+```json
 PROJECT
 {"title":1,"comments":1}
 SORT
 {"comments":-1}
 LIMIT
 1
- 
-Obtén la historia menos comentada.
+ ```
+13. Obtén la historia menos comentada.
+```json
 PROJECT
 {"title":1,"comments":1}
 SORT
 {"comments":1}
 LIMIT
 1
-
+```
