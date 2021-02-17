@@ -13,5 +13,5 @@ sea desde Wifi o desde cable (Ethernet):
   "address.country": "Brazil"
 }}, {$match: {
   amenities : "Ethernet connection"
-}}]
+}}, {$count: 'Count'}]
 ```
