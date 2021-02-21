@@ -2,5 +2,5 @@
 
 - [Prework](Prework) 
 - [Work](Work)
-- [ ] [Proyecto](Proyecto)
+- [x] [Proyecto](Proyecto)
 - [ ] [Postwork](Postwork)
