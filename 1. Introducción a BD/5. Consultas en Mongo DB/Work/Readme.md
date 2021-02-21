@@ -113,14 +113,7 @@ sea desde Wifi o desde cable (Ethernet):
 
 ```json
 [{$match: {
-  number_of_reviews: {"$gte": 50}
-}}, {$match: {
-  "review_scores.review_scores_rating":
-  {"$gte":80}
-}}, {$match: {
-  "address.country": "Brazil"
-}}, {$match: {
-  amenities : "Ethernet connection"
+  amenities: {"$in": ["Wifi","Ethernet connection"]}
 }}, {$count: 'Count'}]
 ```
 
