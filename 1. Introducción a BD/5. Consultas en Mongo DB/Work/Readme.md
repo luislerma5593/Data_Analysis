@@ -71,6 +71,9 @@ FILTER
 2. Podemos obtener la lista de todas las publicaciones con un costo menor a 100, que se encuentren en España, con una valoración de 50 o más puntos, 
 que cuenten con Internet o Wifi y que tegan Elevador.
 
+```json
+{"price":{"$lt":100}, "address.country":"Spain","review_scores.review_scores_rating" : {"$gt":50 }, "$and" : [{"amenities" :{ "$in" : ["Wifi", "Internet"]}},{"amenities" :{ "$in" : ["Elevator"]}}]}
+```
 
 ## RETO 2
 
