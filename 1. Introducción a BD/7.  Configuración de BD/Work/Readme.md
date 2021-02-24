@@ -3,13 +3,21 @@
 ## MySQL
 
 #Configuración:
+
 #Elegir MySQL
+
 #Free tier
+
 #Standat create
+
 #Poner identificador
+
 #Cambiar nombre de usuario y colocar contraseña
+
 #Desactivar autoscaling
+
 #Seleccionar acceso público
+
 #En configuración adicional desactivamos los backups automáticos
 
 
