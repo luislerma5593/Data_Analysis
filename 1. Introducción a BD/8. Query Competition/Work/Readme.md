@@ -2,17 +2,17 @@
 
 ## Reto 1: Starbucks
 
-Descarga la fuente de datos de los locales de Starbucks:
+1. Descarga la fuente de datos de los locales de Starbucks:
 
-https://raw.githubusercontent.com/MarioHdpz/21-01-Introduccion-a-Bases-de-Datos-2020/main/Sesion-08/Reto-01/datos/directory.csv
+`https://raw.githubusercontent.com/MarioHdpz/21-01-Introduccion-a-Bases-de-Datos-2020/main/Sesion-08/Reto-01/datos/directory.csv`
 
-Analiza los datos, limpia los datos en caso de ser necesario.
+2. Analiza los datos, limpia los datos en caso de ser necesario.
 
-Elige MySQL o MongoDB y crea una base de datos para el conjunto de datos del reto.
+3. Elige MySQL o MongoDB y crea una base de datos para el conjunto de datos del reto.
 
-Carga los datos en la base de datos que elegiste y revisa que éstos se muestren correctamente.
+4. Carga los datos en la base de datos que elegiste y revisa que éstos se muestren correctamente.
 
-Usando la latitud y longitud de tu posición actual, encuenta el Starbucks más cercano a tu posición. Para conocer tu posición actual puedes usar Google Maps para, sólo debes copiar los datos de la URL.
+5. Usando la latitud y longitud de tu posición actual, encuenta el Starbucks más cercano a tu posición. Para conocer tu posición actual puedes usar Google Maps para, sólo debes copiar los datos de la URL.
 
 ### SQL
 
