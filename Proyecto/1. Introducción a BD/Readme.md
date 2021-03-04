@@ -1,4 +1,21 @@
-# Proyecto
+# Introducción a BD
+
+La consulta que más puede servir para obtener información de los dos hornos, agrupados por mes es la siguiente:
+
+```sql
+SELECT 
+MONTH(horno1.FinishedTime),
+AVG(horno1.SteelTemperature) AS Temp_H1,
+AVG(horno2.SteelTemperature) AS Temp_H2
+FROM horno1
+JOIN horno2
+ON MONTH(horno1.FinishedTime) = MONTH(horno2.Finishedtime)
+GROUP BY MONTH(horno1.FinishedTime);
+```
+
+- Es importante primero realizar el join y después hacer la agrupación, para que sea más eficiente.
+
+- Es más eficiente el JOIN que una subconsulta.
 
 ## Postwork 1
 
