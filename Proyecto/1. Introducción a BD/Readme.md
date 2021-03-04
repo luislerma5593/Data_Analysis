@@ -267,4 +267,72 @@ LIMIT 10;
 #FROM horno1
 #GROUP BY MONTH(FinishedTime);
 ```
+## Postwork 4
+
+```json
+# 1. Filtrar las columnas de HeatId, P_On, P_Off 
+
+[{$project: {
+  HeatNumber:1,
+  TapToTap:1,
+  PowerOff:1,
+  PowerOn:1
+}}]
+
+
+# 2. Filtrar las coladas con duración mayor a 1 hora y media
+
+[{$project: {
+  HeatNumber: 1,
+  TapToTap: 1,
+  PowerOff: 1,
+  PowerOn: 1
+}}, {$match: {
+  TapToTap : {$gte : 90}
+}}]
+
+# 3. Filtrar las coladas con el rendimiento más alto (Utilization -> PowerOn/TapToTap)
+
+[{$project: {
+  HeatNumber: 1,
+  TapToTap: 1,
+  PowerOff: 1,
+  PowerOn: 1,
+  Utilization:1
+}}, {$sort: {
+  Utilization:-1
+
+  }}]
+
+
+# 4. Filtrar el top 10 de coladas más largas y después más cortas
+
+[{$project: {
+  HeatNumber: 1,
+  TapToTap: 1,
+  PowerOff: 1,
+  PowerOn: 1,
+
+}}, {$sort: {
+  TapToTap:-1
+  }}]
+
+
+# 5. Filtrar las 10 coladas que más energía se utilizó cuando se usaron 2 cargas.
+
+
+[{$project: {
+  HeatNumber: 1,
+  TapToTap: 1,
+  PowerOff: 1,
+  PowerOn: 1,
+  EnergyPerHeat:1,
+  Charges:1
+
+}}, {$match: {
+  Charges:2
+}}, {$sort: {
+  EnergyPerHeat:-1
+}}, {$limit: 10}]
+```
 
