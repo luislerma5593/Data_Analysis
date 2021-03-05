@@ -1,5 +1,7 @@
 # Work
 
+# Ejercicios
+
 ## Ejemplo 1
 ```r
 # EJEMPLO 1. Tipos de datos y vectores
@@ -109,3 +111,178 @@ a^2
 a1 <- a*0.5 + b^2
 a1[1]
 ```
+
+## Ejemplo 2
+
+```R
+# Ejemplo 2. Matrices
+
+# Objetivo
+
+# Crear nuevas matrices
+# Extraer datos dentro de una matriz
+# Calcular sus dimensiones
+# Realizar operaciones bÃ¡sicas entre matrices
+
+# Requisitos
+
+# Tener instalados R y RStudio
+# Haber estudiado el Prework
+
+# Desarrollo
+
+# Se debe seguir el cÃ³digo propuesto y tratar de compreder que es lo que realiza
+
+# Crear Matrices. 
+
+(m <- matrix(1:9, nrow = 3, ncol = 3))
+
+# Extrayendo la primera entrada
+
+m[1,1]
+
+# Extrayendo la primer columna, con todas sus filas
+
+m[ ,1]
+
+# Â¿QuÃ© sucede si se suma un vector y una matriz?
+
+(sum.vecmat <- c(1, 2) + m)
+
+# Creando otra matriz
+
+(n <- matrix(2:7, 4, 6))
+
+# Podemos conocer la dimensiÃ³n de la matriz asÃ­
+
+dim(n)
+
+# Extrayendo subconjuntos de la matriz
+
+n[n > 4] 
+
+# Ahora veremos como localizar la posiciÃ³n de las entradas anteriores
+
+which(n > 4)
+
+# Uniendo Vectores para formar una matriz
+
+a <- 2:6
+b <- 5:9
+
+# Construyendo la matriz utilizando la funciÃ³n cbind, para unirlos por culumna
+
+cbind(a,b)
+
+# Construyendo la matriz utilizando la funciÃ³n rbind, para unirlos por fila
+
+rbind(a,b)
+
+# Aplicando una funciÃ³n a las filas o columnas de una matriz (mean, sort)
+
+round(apply(n, 1, mean))
+apply(n, 1, sort)
+
+# Algunas operaciones bÃ¡sicas de matrices
+
+# Producto matricial: A %*% B
+# Producto elemento a elemento: A*B
+# Traspuesta: t(A)
+# Determinante: det(A)
+# Extraer la diagonal: diag(A)
+# Resolver un sistema de ecuaciones lineales (( Ax=b )): solve(A,b)
+# Inversa: solve(A)
+# Autovalores y autovectores: eigen(A)
+```
+
+## Ejemplo 3
+
+```R
+# Ejemplo 3. Listas y data frames
+
+# Objetivo
+# Crear listas y data frames
+# Extraer informaciÃ³n de estos
+# CÃ¡lculo de estadÃ­sticos bÃ¡sicos
+
+# Requisitos
+
+# Prework
+# R, RStudio
+# Ejemplos 1 y 2
+
+# Desarrollo
+
+# Seguir el contenido y tratar de comprender el cÃ³digo mostrado a continuaciÃ³n
+
+# Listas
+
+(milista <- list(nombre = "Pepe", no.hijos = 3, edades.hijos = c(4, 7, 9)))
+
+# propiedades de la lista
+
+str(milista)
+
+# Extrayendo elementos de la lista, recuerda que para ingresar se debe usar el sÃ­mbolo $
+
+milista$nombre
+
+# Creando data frames
+
+x <- 6:8
+y <- c("A", "B", "C")
+(mifile <- data.frame(edad = x, grupo = y))
+
+str(mifile)
+
+# Extrayendo informaciÃ³n del df, se hace igual que con las matrices
+
+mifile[1]
+mifile[,2]
+mifile$edad
+
+# Calculando algunos estadÃ­sticos bÃ¡sicos
+
+mean(mifile$edad)
+
+# Podemos hacer uso de la funciÃ³n `paste` para agregar un mensaje
+
+paste("La media de la edad es:", mean(mifile$edad))
+
+# Podemos inspeccionar a detalle el df utilizando `summary`
+
+summary(mifile)
+
+# TambiÃ©n se puede conocer su dimensiÃ³n
+
+dim(mifile)
+
+# Podemos agregar una columna extra con datos
+
+mifile$sexo <- c("H", "M", "H")
+mifile
+
+# Si fuera el caso, se puede eliminar una columna
+
+mifile$sexo <- NULL
+mifile
+```
+
+## Ejemplo 4
+
+```R
+```
+
+
+## Ejemplo 5
+
+```R
+```
+
+
+## Ejemplo 6
+
+```R
+```
+
+
