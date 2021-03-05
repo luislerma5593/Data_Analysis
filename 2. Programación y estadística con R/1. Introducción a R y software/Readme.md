@@ -1,6 +1,6 @@
 # Work
 
-## Ejercicios
+# Ejemplos
 
 ## Ejemplo 1
 ```r
