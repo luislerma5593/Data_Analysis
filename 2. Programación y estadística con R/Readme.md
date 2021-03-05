@@ -2,7 +2,7 @@
 
 ## Vectores
 
-`round(x)` -> Redondear
+`round(x)` -> Redondear\n
 `c(x)` -> Vector
 `c(a,b)` -> Une dos vectores
 `a[x]` -> Obtienes la coordenada del vector
