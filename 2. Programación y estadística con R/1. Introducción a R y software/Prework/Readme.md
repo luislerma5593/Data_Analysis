@@ -198,3 +198,124 @@ Las **funciones** en R son aquellas que convierten una entrada o dato, las proce
 Existe una función en R llamada max, la cual tiene las siguientes partes: Argumento, Operación y Resultado
 
 **Utiliza esta función para encontrar el máximo entre los números 100/4, 108/5, 200/20, sqrt(81), 35. Recuerda que para saber cómo implementar la función mean puedes pedir ayuda.**
+
+## Asignación de una variable
+
+Hemos aprendido a hacer algunas operaciones, buscar funciones que ya existen en R y también a pedir ayuda. Pero muchas veces, los resultados de las operaciones que hacemos, o de las funciones que utilizamos, las queremos guardar para utilizarlas más adelante. Para guardar un elemento, podemos utilizar una variable. Aunque tenga un nombre raro, una variable sólo es un objeto al que vamos a “etiquetar” con un nombre que nosotros queramos. Por ejemplo, imagina que el resultado de la siguiente operación la tenemos que utilizar más adelante, por lo que guardamos el resultado en una variable llamada resultado.
+
+- resultado <- ((43012180)+10)/4.1** Al hacerlo, no se imprime nada. Sólo se guarda la nueva variable y en un futuro podemos ver lo que tiene. resultado [1] 1888334
+
+## Mi primer Script
+
+Como te puedes dar cuenta, la consola es muy amigable para correr comandos cortos, pero, en general vamos a preferir trabajar en un R Script, pues funciona como un editor de texto y nos dejará visualizar muchas líneas de código a la vez. Para abrir un R Script:
+
+- Windows: ve a File-> New File-> R Script
+- Mac: File-> New Document-> R Script en Mac
+- 
+Esto nos abre un nuevo panel en la parte superior izquierda. Para que una línea de código se ejecute en un R Script (cómo al hacer Enter en la consola) basta con ponerse en la línea deseada y picarle al botón **Run**.
+
+En el proceso de crear algo nuevo con R muy seguramente necesitaremos funciones mucho más específicas a las que tenemos precargadas en R. Por ejemplo, si tuvieras que graficar algunos puntos en un mapa de la Ciudad de México, ¿tienes idea de cómo harías una tarea tan específica?
+
+### PREWORK - PARTE 2
+
+R, a pesar de ser un lenguaje relativamente nuevo, tiene una comunidad muy grande de personas que continuamente contribuyen a través de paquetes. Dichos paquetes incluyen funciones y datasets relacionados a un tema específico, y nos ahorra el trabajo de tener que programar muchas cosas desde cero.
+
+### Actividad 1
+
+Abre https://rstudio.com/products/rpackages/ y descubre para qué sirve el paquete ggplot2.
+
+## Instalar un paquete
+
+Como te pudiste dar cuenta, ggplot2 es un paquete para visualización de datos. Entonces, si queremos crear visualizaciones, nos conviene instalar el paquete de ggplot2 y así poder utilizar todas las funcionalidades que se instalan. Para instalar un paquete, tenemos que hacer:
+
+- install.packages(“ggplot2”)
+
+Basta con hacer esto una vez en la vida para que quede instalado el paquete. Es decir, lo instalo hoy y en dos meses va a seguir instalado sin necesidad de volver a ejecutar el comando anterior. El detalle es que, cada vez que queramos utilizarlo, tenemos que hacerle un llamado. Este se hace de la siguiente manera:
+
+- library(ggplot2)
+
+Al hacer esto, estamos avisando que necesitamos utilizar funciones de la librería ggplot2. Esto se tiene que hacer cada que iniciemos un script nuevo, si no, no será capaz de ejecutar las funciones que vienen cargadas con ggplot2, aunque ya esté instalado.
+
+### Actividad 2
+
+Abre https://rstudio.com/products/rpackages/ y descubre para qué sirve el paquete dplyr. Después, instala y llama el paquete. Por último, busca en Google ‘dplyr cheat sheet’ y mira la información que tiene.
+
+## ¿Qué es una función?
+
+Una persona que vende galletas de 3 diferente tamaños (la chica cuesta $5, la mediana $7 y la grande $9) se enteró que ya estás aprendiendo a programar y que además, eres muy bueno utilizando R como una calculadora. Por eso, te quiere contratar para que le ayudes a calcular el precio final para cada cliente. Esta persona que vende las galletas tiene una manera muy peculiar de cobrar: tienes que pagar solamente el promedio de todas las galletas que llevas, y puedes llevar a lo más 2 galletas por persona.
+
+La única opción que tenemos con lo que sabemos hasta ahora, es estar en la tienda y para cada cliente, calcular el promedio de lo que lleva.
+
+El cliente 1 lleva una galleta chica y una mediana, entonces hacemos:
+
+- (5+7)/2 [1] 6
+
+El cliente 2 lleva dos galletas chicas, entonces hacemos:
+
+- (5+5)/2 [1] 5
+
+El cliente 3 lleva una galleta grande, entonces hacemos:
+
+- 9/1 [1] 9
+
+y tendríamos que hacer este proceso para cada cliente que entre a la tienda.
+
+Por suerte, hay mucha gente que está utilizando R en el mundo que nos ayuda a hacer nuestra tarea más fácil. En particular, existe una función llamada mean la cual calcula el promedio de los números, sin que nosotros tengamos que hacer la operación manual. Podríamos utilizarla de la siguiente manera para los mismos casos que antes.
+
+- mean(c(5,7)) [1] 6
+- mean(c(5,5)) [1] 5
+- mean(c(9)) [1] 9
+ 
+Esta es la función mean. Existen muchas funciones precargadas en R, las cuales tienen como objetivo recibir uno o más datos, hacer una operación intermedia y dar un resultado. En este caso, la función mean recibe números. Después, y aunque nosotros no lo vemos, calcula el promedio como lo hicimos nosotros antes y al final solo nos regresa el resultado.
+
+## Como crear una nueva función
+Las funciones que ya existen en R son muy fáciles de utilizar. Por ejemplo, la función mean() recibe como argumento una serie de números y regresa el promedio. En realidad, casi todas las funciones generales están programadas en R. Por lo tanto, nos limitaremos a crear nuevas funciones solo en los casos donde necesitamos crear una serie de instrucciones muy particulares.
+
+Para poder crear una función, hay que conocer su estructura:
+
+- Nombre de la función
+- Argumentos
+- Cuerpo
+- Resultado
+- Para poder escribir una nueva función, se tiene que utilizar la sintaxis:
+
+```r
+ nombre.funcion <- function(argumento.1, argumento.2,...,argumento.n){
+...operaciones entre argumentos...
+...guardar resultado a mostrar en una variable (var.resultado)... return(var.resultado)
+}
+```
+
+En donde, en este caso, el nombre de la función es nombre.funcion y tiene n argumentos llamados argumento.1, argumento.2, ..., argumento.n. El cuerpo de la función depende de las operaciones que queramos hacer utilizando los argumentos y esta función regresa la var.resultado.
+
+Ejemplo
+
+Vamos a crear una función que tenga:
+
+- Nombre: saludo
+- Argumento: nombre
+- Body: utilizar el nombre de la función para crear 'Hola -nombre-'
+- Resultado: Que al llamar esta función, nos regrese el mensaje
+```r
+ saludo <- function(nombre){ mensaje <- paste(“Hola”, nombre) return(mensaje)
+}
+# Llamada a la función saludo(“Ana”) saludo(“Pablo”)
+```
+Vamos a crear otra función que tenga:
+
+- Nombre: operacion.personalizada
+- Argumento: tres números llamados a,b,c
+- Body
+
+- a. (a+b)4 + 2a
+- al resultado de lo anterior, multiplicarlo por dos y sumarle c/2
+- al resultado de lo anterior, multiplicarlo por tres
+
+Resultado: Que al llamar esta función, nos regrese el último resultado
+```r
+operacion.personalizada <- function(a,b,c){ paso.1 <- (a+b)*4 + 2*a
+paso.2 <- paso.1*2 + c/2 paso.3 <- paso.2*3 return(paso.3)
+}
+
+# Llamada a la función operacion.personalizada(1,2,3) operacion.personalizada(7,8,9)
+``` 
