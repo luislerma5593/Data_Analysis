@@ -1,6 +1,6 @@
 # Work
 
-##Ejemplo 1
+## Ejemplo 1
 ```r
 # EJEMPLO 1. Tipos de datos y vectores
 
