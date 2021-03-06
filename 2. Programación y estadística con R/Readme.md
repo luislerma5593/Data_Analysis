@@ -34,6 +34,6 @@
 |t(A)| Traspuesta de A|
 |diag(A)| Diagonal de A|
 |det(A)| Determinante de A|
-|(( Ax=b )): solve(A,b)| Resolver un sistema de ecuaciones lineales|
+|( Ax=b ): solve(A,b)| Resolver un sistema de ecuaciones lineales|
 |solve(A)| Inversa de A|
 |eigen(A)| Autovalores y autovectores|
