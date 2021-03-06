@@ -2,14 +2,14 @@
 
 ## General
 
-| Función | Descripción |
-| ------------- | ------------- |
+| Comando | Descripción |
+| :---: | ------------- |
 | round(x)  | Redondear  |
 
 ## Vectores
 
-| Función | Descripción |
-| ------------- | ------------- |
+| Comando | Descripción |
+| :---: | ------------- |
 | c(x)  | Vector  |
 |c(a,b) | Une dos vectores|
 |c(x) |Vector 
@@ -25,8 +25,8 @@
 
 ## Matrices
 
-| Función | Descripción |
-| ------------- | ------------- |
+| Comando | Descripción |
+| :---: | ------------- |
 |rbind(x,y)| Une los vectores 'x' y 'y' por renglones|
 |rbind(1:4,5:8)| Crea una matriz del 1 al 4 y luego del 5 al 8|
 |cbind(x,y)| Une los vectores 'x' y 'y' por columnas|
