@@ -5,6 +5,8 @@
 | **Comando**| **Descripción** |
 | :---: | ------------- |
 |**` round(x) `** | Redondear  |
+|**`paste("Texto1","Texto2")`**|Concatenar textos|
+|**`summary(X)`**|Genera un resumen de lista o dataframe|
 
 ## Vectores
 
@@ -22,6 +24,14 @@
 |**`x:y`**| Genera un vector |
 |**`rep(x,y)`**| Repite x, y veces |
 
+## Listas
+
+| **Comando** | **Descripción** |
+| :---: | ------------- |
+|**`list(nom1="Luis",años=25)`**|Generar una lista  con diferentes tipos de datos|
+|**`str(milista)`**|Obtener información de la lista o dataframe|
+|**`milista$nombre`**|Extraer elementos de una lista|
+
 
 ## Matrices
 
@@ -34,6 +44,7 @@
 |**`n[n > 4]`**| Extraer subconjuntos de la matriz|
 |**`which(n > 4)`**| Localizar la posición de las coincidencias de `n[n > 4] `|
 |**`dim(A)`**| Obtener la dimensión de la matriz|
+|**`apply(matriz, 1, mean)`**|Obtener el" promedio" de la matriz (1: Rows/2:Columns)|
 |**`A %*% B`**| Producto matricial|
 |**`A*B`**| Producto elemento a elemento|
 |**`t(A)`**| Traspuesta de A|
@@ -42,3 +53,13 @@
 |**`( Ax=b ): solve(A,b)`**| Resolver un sistema de ecuaciones lineales|
 |**`solve(A)`**| Inversa de A|
 |**`eigen(A)`**| Autovalores y autovectores|
+
+## Data Frames
+
+| **Comando** | **Descripción** |
+| :---: | ------------- |
+|**`data.frame(edad = vec1, grupo = vec2)`**|Generar un dataframe con los vectores asignados|
+|**`mifile$sexo <- c("H", "M", "H")`**|Agregar un campo|
+|**`mifile$sexo <- NULL`**|Eliminar un campo|
+
+
