@@ -8,6 +8,7 @@
 |**`paste("Texto1","Texto2")`**|Concatenar textos|
 |**`summary(X)`**|Genera un resumen de lista o dataframe|
 
+
 ## Vectores
 
 | **Comando** | **Descripción** |
@@ -23,6 +24,7 @@
 |**`typeof(x)`**| Tipo de dato |
 |**`x:y`**| Genera un vector |
 |**`rep(x,y)`**| Repite x, y veces |
+
 
 ## Listas
 
@@ -53,6 +55,7 @@
 |**`( Ax=b ): solve(A,b)`**| Resolver un sistema de ecuaciones lineales|
 |**`solve(A)`**| Inversa de A|
 |**`eigen(A)`**| Autovalores y autovectores|
+
 
 ## Data Frames
 
