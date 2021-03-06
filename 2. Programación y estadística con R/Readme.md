@@ -20,7 +20,7 @@
 
 ## Matrices
 
-| Función | Descripción ||
+| Función | Descripción |
 | ------------- | ------------- |
 |rbind(x,y)| Une los vectores 'x' y 'y' por renglones|
 |rbind(1:4,5:8)| Crea una matriz del 1 al 4 y luego del 5 al 8|
