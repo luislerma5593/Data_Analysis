@@ -7,6 +7,9 @@
 |**` round(x) `** | Redondear  |
 |**`paste("Texto1","Texto2")`**|Concatenar textos|
 |**`summary(X)`**|Genera un resumen de lista o dataframe|
+|**`head(Top250Rest) `**|Obtener la primera parte de un vector, matriz, tabla, df o función.|
+|**`tail(Top250Rest) `**|Obtener la última parte de un vector, matriz, tabla, df o función.|
+
 
 
 ## Vectores
@@ -65,4 +68,12 @@
 |**`mifile$sexo <- c("H", "M", "H")`**|Agregar un campo|
 |**`mifile$sexo <- NULL`**|Eliminar un campo|
 
+
+## Descarga y lectura de Datasets
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`getwd()`**|Obtener la ruta del directorio de trabajo|
+|**`setwd("c:/Users/User/Documents/Bedu/")`**|Fijar la ruta del directorio de trabajo|
+|**`read.csv("Top250.csv")`**|Leer un archivo .csv, o directamente de un URL|
 
