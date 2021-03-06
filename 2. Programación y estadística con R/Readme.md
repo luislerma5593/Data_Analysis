@@ -6,6 +6,7 @@
 | ------------- | ------------- |
 |**` round(x) `** | Redondear  |
 |**`paste("Texto1","Texto2")`**|Concatenar textos|
+|**`rm(a)`**|(Remove) Elimina una variable|
 |**`summary(X)`**|Genera un resumen de lista o dataframe|
 |**`head(Top250Rest) `**|Obtener la primera parte de un vector, matriz, tabla, df o función.|
 |**`tail(Top250Rest) `**|Obtener la última parte de un vector, matriz, tabla, df o función.|
@@ -83,4 +84,20 @@
 |**`getwd()`**|Obtener la ruta del directorio de trabajo|
 |**`setwd("c:/Users/User/Documents/Bedu/")`**|Fijar la ruta del directorio de trabajo|
 |**`read.csv("Top250.csv")`**|Leer un archivo .csv, o directamente de un URL|
+
+
+## Matemáticas
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`rnorm(n)`**|Genera un vector con 'n' elementos dentro de una distribución normal (mean = 0, sd = 1)|
+|**`runif(n, a, b,)`**|Genera un vector de 'n' elementos entre 'a' y 'b' (Distribución uniforme)|
+
+
+## Ciclos y condiciones
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`for(i in 1:10){ print(i) }`**|For|
+|**`while(cond){expr}`**|While|
 
