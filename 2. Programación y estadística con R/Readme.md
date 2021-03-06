@@ -1,10 +1,15 @@
 # Funciones
 
-## Vectores
+## General
 
 | Función | Descripción |
 | ------------- | ------------- |
 | round(x)  | Redondear  |
+
+## Vectores
+
+| Función | Descripción |
+| ------------- | ------------- |
 | c(x)  | Vector  |
 |c(a,b) | Une dos vectores|
 |c(x) |Vector 
