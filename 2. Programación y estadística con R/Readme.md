@@ -4,7 +4,7 @@
 
 | Comando | Descripción |
 | :---: | ------------- |
-|` round(x) ` | Redondear  |
+|**` round(x) `** | Redondear  |
 
 ## Vectores
 
