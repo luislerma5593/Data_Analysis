@@ -60,7 +60,7 @@
 ## Data Frames
 
 | **Comando** | **Descripción** |
-| :---: | ------------- |
+| ------------- | ------------- |
 |**`data.frame(edad = vec1, grupo = vec2)`**|Generar un dataframe con los vectores asignados|
 |**`mifile$sexo <- c("H", "M", "H")`**|Agregar un campo|
 |**`mifile$sexo <- NULL`**|Eliminar un campo|
