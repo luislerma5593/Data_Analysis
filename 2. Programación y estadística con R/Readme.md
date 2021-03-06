@@ -11,6 +11,13 @@
 |**`tail(Top250Rest) `**|Obtener la última parte de un vector, matriz, tabla, df o función.|
 
 
+## Instalación de paquetes
+
+| **Comando**| **Descripción** |
+| ------------- | ------------- |
+|**`install.packages("ggplot2")`**|Instalar el paquete|
+|**`library(ggplot2)`**|Utilizar el paquete|
+
 
 ## Vectores
 
