@@ -7,17 +7,17 @@
 
 | Función | Descripción |
 | ------------- | ------------- |
-| `round(x)`  | Redondear  |
+| round(x)  | Redondear  |
 | c(x)  | Vector  |
 |c(a,b) | Une dos vectores|
-c(x) |Vector |
+c(x) |Vector 
 c(a,b) | Une dos vectores |
 a[x] | Obtienes la coordenada del vector |
 seq(x,y,z) | Vector secuencial |
 length(x) | Longitud de vector x |
 class(x) | Tipo de dato |
 typeof(x) | Tipo de dato |
-x:y` → Genera un vector |
+x:y| Genera un vector |
 rep(x,y) | Repite x, y veces |
 
 
