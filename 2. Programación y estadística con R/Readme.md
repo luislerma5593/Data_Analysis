@@ -7,7 +7,7 @@
 
 | Función | Descripción |
 | ------------- | ------------- |
-| round(x)  | Redondear  |
+| `round(x)`  | Redondear  |
 | c(x)  | Vector  |
 |c(a,b) | Une dos vectores|
 c(x) |Vector |
