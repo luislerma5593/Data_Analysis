@@ -3,6 +3,7 @@
 ## Vectores
 
 `round(x)` -> Redondear
+`round(x)` → Redondear
 
 `c(x)` -> Vector
 
