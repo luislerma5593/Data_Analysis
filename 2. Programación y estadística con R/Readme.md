@@ -4,6 +4,13 @@
 
 `round(x)` → Redondear
 
+
+| Función | Descripción |
+| ------------- | ------------- |
+| `round(x)`  | Redondear  |
+| `c(x)`  | Vector  |
+
+
 `c(x)` → Vector
 
 `c(a,b)` → Une dos vectores
