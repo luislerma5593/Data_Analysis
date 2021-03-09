@@ -9,7 +9,7 @@
   * [Ejemplo 6 (Loops)](#Ejemplo-6)
   
 * [Retos](#Retos)
-  * [Reto 1](#Reto -1)
+  * [Reto 1](#Reto-1)
 
 # Ejemplos
 
