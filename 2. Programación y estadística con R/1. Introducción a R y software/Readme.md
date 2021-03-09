@@ -2,6 +2,12 @@
 
 * [Ejemplos](#Ejemplos)
   * [Ejemplo 1](#Ejemplo-1)
+  * [Ejemplo 2](#Ejemplo-2)
+  * [Ejemplo 3](#Ejemplo-3)
+  * [Ejemplo 4](#Ejemplo-4)
+  * [Ejemplo 5](#Ejemplo-5)
+  * [Ejemplo 6](#Ejemplo-6)
+  
 * [Retos](#Retos)
 
 
