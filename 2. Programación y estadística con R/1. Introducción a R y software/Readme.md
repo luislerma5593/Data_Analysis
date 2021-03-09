@@ -10,7 +10,9 @@
   
 * [Retos](#Retos)
   * [Reto 1](#Reto-1)
-
+  * [Reto 2](#Reto-2)
+  * [Reto 3](#Reto-3)
+  
 # Ejemplos
 
 ## Ejemplo 1
@@ -490,3 +492,7 @@ write.csv(new_netflix)
 write.csv(netflix, "Netflix")
 write.csv(new_netflix, "New Netflix")
 ```
+
+## Reto 2
+
+## Reto 3
