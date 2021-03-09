@@ -1,12 +1,12 @@
 # Work
 
 * [Ejemplos](#Ejemplos)
-  * [Ejemplo 1](#Ejemplo-1)
-  * [Ejemplo 2](#Ejemplo-2)
-  * [Ejemplo 3](#Ejemplo-3)
-  * [Ejemplo 4](#Ejemplo-4)
-  * [Ejemplo 5](#Ejemplo-5)
-  * [Ejemplo 6](#Ejemplo-6)
+  * [Ejemplo 1 (Tipos de datos y vectores)](#Ejemplo-1)
+  * [Ejemplo 2 (Matrices)](#Ejemplo-2)
+  * [Ejemplo 3 ( Listas y data frames)](#Ejemplo-3)
+  * [Ejemplo 4 (Descarga y lectura de data sets)](#Ejemplo-4)
+  * [Ejemplo 5 (Paquetes)](#Ejemplo-5)
+  * [Ejemplo 6 (Loops)](#Ejemplo-6)
   
 * [Retos](#Retos)
 
