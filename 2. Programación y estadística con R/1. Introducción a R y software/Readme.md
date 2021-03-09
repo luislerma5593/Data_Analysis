@@ -1,5 +1,7 @@
 # Work
 
+* [Change to an aliased directory](#Retos)
+
 # Ejemplos
 
 ## Ejemplo 1
