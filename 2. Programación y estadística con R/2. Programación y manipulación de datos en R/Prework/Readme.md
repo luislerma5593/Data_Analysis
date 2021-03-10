@@ -18,9 +18,13 @@ Dado un conjunto de datos, las llamadas medidas de tendencia central son número
 
 es decir, el promedio de los datos.
 
+![image](https://user-images.githubusercontent.com/78183885/110557325-fcbd0e00-8105-11eb-935c-0b086d5cd0f6.png)
+
 Ejemplo. Un estudiante cursó seis materias en el semestre, obteniendo calificaciones de 8, 7, 10, 8, 9 y 7. Su calificación media o promedio semestral es de
 
 Ejemplo. Una pequeña compañía consultora tiene una secretaria, un empleado de limpieza, un mensajero y un economista. Sus salarios mensuales respectivos son de $5000, $4000, $3500 y $50000. El salario promedio de la compañía es de
+
+![image](https://user-images.githubusercontent.com/78183885/110557334-02b2ef00-8106-11eb-81f7-23146803a613.png)
 
 El lector podría pensar que este salario no es una medida representativa de los salarios del personal. ¿Qué sucede? La razón es que existe un dato, el salario del economista, que está totalmente fuera del rango de los demás salarios. Así, al realizar el promedio, este dato jala a los demás.
 
@@ -30,7 +34,11 @@ Para evitar problemas con datos alejados de los demás, como en el ejemplo anter
 
 Ejemplo. Encontrar la mediana del conjunto de salarios {$5000, $4000, $3500 y $50000}. Los ordenamos de menor a mayor obteniendo,
 
+![image](https://user-images.githubusercontent.com/78183885/110557348-08a8d000-8106-11eb-991e-fc8657a4f9cf.png)
+
 Este es un conjunto par de datos de manera que la mediana es el promedio de los dos datos intermedios, es decir la mediana es
+
+![image](https://user-images.githubusercontent.com/78183885/110557356-0d6d8400-8106-11eb-9454-a264c1185791.png)
 
 En ocasiones, este dato puede ser una mejor representación de los salarios de la empresa que el promedio obtenido anteriormente en el ejemplo.
 
