@@ -1,12 +1,12 @@
 # Work
 
 * [Ejemplos](#Ejemplos)
-  * [Ejemplo 1 ()](#Ejemplo-1)
-  * [Ejemplo 2 ()](#Ejemplo-2)
-  * [Ejemplo 3 ()](#Ejemplo-3)
-  * [Ejemplo 4 ()](#Ejemplo-4)
-  * [Ejemplo 5 ()](#Ejemplo-5)
-  * [Ejemplo 6 ()](#Ejemplo-6)
+  * [Ejemplo 1 (Medidas de tendencia central, posición y disperción)](#Ejemplo-1)
+  * [Ejemplo 2 (Características de los objetos (str, summary, head y View) y funciones)](#Ejemplo-2)
+  * [Ejemplo 3 (Paquete dplyr y aplicaciones)](#Ejemplo-3)
+  * [Ejemplo 4 (Funciones cbind, rbind (manipulación de data frames))](#Ejemplo-4)
+  * [Ejemplo 5 (Funciones apply, lapply y do.call)](#Ejemplo-5)
+  * [Ejemplo 6 (Funciones na.omit y complete.cases)](#Ejemplo-6)
   
 * [Retos](#Retos)
   * [Reto 1](#Reto-1)
