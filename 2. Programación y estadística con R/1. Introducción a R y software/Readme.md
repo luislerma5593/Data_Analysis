@@ -9,9 +9,9 @@
   * [Ejemplo 6 (Loops)](#Ejemplo-6)
   
 * [Retos](#Retos)
-  * [Reto 1](#Reto-1)
-  * [Reto 2](#Reto-2)
-  * [Reto 3](#Reto-3)
+  * [x] [Reto 1](#Reto-1)
+  * [x] [Reto 2](#Reto-2)
+  * [ ][Reto 3](#Reto-3)
   
 # Ejemplos
 
@@ -494,5 +494,24 @@ write.csv(new_netflix, "New Netflix")
 ```
 
 ## Reto 2
+
+Realizar la lectura de los datos y seguir las instruccines que se muestran a continuación.
+
+Utiliza el data frame de ventas de libros por Amazon y realiza las siguientes actividades:
+```r
+#Almacenalo en un data frame que se llame amazon.best
+amazon.best <- read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-con-R-Santander/master/Sesion-01/Data/bestsellers%20with%20categories.csv
+")
+
+#Calcula el data frame transpuesto, asÃ­gnale el nombre de tAmazon y conviÃ©rtelo en un data frame (Hint: consulta la ayuda sobre las funciones t y as.data.frame)
+tAmazon <- as.data.frame(t(amazon.best))
+
+#Usa el nombre de los libros como el nombre de las columnas (Hint: consulta la documentaciÃ³n de names, tienes que hacer algo similar a names(dataframe) <- vector de nuevos nombres)
+names(tAmazon) <- amazon.best$Name
+
+#Â¿CÃºal es el libro de menor y mayor precio?
+max(amazon.best$Price)
+min(amazon.best$Price)
+```
 
 ## Reto 3
