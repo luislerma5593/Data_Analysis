@@ -1,5 +1,18 @@
 # Work
 
+* [Ejemplos](#Ejemplos)
+  * [Ejemplo 1 (Tipos de datos y vectores)](#Ejemplo-1)
+  * [Ejemplo 2 (Matrices)](#Ejemplo-2)
+  * [Ejemplo 3 ( Listas y data frames)](#Ejemplo-3)
+  * [Ejemplo 4 (Descarga y lectura de data sets)](#Ejemplo-4)
+  * [Ejemplo 5 (Paquetes)](#Ejemplo-5)
+  * [Ejemplo 6 (Loops)](#Ejemplo-6)
+  
+* [Retos](#Retos)
+  * [x] [Reto 1](#Reto-1)
+  * [x] [Reto 2](#Reto-2)
+  * [ ] [Reto 3](#Reto-3)
+  
 # Ejemplos
 
 ## Ejemplo 1
@@ -450,4 +463,55 @@ About
 
 ```
 
+# Retos 
 
+## Reto 1
+
+Abre el fichero que se encuentra en el repositorio y obten sus carácteristicas, para finalmente imprimir los resultados en un fichero CSV.
+
+Leer el archivo "netflix_titles.csv" desde Github (https://raw.githubusercontent.com/ecoronadoj/Sesion_1/main/Data/netflix_titles.csv), almacenarlo en un df llamado netflix
+
+Obtener la dimensión y el tipo de objeto que se obtiene
+
+Obtener los títulos que se estrenaron después del 2015. Almacenar este df en una variable llamada net.2015 (Hint: primero podrías filtrar solo aquellas filas del data frame que corresponden a estrenos después del 2015, por ejemplo, dataframe[columna > 2015, ])
+
+Escribir los resultados en un archivo .csv llamado res.netflix.csv (Hint: consulta la función write.csv)
+
+```r
+netflix <- read.csv("https://raw.githubusercontent.com/ecoronadoj/Sesion_1/main/Data/netflix_titles.csv")
+
+dim(netflix)
+
+class(netflix)
+str(netflix)
+
+new_netflix<-netflix[netflix$release_year > 2015,]
+  
+write.csv(new_netflix)
+
+write.csv(netflix, "Netflix")
+write.csv(new_netflix, "New Netflix")
+```
+
+## Reto 2
+
+Realizar la lectura de los datos y seguir las instruccines que se muestran a continuación.
+
+Utiliza el data frame de ventas de libros por Amazon y realiza las siguientes actividades:
+```r
+#Almacenalo en un data frame que se llame amazon.best
+amazon.best <- read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-con-R-Santander/master/Sesion-01/Data/bestsellers%20with%20categories.csv
+")
+
+#Calcula el data frame transpuesto, asÃ­gnale el nombre de tAmazon y conviÃ©rtelo en un data frame (Hint: consulta la ayuda sobre las funciones t y as.data.frame)
+tAmazon <- as.data.frame(t(amazon.best))
+
+#Usa el nombre de los libros como el nombre de las columnas (Hint: consulta la documentaciÃ³n de names, tienes que hacer algo similar a names(dataframe) <- vector de nuevos nombres)
+names(tAmazon) <- amazon.best$Name
+
+#Â¿CÃºal es el libro de menor y mayor precio?
+max(amazon.best$Price)
+min(amazon.best$Price)
+```
+
+## Reto 3

@@ -10,6 +10,8 @@
 |**`summary(X)`**|Genera un resumen de lista o dataframe|
 |**`head(Top250Rest) `**|Obtener la primera parte de un vector, matriz, tabla, df o función.|
 |**`tail(Top250Rest) `**|Obtener la última parte de un vector, matriz, tabla, df o función.|
+|**`sort(x, decreasing = T/F)`**|Ordenar un vector|
+|**`set.seed(num)`**|Para poder obtener los mismos números aleatorios|
 
 
 ## Instalación de paquetes
@@ -84,6 +86,9 @@
 |**`getwd()`**|Obtener la ruta del directorio de trabajo|
 |**`setwd("c:/Users/User/Documents/Bedu/")`**|Fijar la ruta del directorio de trabajo|
 |**`read.csv("Top250.csv")`**|Leer un archivo .csv, o directamente de un URL|
+|**`as.data.frame()`**|Convertir en un dataframe|
+|**`names(x) <- vec`**|Asignar un vector de nombres para el dataframe 'x'|
+|**`dir()`**|Obtener los archivos que hay en el directorio establecido con setwd()|
 
 
 ## Matemáticas
@@ -92,6 +97,16 @@
 | ------------- | ------------- |
 |**`rnorm(n)`**|Genera un vector con 'n' elementos dentro de una distribución normal (mean = 0, sd = 1)|
 |**`runif(n, a, b,)`**|Genera un vector de 'n' elementos entre 'a' y 'b' (Distribución uniforme)|
+|**`which.max(x)`**|Posición del máximo valor |
+|**`which.min(x)`**|Posición del mínimo valor|
+|**`mean(x)`**|Obtener el promedio|
+|**`median(x)`**|Obtener la mediana|
+|**`Mode(x)`**|Obtener la moda (Se necesita la librería "DescTools")|
+|**`quantile(x, vec)`**|Obtener cuantiles|
+|**`quantile(x, sec(0.1,0.9,0.1))`**|Obtener deciles|
+|**`IQR(x)`**|Obtener rango intercuartílico (Q3-Q1)|
+|**`var(x)`**|Obtener la varianza|
+|**`sd(x)`**|Obtener la desviación estándar|
 
 
 ## Ciclos y condiciones
@@ -100,4 +115,11 @@
 | ------------- | ------------- |
 |**`for(i in 1:10){ print(i) }`**|For|
 |**`while(cond){expr}`**|While|
+
+
+## Gráficas
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`plot(x,y)`**|Crear una gráfica|
 
