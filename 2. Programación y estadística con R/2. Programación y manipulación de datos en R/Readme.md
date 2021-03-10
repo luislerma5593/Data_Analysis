@@ -149,7 +149,7 @@ moda(x) # obtenemos la moda de los valores de la muestra
 
 # Retos
 
-#" Reto 1
+## Reto 1
 ```r
 #Considere el siguiente vector
 
