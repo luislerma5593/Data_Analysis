@@ -13,8 +13,9 @@ En este prework, estudiarás las medidas de tendencia central más conocidas, al
 ## Medidas de tendencia central
 Dado un conjunto de datos, las llamadas medidas de tendencia central son números alrededor de los cuales se concentran los datos. La media o promedio es quizás la medida de tendencia central más conocida. Dado un conjunto de datos {x1, ⋯, xn} que representa una muestra de alguna población, la media del conjunto se define como
 
+<p align="center">
 ![image](https://user-images.githubusercontent.com/78183885/110557289-ef078880-8105-11eb-8203-5ff264ae9428.png)
-
+</p>
 
 es decir, el promedio de los datos.
 
