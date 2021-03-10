@@ -9,9 +9,9 @@
   * [Ejemplo 6 (Funciones na.omit y complete.cases)](#Ejemplo-6)
   
 * [Retos](#Retos)
-  * [Reto 1](#Reto-1)
-  * [Reto 2](#Reto-2)
-  * [Reto 3](#Reto-3)
+  * [x] [Reto 1](#Reto-1)
+  * [ ] [Reto 2](#Reto-2)
+  * [ ] [Reto 3](#Reto-3)
   
 # Ejemplos
 
