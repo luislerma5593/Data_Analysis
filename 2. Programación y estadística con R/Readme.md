@@ -12,6 +12,9 @@
 |**`tail(Top250Rest) `**|Obtener la última parte de un vector, matriz, tabla, df o función.|
 |**`sort(x, decreasing = T/F)`**|Ordenar un vector|
 |**`set.seed(num)`**|Para poder obtener los mismos números aleatorios|
+|**`sample(a:b, n, replace = T)`**|Genera un vector con 'n' elementos de 'a' a 'b'.|
+|**`lapply(vec,func) `**|Aplica la función a cada uno de los elementos|
+|**`do.call(func,lista) `**|Aplica una función a una lista o argumentos|
 
 
 ## Instalación de paquetes
@@ -37,6 +40,8 @@
 |**`typeof(x)`**| Tipo de dato |
 |**`x:y`**| Genera un vector |
 |**`rep(x,y)`**| Repite x, y veces |
+|**`unique(vec)`**|Obtener un vector sin elementos repetidos|
+
 
 
 ## Listas
@@ -46,6 +51,8 @@
 |**`list(nom1="Luis",años=25)`**|Generar una lista  con diferentes tipos de datos|
 |**`str(milista)`**|Obtener información de la lista o dataframe|
 |**`milista$nombre`**|Extraer elementos de una lista|
+
+
 
 
 ## Matrices
@@ -89,6 +96,7 @@
 |**`as.data.frame()`**|Convertir en un dataframe|
 |**`names(x) <- vec`**|Asignar un vector de nombres para el dataframe 'x'|
 |**`dir()`**|Obtener los archivos que hay en el directorio establecido con setwd()|
+|**`download.file(url, filename, mode = "wb")`**|Descarga un archivo en el directorio establecido|
 
 
 ## Matemáticas
@@ -107,6 +115,7 @@
 |**`IQR(x)`**|Obtener rango intercuartílico (Q3-Q1)|
 |**`var(x)`**|Obtener la varianza|
 |**`sd(x)`**|Obtener la desviación estándar|
+|**`table(vec/df) `**|Generar una tabla de frecuencias|
 
 
 ## Ciclos y condiciones
@@ -123,3 +132,13 @@
 | ------------- | ------------- |
 |**`plot(x,y)`**|Crear una gráfica|
 
+
+##  DPLYR (Manipulación y operaciones con DF)
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`select(df,col1,...) `**|Filtrar columnas|
+|**`rename(df,new_col_name) `**|Renombrar columnas|
+|**`mutate(df, modif) `**|Agregar o modificar columnas|
+|**`merge(df1,df2)`**|Unir dos data frames|
+|**`filter(df,condición) `**|Filtrar registros de un df|
