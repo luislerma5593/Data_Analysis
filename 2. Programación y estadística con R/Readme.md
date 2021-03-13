@@ -96,7 +96,7 @@
 |**`as.data.frame()`**|Convertir en un dataframe|
 |**`names(x) <- vec`**|Asignar un vector de nombres para el dataframe 'x'|
 |**`dir()`**|Obtener los archivos que hay en el directorio establecido con setwd()|
-|**`download.file(url, filename, mode = "wb")`**|Descarga un archivo en el directorio establecido|
+|**`download.file(url, destfile , mode = "wb")`**|Descarga un archivo en el directorio establecido|
 
 
 ## Matemáticas
