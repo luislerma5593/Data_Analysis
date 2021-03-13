@@ -400,3 +400,18 @@ mediana(x)
 
 
 ## Reto 3
+
+Descargue los archivos csv que corresponden a las temporadas 2017/2018, 2018/2019, 2019/2020 y 2020/2021 de la Bundesliga 1 y que se encuentran en el siguiente enlace https://www.football-data.co.uk/germanym.php
+
+Importe los archivos descargados a R
+
+Usando la función select del paquete dplyr, seleccione únicamente las columnas:
+
+- Date
+- HomeTeam
+- AwayTeam
+- FTHG
+- FTAG
+- FTR
+
+Combine cada uno de los data frames en un único data frame con ayuda de las funciones: "rbind" y "do.call"
