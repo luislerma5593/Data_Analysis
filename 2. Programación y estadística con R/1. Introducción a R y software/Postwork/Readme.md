@@ -12,3 +12,25 @@ El siguiente postwork, te servirá para ir desarrollando habilidades como si se 
 4. La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x=0,1,2,)
 5. La probabilidad (marginal) de que el equipo que juega en casa anote y goles (y=0,1,2,)
 6. La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x=0,1,2,, y=0,1,2,)
+
+```r
+getwd()
+setwd("C:/Users/LLerma/Google Drive/Analisis de Datos/M2 - Programacion y Estadistica con R/S1/Files")
+
+datos<-read.csv("https://www.football-data.co.uk/mmz4281/1920/SP1.csv")
+
+thg<-table(datos$FTHG)
+tag<-table(datos$FTAG)
+
+
+for(i in 0:2){
+print(paste("La probabilidad de meter",i,"goles en casa es de: ", round(thg[[i+1]]/380,4)))
+}
+
+for(i in 0:2){
+  print(paste("La probabilidad de meter",i,"goles de visitante es de: ", round(tag[[i+1]]/380,4)))
+}
+
+for(i in 0:2){
+  print(paste("La probabilidad de que el equipo local y el equipo visitante metan",i,"goles es de:", round((tag[[i+1]]/380)*(thg[[i+1]]/380),4)))
+}```
