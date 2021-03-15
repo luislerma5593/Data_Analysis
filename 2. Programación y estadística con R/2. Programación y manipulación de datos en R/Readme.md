@@ -11,7 +11,7 @@
 * [Retos](#Retos)
   * [x] [Reto 1](#Reto-1)
   * [x] [Reto 2](#Reto-2)
-  * [ ] [Reto 3](#Reto-3)
+  * [x] [Reto 3](#Reto-3)
   
 # Ejemplos
 
