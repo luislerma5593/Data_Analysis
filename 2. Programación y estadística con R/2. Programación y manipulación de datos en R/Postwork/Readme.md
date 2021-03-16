@@ -41,4 +41,7 @@ list3[1] <- lapply(list2[1],mutate, Date = as.Date(Date, "%d/%m/%y"))
 list3[2:3] <- lapply(list2[2:3],mutate, Date = as.Date(Date, "%d/%m/%Y"))
 
 data <- do.call(rbind,list3)
+
+write.csv(data,"Datos finales.csv", quote = TRUE, row.names = FALSE)
+
 ```
