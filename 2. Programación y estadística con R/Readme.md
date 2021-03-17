@@ -15,6 +15,8 @@
 |**`sample(a:b, n, replace = T)`**|Genera un vector con 'n' elementos de 'a' a 'b'.|
 |**`lapply(vec,func) `**|Aplica la función a cada uno de los elementos|
 |**`do.call(func,lista) `**|Aplica una función a una lista o argumentos|
+|**`complete.cases(df)`**|Identifica las filas que están comletas (No NA) y regresa T y F|
+|**`na.omit(df)`**|Omitir los valores que no son números. |
 
 
 ## Instalación de paquetes
@@ -131,9 +133,14 @@
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
 |**`plot(x,y)`**|Crear una gráfica|
+|**`hist(df)`**|Generar un histograma nativo de R|
+|**`main="Título"`**|Generar un título para el histograma|
+|**`xlab="Eje x"`**|Leyenda del eje x|
+|**`ylab="Eje y"`**|Leyenda del eje y|
+|**`breaks = 30 / seq(a,b,c)`**|Establecer el número de secciones |
 
 
-##  DPLYR (Manipulación y operaciones con DF)
+##  dplyr(Manipulación y operaciones con DF)
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
@@ -142,3 +149,32 @@
 |**`mutate(df, modif) `**|Agregar o modificar columnas|
 |**`merge(df1,df2)`**|Unir dos data frames|
 |**`filter(df,condición) `**|Filtrar registros de un df|
+
+
+##  ggplot2 (Creación de gráficas)
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general|
+|**`+ geom_point`**|Diagrama de dispersión|
+|**`+ geom_histogram`**|Histograma|
+|**`aes(Variable)`**|Seleccionar la variable para el diagrama|
+|**`ggtitle("Title")`**|Título de digrama|
+|**`theme_...()`**|Seleccionar un tema|
+|**`facet_wrap("a")`**|Dividir horizontalmente|
+|**`facet_grid("a")`**|Dividir verticalmente|
+|**`xlab("x")`**|Etiqueta eje x|
+|**`ylab("y")`**|Etiqueta eje y|
+|**`data %>%     ggplot() + `**|Otra forma para concatenar las funciones|
+|**`fill("color")`**|Color de fondo de las barras|
+|**`col("color")`**|Color del contorno de las barras|
+|**`binwidth = num`**|Ancho de cada una de las barras|
+|**`bin = num`**|Número total de barras|
+|**`alpha(0-1)`**|Seleccionar la transparencia del color de fondo|
+
+
+##  Plotly (Gráficas con información detallada)
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`ggplotly(x)`**|Generar una gráfica que muestra la información en el cursor.|
