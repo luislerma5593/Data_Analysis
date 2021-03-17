@@ -337,9 +337,58 @@ dim(data)
 ```
 
 ## Ejemplo 6
+```r
+# Ejemplo 2.6
 
+# Ejemplo 6. Funciones `na.omit` y `complete.cases`
 
-## Ejemplo 7
+# Ahora vamos a considerar el conjunto de datos `airquality`, observamos primero
+# algunas de sus filas
+
+head(airquality)
+library(dplyr)
+
+# El tipo de objeto que es y el tipo de variables que contiene
+
+str(airquality)
+
+# observamos la dimensiÃ³n
+
+dim(airquality)
+
+# Con la funciÃ³n `complete.cases` podemos averiguar cuales son aquellas filas
+# que no contienen ningÃºn valor perdido (NA) y cuales son aquellas filas
+# que tienen al menos un valor perdido.
+
+bien <- complete.cases(airquality)
+
+# La variable bien, es un vector lÃ³gico con `TRUE` en las posiciones que 
+# representan filas de `airquality` en donde no hay NA's y con `FALSE`
+# en las posiciones que representan aquellas filas de `airquality` en donde
+# se encontraron NA's
+
+# Por tanto, podemos contar el nÃºmero de filas en donde no hay NAÂ´s de la 
+# siguiente manera
+
+sum(bien)
+
+# Podemos filtrar aquellas filas sin NA's de la siguiente manera
+
+sin_na <- airquality[bien,]
+
+data <- select(airquality, Ozone:Temp)
+apply(data, 2, mean)
+apply(data, 2, mean, na.rm = T)
+
+# `na.omit` devuelve el objeto con casos incompletos eliminados
+
+(m1 <- apply(na.omit(data), 2, mean))
+
+b <- complete.cases(data)
+
+(m2 <- apply(data[b,], 2, mean))
+
+identical(m1, m2)```
 
 
 # Retos
