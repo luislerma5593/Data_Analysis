@@ -43,7 +43,8 @@
 |**`x:y`**| Genera un vector |
 |**`rep(x,y)`**| Repite x, y veces |
 |**`unique(vec)`**|Obtener un vector sin elementos repetidos|
-
+|**`row.names()`**|Regresa un vector con los nombres de las filas|
+|**`colnames()`**|Regresa un vector con los nombres de las columnas|
 
 
 ## Listas
@@ -53,8 +54,6 @@
 |**`list(nom1="Luis",años=25)`**|Generar una lista  con diferentes tipos de datos|
 |**`str(milista)`**|Obtener información de la lista o dataframe|
 |**`milista$nombre`**|Extraer elementos de una lista|
-
-
 
 
 ## Matrices
@@ -158,13 +157,13 @@
 |**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general|
 |**`+ geom_point`**|Diagrama de dispersión|
 |**`+ geom_histogram`**|Histograma|
-|**`aes(Variable)`**|Seleccionar la variable para el diagrama|
-|**`ggtitle("Title")`**|Título de digrama|
-|**`theme_...()`**|Seleccionar un tema|
-|**`facet_wrap("a")`**|Dividir horizontalmente|
-|**`facet_grid("a")`**|Dividir verticalmente|
-|**`xlab("x")`**|Etiqueta eje x|
-|**`ylab("y")`**|Etiqueta eje y|
+|**`+ aes(Variable)`**|Seleccionar la variable para el diagrama|
+|**`+ ggtitle("Title")`**|Título de digrama|
+|**`+ theme_...()`**|Seleccionar un tema|
+|**`+ facet_wrap("a")`**|Dividir horizontalmente|
+|**`+ facet_grid("a")`**|Dividir verticalmente|
+|**`+ xlab("x")`**|Etiqueta eje x|
+|**`+ ylab("y")`**|Etiqueta eje y|
 |**`data %>%     ggplot() + `**|Otra forma para concatenar las funciones|
 |**`fill("color")`**|Color de fondo de las barras|
 |**`col("color")`**|Color del contorno de las barras|
