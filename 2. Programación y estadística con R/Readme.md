@@ -140,7 +140,7 @@
 |**`breaks = 30 / seq(a,b,c)`**|Establecer el número de secciones |
 
 
-##  dplyr(Manipulación y operaciones con DF)
+##  dplyr (Manipulación y operaciones con DF)
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
