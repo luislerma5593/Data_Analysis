@@ -9,9 +9,9 @@
   * [Ejemplo 6 (Gráficos de líneas o barras)](#Ejemplo-6)
   
 * [Retos](#Retos)
-  * [x] [Reto 1 (Altura de los alumnos)](#Reto-1)
-  * [x] [Reto 2 (Estadísticos de la NBA)](#Reto-2)
-  * [x] [Reto 3 (Series de tiempo y descomposición)](#Reto-3)
+  * [ ] [Reto 1 (Altura de los alumnos)](#Reto-1)
+  * [ ] [Reto 2 (Estadísticos de la NBA)](#Reto-2)
+  * [ ] [Reto 3 (Series de tiempo y descomposición)](#Reto-3)
   
 # Ejemplos
 
