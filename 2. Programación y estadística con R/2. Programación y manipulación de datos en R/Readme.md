@@ -388,7 +388,8 @@ b <- complete.cases(data)
 
 (m2 <- apply(data[b,], 2, mean))
 
-identical(m1, m2)```
+identical(m1, m2)
+```
 
 
 # Retos
