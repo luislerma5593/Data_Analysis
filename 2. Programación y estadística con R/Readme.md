@@ -1,6 +1,7 @@
 # Funciones
 
 - https://rsanchezs.gitbooks.io/rprogramming/content/index.html
+- https://es.wikipedia.org/wiki/Cuarteto_de_Anscombe
 
 ## General
 
