@@ -17,6 +17,8 @@
 |**`do.call(func,lista) `**|Aplica una función a una lista o argumentos|
 |**`complete.cases(df)`**|Identifica las filas que están comletas (No NA) y regresa T y F|
 |**`na.omit(df)`**|Omitir los valores que no son números. |
+|**`row.names()`**|Regresa un vector con los nombres de las filas|
+|**`colnames()`**|Regresa un vector con los nombres de las columnas|
 
 
 ## Instalación de paquetes
@@ -43,8 +45,6 @@
 |**`x:y`**| Genera un vector |
 |**`rep(x,y)`**| Repite x, y veces |
 |**`unique(vec)`**|Obtener un vector sin elementos repetidos|
-|**`row.names()`**|Regresa un vector con los nombres de las filas|
-|**`colnames()`**|Regresa un vector con los nombres de las columnas|
 
 
 ## Listas
