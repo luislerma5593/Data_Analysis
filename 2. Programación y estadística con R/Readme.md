@@ -160,7 +160,7 @@
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
-|**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general|
+|**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general (aes es para las variables)|
 |**`+ geom_point`**|Diagrama de dispersión|
 |**`+ geom_histogram`**|Histograma|
 |**`+ aes(Variable)`**|Seleccionar la variable para el diagrama|
