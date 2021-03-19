@@ -155,6 +155,8 @@
 
 ##  ggplot2 (Creación de gráficas)
 
+- https://raw.githubusercontent.com/rstudio/cheatsheets/master/data-visualization-2.1.pdf
+
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
 |**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general|
