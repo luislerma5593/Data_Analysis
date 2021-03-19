@@ -5,8 +5,8 @@
   * [Ejemplo 2 (Histogramas)](#Ejemplo-2)
   * [Ejemplo 3 (Gráficos de dispersión)](#Ejemplo-3)
   * [Ejemplo 4 (Boxplots y outliers)](#Ejemplo-4)
-  * [Ejemplo 5 (Estadísticos de la NBA)](#Ejemplo-5)
-  * [Ejemplo 6 (Gráficos de líneas o barras)](#Ejemplo-6)
+  * [Ejemplo 5 (Gráficos de líneas o barras)](#Ejemplo-5)
+  * [Ejemplo 6 (Series de tiempo y descomposición)](#Ejemplo-6)
   
 * [Retos](#Retos)
   * [ ] [Reto 1 (Altura de los alumnos)](#Reto-1)
