@@ -141,14 +141,279 @@ data %>%
 
 ## Ejemplo 3
 ```r
+# Ejemplo 3.3
+
+# Realizamos un scatter plot de las variables wt y mpg, debemos utilizar necesariamente geom_point()
+
+library(ggplot2)
+
+(my_scatplot <- ggplot(mtcars, 
+                       aes(x = wt, y = mpg)) + 
+  geom_point())
+
+# Adicionalmente se puede agregar una línea de tendencia
+
+(my_scatplot <- ggplot(mtcars, 
+                       aes(x=wt,y=mpg)) + 
+    geom_point() + 
+    geom_smooth(method = "lm", se = T))  # modelo lineal, cambia el parametro `se`, este hace referencia al intervalo de confianza
+
+# se → es el intervalo de confianza
+# Method = "lm" → traza la línea de tendencia
+
+cor(mtcars$wt,mtcars$mpg)
+
+# Agregando los nombres de los ejes, observa que se almacenó el gráfico en el objeto my_scatplot (nota que pueden agregarse más características seguido del signo +)
+
+my_scatplot + xlab('Weight (x 1000lbs)') + ylab('Miles per Gallon')
+
+# Otras características interesantes
+
+(my_scatplot <- ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) + geom_point())
+my_scatplot + labs(x='Weight (x1000lbs)',y='Miles per Gallon',colour='Number of\n Cylinders')
+
+# Haciendo un facewrap con la variable cyl
+
+my_scatplot + facet_wrap("cyl")
+
+# Separándolas por cilindros y tipo de transmisión (am = Transmission (0 = automatic, 1 = manual))
+
+my_scatplot + facet_grid(am~cyl)
+
+# Como puedes observar, hay muchas formas de representar el gráfico de dispersión, éstas son algunas de ellas, obviamente existen muchas más.
 ```
 
 ## Ejemplo 4
 ```r
+# Ejemplo 3.4
+
+library(dplyr)
+
+# Comenzamos leyendo un fichero, el cual contiene información sobre dos grupos de control G1 y G2, a los cuales se les realizó a cada uno una medición en 3 momentos diferentes C1, C2 y C3
+# library(dplyr) # para usar mutate
+
+data <- read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-con-R-Santander/master/Sesion-03/Data/boxp.csv")
+
+# Revisamos el encabezado del fichero y el nombre de sus variables o columnas
+
+head(data)
+names(data)
+
+# Observamos algunos datos estadísticos sobre las variables
+
+summary(data)
+
+# Como estamos ante la presencia de NA´s los eliminamos con complete.cases() y solamente seleccionamos aquellos sin NAsy convertimos en factores la variableCategoriayGrupo`
+
+bien <- complete.cases(data)
+data <- data[bien,]
+data <- mutate(data, Categoria = factor(Categoria), Grupo = factor(Grupo))
+
+# Factor es para poder categorizar
+
+# Finalmente realizamos el boxplot 
+
+ggplot(data, aes(x = Categoria, y = Mediciones, fill = Grupo)) + geom_boxplot() +
+  ggtitle("Boxplots") +
+  xlab("Categorias") +
+  ylab("Mediciones")
+
+# Agregamos el nombre de las etiquetas para los grupos G1 y G2
+
+ggplot(data, aes(x = Categoria, y = Mediciones, fill = Grupo)) + geom_boxplot() +
+  scale_fill_discrete(name = "Dos Gps", labels = c("G1", "G2")) + 
+  ggtitle("Boxplots") +
+  xlab("Categorias") +
+  ylab("Mediciones")
+
 ```
 
 ## Ejemplo 5
 ```r
+# Ejemplo 3.5
+
+# Al inicio es posible que no comprendas todo el código, trata de leerlo e ir asimilando que es lo que realiza cada línea. 
+
+# library(ggplot2)
+# install.packages("scales")
+library(scales) # Para mejorar la lectura de las etiquetas  en el eje de las x de tipo fecha
+# Ahora vamos a leer nuestro archivo C19Mexico.csv con los infectados y muertos acumulados para cada fecha
+
+setwd("C:/Users/LLerma/Google Drive/Analisis de Datos/M2 - Programacion y Estadistica con R/S3/Files")
+
+mex <- read.csv("C19Mexico.csv")
+
+head(mex); tail(mex)
+
+mex <- mutate(mex, Fecha = as.Date(Fecha, "%Y-%m-%d"))
+str(mex)
+
+####################################################################
+
+# A continuación, te presentamos un panorama de la situación que se ha estado viviendo en México, debido al coronavirus. Es información simple, que puede resultar valiosa para algunas personas. Las gráficas, las hemos realizado utilizando datos que puedes encontrar en el siguiente sitio: https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases
+
+# Acumulado de Casos Confirmados
+
+p <- ggplot(mex, aes(x=Fecha, y=Infectados)) + 
+  geom_line( color="blue") + 
+  geom_point() +
+  labs(x = "Fecha", 
+       y = "Acumulado de casos confirmados",
+       title = paste("Confirmados de COVID-19 en México:", 
+                     format(Sys.time(), 
+                            tz="America/Mexico_City", 
+                            usetz=TRUE))) +
+  theme(plot.title = element_text(size=12))  +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , 
+                                   size = 10, angle = 45, 
+                                   hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , 
+                                   size = 10, angle = 45, 
+                                   hjust = 1))  # color, ángulo y estilo de las abcisas y ordenadas 
+
+library(scales)
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y")) # paquete scales
+
+###
+
+p <- p +
+  theme(plot.margin=margin(10,10,20,10), plot.caption=element_text(hjust=1.05, size=10)) +
+  annotate("text", x = mex$Fecha[round(dim(mex)[1]*0.4)], y = max(mex$Infectados), colour = "blue", size = 5, label = paste("Última actualización: ", mex$Infectados[dim(mex)[1]]))
+p
+
+# Casos Confirmados por Día
+
+p <- ggplot(mex, aes(x=Fecha, y=NI)) + 
+  geom_line(stat = "identity") + 
+  labs(x = "Fecha", y = "Incidencia (Número de casos nuevos)",
+       title = paste("Casos de Incidencia de COVID-19 en México:", 
+                     format(Sys.time(), 
+                            tz="America/Mexico_City", usetz=TRUE))) +
+  theme(plot.title = element_text(size=12))  +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1))  # color, Ángulo y estilo de las abcisas y ordenadas
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y")) # paquete scales
+p
+
+###
+
+p <- p +
+  theme(plot.margin=margin(10,10,20,10), plot.caption=element_text(hjust=1.05, size=10)) +
+  annotate("text", x = mex$Fecha[round(dim(mex)[1]*0.4)], y = max(mex$NI), colour = "blue", size = 5, 
+           label = paste("Última actualización: ", mex$NI[length(mex$NI)]))
+p
+
+# Muertes Acumuladas
+
+mexm <- subset(mex, Muertos > 0) # Tomamos el subconjunto desde que comenzaron las muertes
+
+p <- ggplot(mexm, aes(x=Fecha, y=Muertos)) + geom_line( color="red") + 
+  geom_point() +
+  labs(x = "Fecha", 
+       y = "Muertes acumuladas",
+       title = paste("Muertes por COVID-19 en México:", format(Sys.time(), tz="America/Mexico_City",usetz=TRUE))) +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1))  # color, Ángulo y estilo de las abcisas y ordenadas
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y"))
+
+p
+
+###
+
+p <- p +
+  theme(plot.margin=margin(10,10,20,10), plot.caption=element_text(hjust=1.05, size=10)) +
+  annotate("text", x = mexm$Fecha[round(dim(mexm)[1]*0.4)], 
+           y = max(mexm$Muertos), colour = "red", size = 5, label = paste("Última actualización: ", mexm$Muertos[dim(mexm)[1]]))
+p
+
+# Muertes por Día
+p <- ggplot(mexm, aes(x=Fecha, y=NM)) + 
+  geom_line(stat = "identity") + 
+  labs(x = "Fecha", y = "Número de nuevos decesos",
+       title = paste("Nuevos decesos por COVID-19 en México:", 
+                     format(Sys.time(), tz="America/Mexico_City",usetz=TRUE))) +
+  theme(plot.title = element_text(size=12)) +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1))  # color, Ángulo y estilo de las abcisas y ordenadas
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y"))
+
+###
+
+p <- p +
+  theme(plot.margin=margin(10,10,20,10), plot.caption=element_text(hjust=1.05, size=10)) +
+  annotate("text", x = mexm$Fecha[round(dim(mexm)[1]*0.2)], 
+           y = max(mexm$NM), colour = "red", size = 5, label = paste("Última actualización: ", mexm$NM[dim(mexm)[1]]))
+p
+
+# Superposición de gráficas
+# Acumulado de Casos Confirmados y Muertes
+p <- ggplot(mex, aes(x=Fecha, y=Infectados)) + geom_line(color="blue") + 
+  labs(x = "Fecha", 
+       y = "Acumulado de casos",
+       title = paste("COVID-19 en México:", format(Sys.time(), tz="America/Mexico_City",usetz=TRUE))) +
+  geom_line(aes(y = Muertos), color = "red") +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1))  # color, Ángulo y estilo de las abcisas y ordenadas
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y"))
+
+
+
+p <- p +
+  theme(plot.margin=margin(10,10,20,10), plot.caption=element_text(hjust=1.05, size=10)) +
+  annotate("text", x = mex$Fecha[round(dim(mex)[1]*0.4)], 
+           y = max(mex$Infectados), colour = "blue", size = 5, label = paste("Última actualización para Infectados:", mex$Infectados[dim(mex)[1]])) +
+  annotate("text", x = mex$Fecha[round(dim(mex)[1]*0.4)], 
+           y = max(mex$Infectados)-100000, colour = "red", size = 5, label = paste("Última actualización para Muertes:", mex$Muertos[dim(mex)[1]])) 
+p
+
+# Tasa de Letalidad: La tasa de letalidad observada para un día determinado, la calculamos dividiendo las muertes acumuladas reportadas hasta ese día, entre el acumulado de casos confirmados para el mismo día. Multiplicamos el resultado por 100 para reportarlo en forma de porcentaje. Lo que obtenemos es el porcentaje de muertes del total de casos confirmados.
+
+p <- ggplot(mexm, aes(x=Fecha, y=Letalidad)) + geom_line(color="red") + 
+  labs(x = "Fecha", 
+       y = "Tasa de letalidad",
+       title = paste("COVID-19 en México:", format(Sys.time(), tz="America/Mexico_City",usetz=TRUE))) +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1)) + # color, Ángulo y estilo de las abcisas y ordenadas 
+  scale_y_discrete(name ="Tasa de letalidad", 
+                   limits=factor(seq(1, 13.5, 1)), labels=paste(seq(1, 13.5, 1), "%", sep = ""))
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y"))
+
+###
+
+p <- p +
+  theme(plot.margin=margin(10,10,20,10), plot.caption=element_text(hjust=1.05, size=10)) +
+  annotate("text", x = mexm$Fecha[round(length(mexm$Fecha)*0.2)], 
+           y = max(mexm$Letalidad)-1, colour = "red", size = 4, label = paste("Última actualización: ", mexm$Letalidad[dim(mexm)[1]], "%", sep = "")) 
+p
+
+# Factores de Crecimiento:
+
+# El factor de crecimiento de infectados para un día determinado, lo calculamos al dividir el acumulado de infectados para ese día, entre el acumulado de infectados del día anterior. El factor de crecimiento de muertes lo calculamos de forma similar.
+
+mex <- filter(mex, FCM < Inf) # Tomamos solo valores reales de factores de crecimiento
+
+p <- ggplot(mex, aes(x=Fecha, y=FCI)) + geom_line(color="blue") + 
+  labs(x = "Fecha", 
+       y = "Factor de crecimiento",
+       title = paste("COVID-19 en México:", format(Sys.time(), tz="America/Mexico_City",usetz=TRUE))) +
+  geom_line(aes(y = FCM), color = "red") + theme(plot.title = element_text(size=12)) +
+  theme(axis.text.x = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1),
+        axis.text.y = element_text(face = "bold", color="#993333" , size = 10, angle = 45, hjust = 1))  # color, Ángulo y estilo de las abcisas y ordenadas
+
+p <- p  + scale_x_date(labels = date_format("%d-%m-%Y"))
+
+###
+
+p <- p +
+  annotate("text", x = mex$Fecha[round(length(mex$Fecha)*0.4)], y = max(mex$FCM), colour = "blue", size = 5, label = paste("Última actualización para infectados: ", round(mex$FCI[dim(mex)[1]], 4))) +
+  annotate("text", x = mex$Fecha[round(length(mex$Fecha)*0.4)], y = max(mex$FCM)-0.2, colour = "red", size = 5, label = paste("Última actualización para muertes: ", round(mex$FCM[dim(mex)[1]], 4))) 
+p
 ```
 
 ## Ejemplo 6
@@ -188,6 +453,58 @@ data %>%
 
 ## Reto 2
 ```r
+# Reto 3.2 
+ 
+
+library(ggplot2)
+
+na <- read.csv("https://raw.githubusercontent.com/beduExpert/Programacion-con-R-Santander/master/Sesion-03/Reto-02/players_stats.csv")
+naom <- na.omit(na)
+# 1 Generar un histograma de los minuntos totales (MIN), de los jugadores y agregar una línea donde se muestre la media (Hint: para agregar la línea que muestre la media consulta la documentación sobre geom_vline y el argumento xintercept)
+ 
+mnba=mean(na$MIN)
+
+ggplot(na, aes(MIN)) + geom_histogram(binwidth=100, col="black") + geom_vline(aes(xintercept=mnba))
+
+
+# 2 Generar un histograma de edad (Age) y agregar una línea con la media
+
+(mean_age=mean(na.omit(na$Age)))
+
+ggplot(na, aes(Age)) + geom_histogram(binwidth=1, col="black") + geom_vline(aes(xintercept=mean_age))
+ 
+# 3 Hacer un scatterplot de las variables Weight y Height y observar la correlacón que existe entre ambas variables (1 sola gráfica)
+
+ggplot(naom, aes(x = Weight, y = Height)) + geom_point()
+cor(naom$Weight,naom$Height)
+       
+# 4 Utiliza la función which.max para saber quién es el jugador más alto, una vez hecho esto, presenta los resultados en una leyenda que diga "El jugador más alto es: Name, con una altura de: Height". Las unidades de altura deben ser en metros.
+
+maxx<-which.max(naom$Height)
+nom<-naom$Name[maxx]
+alt<-naom$Height[maxx]
+paste("El jugador mas alto es",  nom, "con una altura de ", alt*.01,"m")
+
+
+# 5 Utiliza la función which.min para saber quién es el jugador más bajito, una vez hecho esto, presenta los resultados en una leyenda que diga "El jugador más bajito es: Name, con una altura de: Height". Las unidades de altura deben ser en metros.
+
+minn<-which.min(naom$Height)
+min_nom<-naom$Name[minn]
+min_alt<-naom$Height[minn]
+paste("El jugador mas bajo es",  min_nom, "con una altura de ", min_alt*.01,"m")
+
+# 6 ¿Cuál es la altura promedio?, representa el resultado en una frase que diga: "La altura promedio es: ALTURA"
+
+promedioaltura <- mean(naom$Height)
+paste("La altura promedio es de",  promedioaltura*.01,"m")
+
+# 7 Generar un scatterplot donde se representen las Asistencias totales (AST.TOV) vs Puntos (PTS), además has un face wrap con la posición (Pos).
+
+ggplot(naom, aes(x = AST.TOV, y = PTS)) + geom_point() +
+facet_wrap("Pos")
+cor(naom$Weight,naom$Height)
+
+                                                                
 ```
 
 ## Reto 3
