@@ -9,8 +9,8 @@
   * [Ejemplo 6 (Series de tiempo y descomposición)](#Ejemplo-6)
   
 * [Retos](#Retos)
-  * [ ] [Reto 1 (Altura de los alumnos)](#Reto-1)
-  * [ ] [Reto 2 (Estadísticos de la NBA)](#Reto-2)
+  * [x] [Reto 1 (Altura de los alumnos)](#Reto-1)
+  * [x] [Reto 2 (Estadísticos de la NBA)](#Reto-2)
   * [ ] [Reto 3 (Series de tiempo y descomposición)](#Reto-3)
   
 # Ejemplos
