@@ -163,6 +163,8 @@
 |**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general (aes es para las variables)|
 |**`+ geom_point`**|Diagrama de dispersión|
 |**`+ geom_histogram`**|Histograma|
+|**`+ geom_vline`**|Línea vertical|
+|**`+ geom_hline`**|Línea horizontal|
 |**`+ aes(Variable)`**|Seleccionar la variable para el diagrama|
 |**`+ ggtitle("Title")`**|Título de digrama|
 |**`+ theme_...()`**|Seleccionar un tema|
@@ -176,6 +178,7 @@
 |**`binwidth = num`**|Ancho de cada una de las barras|
 |**`bin = num`**|Número total de barras|
 |**`alpha(0-1)`**|Seleccionar la transparencia del color de fondo|
+|**`xintercept`**|Se usa dentro del `vline` para generar la línea|
 
 
 ##  Plotly (Gráficas con información detallada)
