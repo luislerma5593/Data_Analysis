@@ -169,6 +169,7 @@
 ##  ggplot2 (Creación de gráficas)
 
 - https://raw.githubusercontent.com/rstudio/cheatsheets/master/data-visualization-2.1.pdf
+- http://www.sthda.com/english/wiki/ggplot2-axis-ticks-a-guide-to-customize-tick-marks-and-labels
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
