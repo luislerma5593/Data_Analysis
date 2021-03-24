@@ -176,6 +176,7 @@
 |**`ggplot(df, aes(x=a,y=b, colour=c)`**|Diagrama general (aes es para las variables)|
 |**`+ geom_point`**|Diagrama de dispersión|
 |**`+ geom_histogram`**|Histograma|
+|**`+ geom_tile`**|Generar un mapa de calor|
 |**`+ geom_vline`**|Línea vertical|
 |**`+ geom_hline`**|Línea horizontal|
 |**`+ aes(Variable)`**|Seleccionar la variable para el diagrama|
