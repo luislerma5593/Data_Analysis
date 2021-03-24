@@ -10,3 +10,44 @@
   * [ ] [Reto 1 (Distribuciones binomial, normal y t de Student)](#Reto-1)
   * [ ] [Reto 2 (Algunos estimadores puntuales insesgados comunes)](#Reto-2)
   * [ ] [Reto 3 (Contraste de hipótesis)](#Reto-3)
+
+
+# Ejemplos
+
+## Ejemplo 1
+```r
+
+```
+
+## Ejemplo 2
+```r
+
+```
+
+## Ejemplo 3
+```r
+
+```
+
+## Ejemplo 4
+```r
+
+```
+
+
+# Retos
+
+## Reto 1
+```r
+
+```
+
+## Reto 2
+```r
+
+```
+
+## Reto 3
+```r
+
+```
