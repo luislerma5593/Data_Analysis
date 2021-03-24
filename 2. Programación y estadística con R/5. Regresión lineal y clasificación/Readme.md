@@ -11,3 +11,43 @@
   * [ ] [Reto 2 ()](#Reto-2)
   * [ ] [Reto 3 ()](#Reto-3)
 
+
+# Ejemplos
+
+## Ejemplo 1
+```r
+
+```
+
+## Ejemplo 2
+```r
+
+```
+
+## Ejemplo 3
+```r
+
+```
+
+## Ejemplo 4
+```r
+
+```
+
+
+# Retos
+
+## Reto 1
+```r
+
+```
+
+## Reto 2
+```r
+
+```
+
+## Reto 3
+```r
+
+```
