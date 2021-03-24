@@ -141,6 +141,18 @@
 |**`xlab="Eje x"`**|Leyenda del eje x|
 |**`ylab="Eje y"`**|Leyenda del eje y|
 |**`breaks = 30 / seq(a,b,c)`**|Establecer el número de secciones |
+|**`lwd=a`**|"Line width" → Para poder cambiar el ancho de la línea|
+|**`lty(1/2/3)`**|Para seleccionar el tipo de línea|
+|**`lines(st$column)`**|Para poder agregar una línea dentro de un scatterplot|
+|**`legend(cor_x,cor_y…)`**|Posición de la leyenda|
+|**`legend(col=c(...))`**|Nombres de las líneas agregadas|
+|**`legend(lty(1/2/3))`**|Para seleccionar el tipo de línea|
+|**`legend(text.col=a))`**|Seleccionar el color del texto de la leyenda|
+|**`egend(bg=a)`**|"Background" → Color de fondo de la leyenda|
+|**`xlim(vec)`**|Límites en x|
+|**`ylim(vec)`**|Límites en y|
+|**`factor(vec)`**|Para poder categorizar una variables (0=manual,1=automático)|
+
 
 
 ##  dplyr (Manipulación y operaciones con DF)
@@ -179,10 +191,25 @@
 |**`bin = num`**|Número total de barras|
 |**`alpha(0-1)`**|Seleccionar la transparencia del color de fondo|
 |**`xintercept`**|Se usa dentro del `vline` para generar la línea|
+|**`labs(x=a,y=b,title=c)`**|Introducir los textos de las etiquetas|
+|**`theme()`**|Para poder agregar textos a las gráficas y alinear las etiquetas|
+|**`theme(plot.title = element_text(hjust = 0.5))`**|Centrar el título|
 
 
-##  Plotly (Gráficas con información detallada)
+##  Otras librerías
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
-|**`ggplotly(x)`**|Generar una gráfica que muestra la información en el cursor.|
+|**`plotly`**|ggplotly → Mostrar los valores de una gráfica|
+|**`reshape`**|melt → Genera un df a partir de una matriz para un heatmap|
+
+
+##  Series de tiempo
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`start(ts)`**|Inicio de una serie de tiempo|
+|**`end(ts)`**|Fin de una serie de tiempo|
+|**`frequency(ts)`**|Frecuencia de la serie de tiempo|
+|**`decompose(ts, type=add/mult)`**|Descomposición de una serie de tiempo|
+|**`ts(df, start=a, frequency=b)`**|Generar una serie de tiempo|
