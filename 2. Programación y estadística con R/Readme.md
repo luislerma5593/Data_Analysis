@@ -23,6 +23,7 @@
 |**`na.omit(df)`**|Omitir los valores que no son números. |
 |**`row.names()`**|Regresa un vector con los nombres de las filas|
 |**`colnames()`**|Regresa un vector con los nombres de las columnas|
+|**`as.factor()`**|Para categorizar (Mostrar todos los números en las gráficas)|
 
 
 ## Instalación de paquetes
@@ -108,7 +109,6 @@
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
-|**`rnorm(n)`**|Genera un vector con 'n' elementos dentro de una distribución normal (mean = 0, sd = 1)|
 |**`runif(n, a, b,)`**|Genera un vector de 'n' elementos entre 'a' y 'b' (Distribución uniforme)|
 |**`which.max(x)`**|Posición del máximo valor |
 |**`which.min(x)`**|Posición del mínimo valor|
@@ -121,6 +121,24 @@
 |**`var(x)`**|Obtener la varianza|
 |**`sd(x)`**|Obtener la desviación estándar|
 |**`table(vec/df) `**|Generar una tabla de frecuencias|
+
+
+## Probabilidad
+
+- https://estadistica-dma.ulpgc.es/cursoR4ULPGC/10-distribProbabilidad.html
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`dbinom()`**|Una probabilidad de P(X = a)|
+|**`pbinom()`**|Una probabilidad de P(X <= a)|
+|**`qbinom( p = 0.2, ...)`**|Obtienes el cuantil de una probabilidad|
+|**`rbinom()`**|Generar una muestra de n observaciones, con una distribución binomial|
+|**`dt(x, df = 7)`**|Distribución t de student con gl=7|
+|**`pt(q = a, df = 7)`**|Distribución t de student P(T <= a)|
+|**`rnorm(n)`**|Genera un vector con 'n' elementos dentro de una distribución normal (mean = 0, sd = 1)|
+|**`dnorm()`**|Obtener una probabilida (P X = a)|
+|**`pnorm(…,lower.tail = FALSE)`**|Obtener la probabilidad (P X <= a)|
+|**`qnorm()`**|Obtener el cuantil de la dsitribución normal|
 
 
 ## Ciclos y condiciones
@@ -152,7 +170,10 @@
 |**`xlim(vec)`**|Límites en x|
 |**`ylim(vec)`**|Límites en y|
 |**`factor(vec)`**|Para poder categorizar una variables (0=manual,1=automático)|
-
+|**`abline()`**|Agrega una línea vertical|
+|**`par(mfrow = c(2, 2))`**|Genera un espacio con 4 gráficas (2 y 2)|
+|**`polygon()`**|Colorea una parte de una gráfica|
+|**`dev.off()`**|Para mostrar sólo una gráfica|
 
 
 ##  dplyr (Manipulación y operaciones con DF)
