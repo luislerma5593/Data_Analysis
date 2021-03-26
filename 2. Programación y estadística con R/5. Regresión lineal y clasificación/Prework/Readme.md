@@ -181,7 +181,8 @@ Entonces el problema de optimización
 
 sujeto a
 
-prueba
+![image](https://user-images.githubusercontent.com/78183885/112559318-58d69200-8d96-11eb-87af-818c8bdd6770.png)
+
 
 se convertiría en
 
