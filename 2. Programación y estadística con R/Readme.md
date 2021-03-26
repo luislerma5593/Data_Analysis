@@ -103,6 +103,7 @@
 |**`names(x) <- vec`**|Asignar un vector de nombres para el dataframe 'x'|
 |**`dir()`**|Obtener los archivos que hay en el directorio establecido con setwd()|
 |**`download.file(url, destfile , mode = "wb")`**|Descarga un archivo en el directorio establecido|
+|**`read.table("", header=T)`**|Para leer un .txt|
 
 
 ## Matemáticas
@@ -135,10 +136,26 @@
 |**`rbinom()`**|Generar una muestra de n observaciones, con una distribución binomial|
 |**`dt(x, df = 7)`**|Distribución t de student con gl=7|
 |**`pt(q = a, df = 7)`**|Distribución t de student P(T <= a)|
+|**`qt(prob,dof)`**|Obtener el cuantil de una probabilidad en t Student|
 |**`rnorm(n)`**|Genera un vector con 'n' elementos dentro de una distribución normal (mean = 0, sd = 1)|
 |**`dnorm()`**|Obtener una probabilida (P X = a)|
 |**`pnorm(…,lower.tail = FALSE)`**|Obtener la probabilidad (P X <= a)|
 |**`qnorm()`**|Obtener el cuantil de la dsitribución normal|
+
+
+## Regresión lineal
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`lm(x~y)`**|Generar un modelo de regresión lineal|
+|**`confint()`**|Encontrar los intervalos de confianza del lm|
+|**`predict(interval="confidence")`**|Generar límites del intervalo de confianza|
+|**`predict(interval="prediction")`**|Generar límites del intervalo de predicción|
+|**`df$residuals`**|Despliega los residuales del modelo|
+|**`abline(lsfit(x, y))`**|Agregar la línea del modelo|
+|**`update(m1, ~. - Column)`**|Eliminar un campo de un modelo|
+|**`pairs(~ a + b + c, data = nyc)`**|Generar una tabla de apareamiento|
+|**`m1$fitted.values`**|Muestra la suma de las variables independientes por sus betas|
 
 
 ## Ciclos y condiciones
@@ -174,6 +191,7 @@
 |**`par(mfrow = c(2, 2))`**|Genera un espacio con 4 gráficas (2 y 2)|
 |**`polygon()`**|Colorea una parte de una gráfica|
 |**`dev.off()`**|Para mostrar sólo una gráfica|
+|**`pch = a`**|Tipo de elemento (punto) en un diagrama|
 
 
 ##  dplyr (Manipulación y operaciones con DF)
