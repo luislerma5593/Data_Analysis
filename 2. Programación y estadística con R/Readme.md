@@ -173,6 +173,7 @@
 |**`plot(x,y)`**|Crear una gráfica|
 |**`hist(df)`**|Generar un histograma nativo de R|
 |**`main="Título"`**|Generar un título para el histograma|
+|**`title(main="x",sub="y"`**|Generar un título y nota debajo|
 |**`xlab="Eje x"`**|Leyenda del eje x|
 |**`ylab="Eje y"`**|Leyenda del eje y|
 |**`breaks = 30 / seq(a,b,c)`**|Establecer el número de secciones |
