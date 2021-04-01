@@ -7,8 +7,8 @@
   * [Ejemplo 4 (Contraste de hipótesis)](#Ejemplo-4)
 
 * [Retos](#Retos)
-  * [ ] [Reto 1 (Distribuciones binomial, normal y t de Student)](#Reto-1)
-  * [ ] [Reto 2 (Algunos estimadores puntuales insesgados comunes)](#Reto-2)
+  * [x] [Reto 1 (Distribuciones binomial, normal y t de Student)](#Reto-1)
+  * [x] [Reto 2 (Algunos estimadores puntuales insesgados comunes)](#Reto-2)
   * [ ] [Reto 3 (Contraste de hipótesis)](#Reto-3)
 
 
@@ -718,12 +718,168 @@ t.test(x = m1, y = m2,
 
 ## Reto 1
 ```r
+# Desarrollo
+# DistribuciÃ³n binomial
+# Consideremos un experimento binomial con n = 35 pruebas idÃ©nticas e independientes, en donde la probabilidad de Ã©xito en cada prueba es p = 0.51. Encuentre lo siguiente:
+
+# n = 35
+# p = 0.51
+
+library(ggplot2)
+
+# 1 La probabilidad de observar exactamente 10 Ã©xitos
+
+(dbinom(10, size=35, prob=0.51))
+
+# 2 La probabilidad de observar 10 o mÃ¡s exitos
+
+(pbinom(10, size=35, prob=0.51, lower.tail = FALSE))
+
+# 3 El cuantil de orden 0.5
+
+(qbinom(0.5, size=35, prob=0.51, lower.tail = TRUE))
+(pbinom(18, size=35, prob=0.51, lower.tail = TRUE))
+
+# 4 Genere una muestra aleatoria de tamaÃ±o 1000 de esta distribuciÃ³n, construya una tabla de frecuencias relativas con los resultados y realice el grÃ¡fico de barras de los resultados que muestre las frecuencias relativas.
+
+a <- rbinom(1000, size=35, prob=0.51)
+(table_a <- table(a)/length(table(a)))
+
+(df1 <- as.data.frame(table_a))
+
+(names(df1) <- c("Exitos", "Prob"))
+
+plot(df1)
+#1
+ggplot(df1, aes(x = Exitos , y = Prob))+ geom_bar(stat="identity")
+#2
+ggplot(df1, aes(x = Exitos , y = Prob))+ geom_col(col="black", fill="red") +
+  theme(plot.title = element_text(hjust = 0.5))+ ggtitle("Prob")
+#3
+ggplot(df1, aes(x = Exitos , y = Prob)) + geom_bar (stat="identity", position = "dodge") 
+
+# Extra
+
+b <- as.numeric(names(table_a))
+
+c <- dbinom(b, size = 35, prob = 0.51)
+
+
+#  DistribuciÃ³n normal
+
+# Considere una variable aleatoria normal con media 110 y desviaciÃ³n estÃ¡ndar 7. Realice lo siguiente:
+
+# mean = 110
+# sd = 7
+
+# 1 Grafique la funciÃ³n de densidad de probabilidad
+
+a <- seq(80, 140, 1)
+b <- dnorm(a, mean=110, sd=7)
+
+df <- data.frame(a,b)
+
+plot(a,b)
+plot(a,b, type = "l", main = "Prob", xlab="x", ylab="y")
+#abline(v = 100)
+
+
+(p <- ggplot(df, aes(a, b)) + geom_line())
+
+(pnorm(110+21, mean=110, sd=7, lower.tail = TRUE)-pnorm(110-21, mean=110, sd=7, lower.tail = TRUE))
+
+# 2 Encuentre la probabilidad de que la v.a. sea mayor o igual a 140
+
+(pnorm(140, mean=110, sd=7, lower.tail = FALSE))
+
+# 3 Encuentre el cuantil de orden 0.95
+
+(qnorm(0.95, mean=110, sd=7))
+
+# 4 Genere una muestra aleatoria de tamaÃ±o 1000 y realice el histograma de frecuencias relativas para esta muestra
+
+c <- rnorm(1000, mean=110, sd=7)
+
+(df_c <- as.data.frame(c))
+
+hist(df_c$c)
+
+ggplot(df_c, aes(c)) + geom_histogram(col="red")
+
+(p <- ggplot(df_c, aes(c)) + 
+  geom_histogram(colour = 'red', 
+                 fill = 'blue',
+                 alpha = 0.8, # Intensidad del color fill
+                 binwidth = 3.5) + 
+  geom_density(aes(y = 3.5*..count..))+
+  geom_vline(xintercept = mean(c), 
+             linetype="dashed", color = "black") + 
+  ggtitle('Histograma para la muestra normal') + 
+  labs(x = 'Valores obtenidos', y = 'Frecuencia')+
+  theme_dark() +
+  theme(plot.title = element_text(hjust = 0.5, size = 16)))
 
 ```
 
 ## Reto 2
 ```r
 
+# Desarrollo
+# Nota: este reto es opcional
+
+library(ggplot2)
+
+# 1 Genere 1500 muestras de tamaÃ±o 67 de la distribuciÃ³n exponencial con parÃ¡metro 5
+
+set.seed(100) # 1.
+
+a <- matrix(ncol = 1500, nrow = 67)
+
+for (i in 1:1500){
+    a[,i] <- rexp(67,5)
+}
+
+#Otra forma
+
+b <- sapply(X = rep(67, 1500), FUN = rexp, rate = 5)
+
+# 2 Obtenga las 1500 medias correspondientes a cada una de las muestras
+
+mean_a <- apply(a, 2, mean)
+media1500.67 <- mean_a
+# 3 Realice el histograma de frecuencias de las 1500 medias
+
+hist(mean_a, breaks = 30)
+
+#Otra forma
+
+mdf <- as.data.frame(media1500.67)
+
+(ggplot(mdf, aes(media1500.67)) + # 3.
+  geom_histogram(colour = 'yellow', 
+                 fill = 'purple',
+                 alpha = 0.7) + # Intensidad del color fill
+  geom_vline(xintercept = mean(media1500.67), 
+             linetype="dashed", color = "black") + 
+  ggtitle('Histograma para las 1500 medias') + 
+  labs(x = 'medias', y = 'Frecuencia')+
+  theme_get() +
+  theme(plot.title = element_text(hjust = 0.5, size = 16))
+)
+# 4 Encuentre la media muestral y desviaciÃ³n estÃ¡ndar muestral de las 1500 medias
+
+(media_muestral <- mean(mean_a)) # -> 0.1989
+(sd_muestral <- sd(mean_a)) # -> 0.0241
+
+# 5 Compare la media muestral encontrada en el paso anterior con la media real (1/5) de la poblaciÃ³n de la cual provienen las muestras
+
+### La media real es 1/lamba → 1/5 → 0.2
+
+(media_muestral <- mean(mean_a)); 1/5
+
+# 6 Compare la desviaciÃ³n estÃ¡ndar muestral encontrada con la desviaciÃ³n estÃ¡ndar real (1/5) de la poblaciÃ³n de la cual provienen las muestras pero dividida por 67 (el tamaÃ±o de las muestras)
+
+(sd_muestral <- sd(mean_a)); (1/5)/sqrt(67)
 ```
 
 ## Reto 3
