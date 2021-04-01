@@ -190,7 +190,7 @@
 |**`xlim(vec)`**|Límites en x|
 |**`ylim(vec)`**|Límites en y|
 |**`factor(vec)`**|Para poder categorizar una variables (0=manual,1=automático)|
-|**`abline()`**|Agrega una línea vertical|
+|**`abline(v= a)`**|Agrega una línea vertical|
 |**`par(mfrow = c(2, 2))`**|Genera un espacio con 4 gráficas (2 y 2)|
 |**`polygon()`**|Colorea una parte de una gráfica|
 |**`dev.off()`**|Para mostrar sólo una gráfica|
