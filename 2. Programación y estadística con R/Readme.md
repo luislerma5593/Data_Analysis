@@ -173,7 +173,7 @@
 | ------------- | ------------- |
 |**`plot(x,y)`**|Crear una gráfica|
 |**`type= "l"/"p"/"b"`**|Graficar una línea, puntos o ambos|
-|**`hist(df)`**|Generar un histograma nativo de R|
+|**`hist(df$x)`**|Generar un histograma nativo de R|
 |**`main="Título"`**|Generar un título para el histograma|
 |**`title(main="x",sub="y"`**|Generar un título y nota debajo|
 |**`xlab="Eje x"`**|Leyenda del eje x|
