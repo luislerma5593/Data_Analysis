@@ -3,6 +3,7 @@
 - https://rsanchezs.gitbooks.io/rprogramming/content/index.html
 - https://es.wikipedia.org/wiki/Cuarteto_de_Anscombe
 - https://raw.githubusercontent.com/rstudio/cheatsheets/master/data-visualization-2.1.pdf
+- https://fhernanb.github.io/Manual-de-R/
 
 ## General
 
