@@ -26,7 +26,7 @@
 |**`colnames()`**|Regresa un vector con los nombres de las columnas|
 |**`as.factor()`**|Para categorizar (Mostrar todos los números en las gráficas)|
 |**`rep(a, b)`**|Genera un vector de b entradas, con el valor a|
-
+|**`expand.grid(v1,v2)`**|Genera un df con todas las opciones posibles de los vectores|
 
 ## Instalación de paquetes
 
