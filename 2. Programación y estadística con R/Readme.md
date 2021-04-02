@@ -226,7 +226,7 @@
 |**`+ geom_vline`**|Línea vertical|
 |**`+ geom_hline`**|Línea horizontal|
 |**`+ aes(Variable)`**|Seleccionar la variable para el diagrama|
-|**`+ ggtitle("Title")`**|Título de digrama|
+|**`+ ggtitle("Title", subtitle="")`**|Título de digrama|
 |**`+ theme_...()`**|Seleccionar un tema|
 |**`+ facet_wrap("a")`**|Dividir horizontalmente|
 |**`+ facet_grid("a")`**|Dividir verticalmente|
