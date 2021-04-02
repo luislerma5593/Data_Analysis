@@ -261,3 +261,17 @@
 |**`frequency(ts)`**|Frecuencia de la serie de tiempo|
 |**`decompose(ts, type=add/mult)`**|Descomposición de una serie de tiempo|
 |**`ts(df, start=a, frequency=b)`**|Generar una serie de tiempo|
+
+
+##  Ejemplo de gráfica
+
+```r
+ggplot(pag, aes(x = Var1, y = Freq)) + 
+  geom_col(colour = "black", fill= "orange") +
+  geom_text(aes(y = round(Freq, 6), label = round(Freq, 3)), 
+            position = "identity", size=3, vjust = -1, hjust=0.5 ,col="black") +
+  ggtitle("Probabilidades marginales de goles de equipos visitantes") + 
+  xlab("Goles") +
+  ylab("Probabilidades") +
+  theme_minimal()
+  ```
