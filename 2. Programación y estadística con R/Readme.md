@@ -173,6 +173,7 @@
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
 |**`plot(x,y)`**|Crear una gráfica|
+|**`barplot(x)`**|Crear una gráfica de barras|
 |**`type= "l"/"p"/"b"`**|Graficar una línea, puntos o ambos|
 |**`hist(df$x)`**|Generar un histograma nativo de R|
 |**`main="Título"`**|Generar un título para el histograma|
