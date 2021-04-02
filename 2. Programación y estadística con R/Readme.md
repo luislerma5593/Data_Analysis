@@ -83,7 +83,7 @@
 |**`( Ax=b ): solve(A,b)`**| Resolver un sistema de ecuaciones lineales|
 |**`solve(A)`**| Inversa de A|
 |**`eigen(A)`**| Autovalores y autovectores|
-
+|**`M[is.na(M)]<-0`**|Convertir NA en 0|
 
 ## Data Frames
 
