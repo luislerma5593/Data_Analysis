@@ -4,6 +4,8 @@
 - https://es.wikipedia.org/wiki/Cuarteto_de_Anscombe
 - https://raw.githubusercontent.com/rstudio/cheatsheets/master/data-visualization-2.1.pdf
 - https://fhernanb.github.io/Manual-de-R/
+- Estadística computacional → https://tereom.github.io/est-computacional-2018/bootstrap-en-r.html
+- Simulación estadística → https://rubenfcasal.github.io/simbook/remuestreo-bootstrap.html
 
 ## General
 
