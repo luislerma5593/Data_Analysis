@@ -145,6 +145,8 @@
 |**`dnorm()`**|Obtener una probabilida (P X = a)|
 |**`pnorm(…,lower.tail = FALSE)`**|Obtener la probabilidad (P X <= a)|
 |**`qnorm()`**|Obtener el cuantil de la dsitribución normal|
+|**`dexp()`**|Genera una distribución exponencial|
+|**`t.test(x, alternative, mu)`**|Hace una prueba de hipótesis con el estadístico t|
 
 
 ## Regresión lineal
@@ -263,6 +265,7 @@
 |**`frequency(ts)`**|Frecuencia de la serie de tiempo|
 |**`decompose(ts, type=add/mult)`**|Descomposición de una serie de tiempo|
 |**`ts(df, start=a, frequency=b)`**|Generar una serie de tiempo|
+|**`r_sample`**|sample_n(df,n) → Toma "n" muestras del dataframe "df"|
 
 
 ##  Ejemplo de gráfica
