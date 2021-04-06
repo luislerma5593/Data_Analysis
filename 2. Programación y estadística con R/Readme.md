@@ -201,6 +201,7 @@
 |**`polygon()`**|Colorea una parte de una gráfica|
 |**`dev.off()`**|Para mostrar sólo una gráfica|
 |**`pch = a`**|Tipo de elemento (punto) en un diagrama|
+|**`legend`**|Agregar una leyenda a una gráfica|
 
 
 ##  dplyr (Manipulación y operaciones con DF)
