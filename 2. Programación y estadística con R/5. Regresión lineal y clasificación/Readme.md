@@ -252,6 +252,14 @@ anova(m2,mfull)
 # nula y adopatamos el modelo reducido
 # Y = beta0 + beta1*Food + beta2*Decor + beta4*East + e (Reducido)
 
+
+# 1 → Si F es mayor al valor crítico, se rechaza la hipótesis nula. En este caso 
+#     F es baja, por lo tanto no se rechaza la H0
+
+# 2 → Como el valor p es 0.3558, y es más alto que 0.05 (para un nivel de 
+#     confianza del 95%) no se rechaza la hipótesis nula. (Si p es bajo, se re-
+#     chaza la H0)
+
 ######
 
 # Diagnósticos
