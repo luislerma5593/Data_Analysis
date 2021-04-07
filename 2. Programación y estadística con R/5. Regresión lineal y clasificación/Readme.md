@@ -7,7 +7,7 @@
   * [Ejemplo 4 (Máquinas de vectores de soporte)](#Ejemplo-4)
 
 * [Retos](#Retos)
-  * [ ] [Reto 1 (Regresión lineal simple)](#Reto-1)
+  * [x] [Reto 1 (Regresión lineal simple)](#Reto-1)
   * [ ] [Reto 2 (Máquinas de vectores de soporte)](#Reto-2)
 
 
