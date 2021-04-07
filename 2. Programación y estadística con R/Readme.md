@@ -29,6 +29,8 @@
 |**`as.factor()`**|Para categorizar (Mostrar todos los números en las gráficas)|
 |**`rep(a, b)`**|Genera un vector de b entradas, con el valor a|
 |**`expand.grid(v1,v2)`**|Genera un df con todas las opciones posibles de los vectores|
+|**`scan()`**|Lee un archivo y genera una lista o vector|
+
 
 ## Instalación de paquetes
 
@@ -202,6 +204,7 @@
 |**`dev.off()`**|Para mostrar sólo una gráfica|
 |**`pch = a`**|Tipo de elemento (punto) en un diagrama|
 |**`legend`**|Agregar una leyenda a una gráfica|
+|**`points(type="l")`**|Es para generar una línea en una gráfica|
 
 
 ##  dplyr (Manipulación y operaciones con DF)
@@ -267,6 +270,11 @@
 |**`decompose(ts, type=add/mult)`**|Descomposición de una serie de tiempo|
 |**`ts(df, start=a, frequency=b)`**|Generar una serie de tiempo|
 |**`r_sample`**|sample_n(df,n) → Toma "n" muestras del dataframe "df"|
+|**`aggregate(ts)`**|Calcular estadísticas de resumen (simplificar), se puede usar promedio, suma, etc. En ts, por default lo agrupa por años (nfrequency=1).|
+|**`boxplot(AP ~ cycle(AP))`**|Agrupa los datos por meses|
+|**`window(ts, start = c(a, b), end = c(c, d))`**|Para obtener un sub-ts a partir de la ts|
+|**`ts.plot(cbind(ts1,ts2...))`**|Para poder graficar varias series de tiempo en una sola gráfica|
+|**`acf()`**|Para graficar un correlograma|
 
 
 ##  Ejemplo de gráfica
