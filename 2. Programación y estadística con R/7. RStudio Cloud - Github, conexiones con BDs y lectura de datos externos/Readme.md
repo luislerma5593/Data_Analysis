@@ -18,7 +18,8 @@
 En este ejercicio se sincronizó Github con RStudio Cloud
 
 - En la terminal
-```git config --global user.email "e.coronadoj@gmail.com"
+```
+git config --global user.email "e.coronadoj@gmail.com"
 git config --global user.name "Erick"
 ```
 - Creas un .R y lo guardas
