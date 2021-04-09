@@ -250,14 +250,8 @@
 |**`labs(x=a,y=b,title=c)`**|Introducir los textos de las etiquetas|
 |**`theme()`**|Para poder agregar textos a las gráficas y alinear las etiquetas|
 |**`theme(plot.title = element_text(hjust = 0.5))`**|Centrar el título|
-
-
-##  Otras librerías
-
-| **Comando** | **Descripción** |
-| ------------- | ------------- |
-|**`plotly`**|ggplotly → Mostrar los valores de una gráfica|
-|**`reshape`**|melt → Genera un df a partir de una matriz para un heatmap|
+|**`coord_flip()`**|Cambiar coordenadas X y Y|
+|**`geom_bin2d()`**|Otro tipo de geometría|
 
 
 ##  Series de tiempo
@@ -275,6 +269,44 @@
 |**`window(ts, start = c(a, b), end = c(c, d))`**|Para obtener un sub-ts a partir de la ts|
 |**`ts.plot(cbind(ts1,ts2...))`**|Para poder graficar varias series de tiempo en una sola gráfica|
 |**`acf()`**|Para graficar un correlograma|
+
+
+##  Bases de datos (DBI & RMySQL)
+
+- Ejemplo
+
+dbConnect(
+  drv = RMySQL::MySQL(),
+  dbname = "shinydemo",
+  host = "shiny-demo.csa7qlmguqrf.us-east-1.rds.amazonaws.com",
+  username = "guest",
+  password = "guest")
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`dbConnect()`**|Conectarse a una base de datos|
+|**`dbListTables(DB)`**|Mostrar las tablas disponibles|
+|**`dbListFields(DB, 'Table')`**|Mostrar los campos disponibles|
+|**`dbGetQuery(DB, "select * from A")`**|Realizar una consulta|
+
+
+##  Otras librerías
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`plotly`**|ggplotly → Mostrar los valores de una gráfica|
+|**`reshape`**|melt → Genera un df a partir de una matriz para un heatmap|
+
+
+##  Lecturas de datos/tablas de internet
+
+| **Comando** | **Descripción** |
+| ------------- | ------------- |
+|**`as.data.frame(fromJSON(URL)))`**|Para JSON|
+|**`xmlToDataFrame(xml)`**|Para XML|
+|**`html_nodes()`**|Para HTML|
+|**`html_table()`**|Para HTML|
+|**`na.omit(as.data.frame(table))`**|Para HTML|
 
 
 ##  Ejemplo de gráfica
