@@ -274,13 +274,14 @@
 ##  Bases de datos (DBI & RMySQL)
 
 - Ejemplo
-
+```r
 dbConnect(
   drv = RMySQL::MySQL(),
   dbname = "shinydemo",
   host = "shiny-demo.csa7qlmguqrf.us-east-1.rds.amazonaws.com",
   username = "guest",
   password = "guest")
+  ```
 
 | **Comando** | **Descripción** |
 | ------------- | ------------- |
