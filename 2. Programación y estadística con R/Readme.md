@@ -264,7 +264,7 @@
 |**`decompose(ts, type=add/mult)`**|Descomposición de una serie de tiempo|
 |**`ts(df, start=a, frequency=b)`**|Generar una serie de tiempo|
 |**`r_sample`**|sample_n(df,n) → Toma "n" muestras del dataframe "df"|
-|**`aggregate(ts)`**|Calcular estadísticas de resumen (simplificar), se puede usar promedio, suma, etc. En ts, por default lo agrupa por años (nfrequency=1).|
+|**`aggregate(ts)`**|Calcular estadísticas de resumen (simplificar), se puede usar promedio, suma, etc. Es como un GROUP BY|
 |**`boxplot(AP ~ cycle(AP))`**|Agrupa los datos por meses|
 |**`window(ts, start = c(a, b), end = c(c, d))`**|Para obtener un sub-ts a partir de la ts|
 |**`ts.plot(cbind(ts1,ts2...))`**|Para poder graficar varias series de tiempo en una sola gráfica|
