@@ -38,7 +38,6 @@ Dentro del ui.R se colocarán los comandos que permitan crear encabezados y agre
 
 Por otro lado en el server.R se codifica la sintaxis necesaria para poder elaborar las tablas, gráficas, imágenes y demás objetos que se mostrarán en la GUI, será nuestro procesador de las entradas (inputs) que se reciban de la GUI.
 
-prueba
 Al comienzo puede parecer algo confuso el orden y el ingreso de las variables que darán forma a todos lo que se mostrará en la interfaz, sin embargo con la práctica y tomando como base algún tema su implementación se hará de manera natural.
 
 No olvides entrar a los links de más arriba para observar el potencial que tienen las Shiny WebApp, es una forma potente y divertida de presentar tus reportes de resultados.
