@@ -5,8 +5,8 @@
   * [Ejemplo 2 (Creación de un Dashboard con pestañas y data tables)](#Ejemplo-2)
   * [Ejemplo 3 (Dashboard dinámico)](#Ejemplo-3)
   * [Ejemplo 4 (Dashboard condicional)](#Ejemplo-4)
-  * [Ejemplo 5 (Dashboard interactivo ejecutivo)](#Ejemplo-4)
-  * [Ejemplo 6 (Publica tu dashboard)](#Ejemplo-4)
+  * [Ejemplo 5 (Dashboard interactivo ejecutivo)](#Ejemplo-5)
+  * [Ejemplo 6 (Publica tu dashboard)](#Ejemplo-6)
 
 * [Retos](#Retos)
   * [ ] [Reto 1 (Crear un Dashboard con pestañas)](#Reto-1)
