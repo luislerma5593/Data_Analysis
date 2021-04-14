@@ -400,6 +400,9 @@ shinyApp(ui, server)
 ```
 
 ## Ejemplo 6
+
+https://www.loom.com/share/aca22ba5b4034823a61c004bb8727f7a
+
 ```r
 # Ejemplo 6. Publica tu dashboard 
 
@@ -417,7 +420,6 @@ Para el desarrollo de este ejemplo se adjunta el siguiente video en el que puede
 
 [![](portada.png)](https://www.loom.com/share/aca22ba5b4034823a61c004bb8727f7a)
 ```
-https://www.loom.com/share/aca22ba5b4034823a61c004bb8727f7a
 
 # Retos
 
