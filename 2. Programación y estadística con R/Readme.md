@@ -205,6 +205,7 @@
 |**`pch = a`**|Tipo de elemento (punto) en un diagrama|
 |**`legend`**|Agregar una leyenda a una gráfica|
 |**`points(type="l")`**|Es para generar una línea en una gráfica|
+|**`names.arg=fg$x`**|Agregar las etiquetas del eje x|
 
 
 ##  dplyr (Manipulación y operaciones con DF)
