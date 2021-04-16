@@ -30,6 +30,7 @@
 |**`rep(a, b)`**|Genera un vector de b entradas, con el valor a|
 |**`expand.grid(v1,v2)`**|Genera un df con todas las opciones posibles de los vectores|
 |**`scan()`**|Lee un archivo y genera una lista o vector|
+|**`arrange(df,x)`**|Ordena las variables que usas como parámetros|
 
 
 ## Instalación de paquetes
