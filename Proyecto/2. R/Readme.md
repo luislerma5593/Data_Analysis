@@ -1,4 +1,4 @@
-# 2. Proyecto
+# 2. R
 
 ```r
 library(DBI)
