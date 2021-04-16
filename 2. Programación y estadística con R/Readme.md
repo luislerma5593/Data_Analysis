@@ -30,7 +30,6 @@
 |**`rep(a, b)`**|Genera un vector de b entradas, con el valor a|
 |**`expand.grid(v1,v2)`**|Genera un df con todas las opciones posibles de los vectores|
 |**`scan()`**|Lee un archivo y genera una lista o vector|
-|**`arrange(df,x)`**|Ordena las variables que usas como parámetros|
 
 
 ## Instalación de paquetes
@@ -97,6 +96,8 @@
 |**`data.frame(edad = vec1, grupo = vec2)`**|Generar un dataframe con los vectores asignados|
 |**`mifile$sexo <- c("H", "M", "H")`**|Agregar un campo|
 |**`mifile$sexo <- NULL`**|Eliminar un campo|
+|**`arrange(df,x)`**|Ordena las variables que usas como parámetros|
+|**`summarise(df, name = mean(x))`**|Crea una variable con el nombre asignado y el valor resultante|
 
 
 ## Descarga y lectura de Datasets
@@ -112,6 +113,7 @@
 |**`download.file(url, destfile , mode = "wb")`**|Descarga un archivo en el directorio establecido|
 |**`read.table("", header=T)`**|Para leer un .txt|
 
+summarise(data, mean_run = mean(R)): Creates a variable named mean_run which is the average of the column run from the dataset data.
 
 ## Matemáticas
 
