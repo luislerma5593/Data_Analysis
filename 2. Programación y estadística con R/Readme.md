@@ -216,7 +216,7 @@
 |**`rename(df,new_col_name) `**|Renombrar columnas|
 |**`mutate(df, modif) `**|Agregar o modificar columnas|
 |**`merge(df1,df2)`**|Unir dos data frames|
-|**`filter(df,condición) `**|Filtrar registros de un df|
+|**`filter(df,condición) `**|Filtrar registros de un df (Se puede usar un "%in%")|
 
 
 ##  ggplot2 (Creación de gráficas)
