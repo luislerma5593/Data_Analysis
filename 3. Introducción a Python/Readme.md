@@ -1,4 +1,4 @@
-
+```
 \ → División
 \\ → Cociente de una división
 % → Residuo de una división
@@ -21,3 +21,4 @@ list(range(x)) → Genera una secuencia de números empezando en 0 hasta x
 def example() → Definir una función
 try / except → Se ejecuta el código del bloque try, si hay error se ejecuta el bloque except.
 		Se pueden usar except para diferentes ti
+```
