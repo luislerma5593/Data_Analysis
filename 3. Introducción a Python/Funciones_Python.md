@@ -1,4 +1,86 @@
+# Instrucciones de Python
+
+https://github.com/beduExpert/B1-Procesamiento-de-Datos-con-Python-2020 
+
 ```py
+
+print(f'La suma de {var_3} y {var_4} es: {var_3 + var_4}')
+
+-------------------------------
+
+x.pop() - Remueve un elemento de una lista
+x.append() - Agrega un elemento al final de la lista
+x.insert(a,x) - Agrega el elemento 'x' en la posición 'a' de la lista
+
+Diccionarios
+
+importar pprint - "Pretty Print"
+
+Tabla
+
+print(f'Registro con id: {registro["id"]}\n')
+print(f'---------------------------------------\n')
+print(f'{("Nombre"):25} | {registro["nombre"]:25}')}
+
+list(map(función,lista)) - Realizar una oepración con cada elemento de una estructura
+
+
+FILTRAR CON DOS FUNCIONES
+
+def numero_es_mayor_que_20(numero):
+    if numero > 20:
+        return True
+
+def numero_es_menor_que_40(numero):
+    if numero < 40:
+        return True
+
+def numero_es_mayor_que_20_y_menor_que_40(numero):
+    return numero_es_mayor_que_20(numero) and numero_es_menor_que_40(numero)
+
+
+INSTALACIÓN DE LIBRERÍAS
+
+!pip install pandas - Se debe usar el ! para que se ejecute en consola.
+
+Puede ser que al instalar una librería, interfiera con otra y no funcione bien. Por eso se deben usar ambientes virtuales.
+
+
+AMBIENTES VIRTUALES
+
+Se debe crear un ambiente en ANACONDA NAVIGATOR
+
+(base) C:\Users\LLerma>conda activate Test
+(Test) C:\Users\LLerma>conda deactivate
+
+PANDAS
+
+serie_1 = pd.Series([3, 7, 9, 8]) - Crear una serie
+serie_1.loc[0) - Es para acceder a un valor de una serie
+
+Serie = pd.Series(diccionario) # De un valor nada mas
+DF = pd.DataFrame(diccionario)
+
+df.shape - Dimensión del DF
+df.head() - Mostrar las primeras columnas del df
+df.tail() - Mostrar las últimas columnas del df
+df.columns() - Mostrar los nombres de las columnas
+
+
+df["Nomre_Col"] = pd.Series(['a', 'b', 'c', 'd', 'e']) -  Crear nueva columna en DF
+
+df.drop(columns=['Nomre_Col']) - Eliminar columna
+
+
+
+JSON
+
+ A = json.load(f) - Asignar un json a una estructura
+df = pd.DataFrame.from_dict(A) - Crear un dataframe
+```
+
+```py
+
 Python
 
 Instrucciones
