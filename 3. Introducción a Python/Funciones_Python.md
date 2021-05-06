@@ -2,8 +2,9 @@
 
 https://github.com/beduExpert/B1-Procesamiento-de-Datos-con-Python-2020 
 
-```py
+El directorio de datasets es: `C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/xxxxx `
 
+```py
 print(f'La suma de {var_3} y {var_4} es: {var_3 + var_4}')
 
 -------------------------------
@@ -55,6 +56,10 @@ Se debe crear un ambiente en ANACONDA NAVIGATOR
 
 PANDAS
 
+- Funciones
+
+https://interactivechaos.com/es/manual/tutorial-de-pandas/dataframes-metodos-de-agregacion-y-estadistica
+
 serie_1 = pd.Series([3, 7, 9, 8]) - Crear una serie
 serie_1.loc[0) - Es para acceder a un valor de una serie
 
@@ -66,17 +71,59 @@ df.head() - Mostrar las primeras columnas del df
 df.tail() - Mostrar las últimas columnas del df
 df.columns() - Mostrar los nombres de las columnas
 
+df.sum(axis=0) - Suma por renglones
+df.sum(axis=1) - Suma por filas
+
 
 df["Nomre_Col"] = pd.Series(['a', 'b', 'c', 'd', 'e']) -  Crear nueva columna en DF
 
 df.drop(columns=['Nomre_Col']) - Eliminar columna
 
+SERIES
 
+Se pueden hacer operaciones a nivel vectorial
+
+np.sqrt(x)
+np.power(x,2)
+
+serie.sum()
+serie.max()
+serie.min()
+seire.count()
+
+NUMPY
+
+https://interactivechaos.com/es/manual/tutorial-de-numpy/funciones-universales-matematicas
+
+np.nan - NaN
+df.isna().sum(axis=0) - Para poder ver cuantos valores NaN existen en un df
+df.dropna(axis=0, how='any/all') - Eliminar columnas (0) / filas (1) con NaNs
+df_no_nans['productos_vendidos'].fillna(0) - Reemplazar los NaNs
+df_dropped.reset_index() - Resetear index ( Y crea una columna con los indices antiguos)
+df_dropped.reset_index(drop = True) - Resetea index y deshecha indices anteriores
+
+df_renamed = df_dropped.rename(columns = diccionario) - 
 
 JSON
 
  A = json.load(f) - Asignar un json a una estructura
 df = pd.DataFrame.from_dict(A) - Crear un dataframe
+
+Lectura de datos
+
+f = open('C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/zomato_reviews-clean.json', 'r')
+json_data = json.load(f)
+f.close()
+
+OTRO
+
+df.shape - Dimensiones
+df.head() - Ver datos iniciales
+df.tail - Ver datos finales
+df.dtypes - Información general
+df.info () - Información general
+df.columns - Obtener nombre de columnas
+
 ```
 
 ```py
