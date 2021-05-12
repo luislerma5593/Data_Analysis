@@ -7,8 +7,14 @@ El directorio de datasets es: `C:/Users/LLerma/Google Drive/Analisis de Datos/M3
 to_csv: `df.to_csv("C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/My_files/Reto_x.csv")`
 
 ```py
+GENERAL
+
+print(list("luis")) - Separa un string en caracteres
+
 print(f'La suma de {var_3} y {var_4} es: {var_3 + var_4}')
 
+df.to_csv("File_name.csv") - Guardar un archivo csv
+pd.read_csv("File_name.csv")  - Leer un archivo csv
 -------------------------------
 
 x.pop() - Remueve un elemento de una lista
@@ -68,6 +74,9 @@ serie_1.loc[0) - Es para acceder a un valor de una serie
 Serie = pd.Series(diccionario) # De un valor nada mas
 DF = pd.DataFrame(diccionario)
 
+pd.concat([serie_1, serie_2], axis=1, keys=['serie_1', 'serie_2']) -> 0 - Vertical / 1 - Hortizontal
+series_concat.loc[('serie_1', 'b')]
+
 df.shape - Dimensión del DF
 df.head() - Mostrar las primeras columnas del df
 df.tail() - Mostrar las últimas columnas del df
@@ -125,6 +134,50 @@ df.tail - Ver datos finales
 df.dtypes - Información general
 df.info () - Información general
 df.columns - Obtener nombre de columnas
+
+---
+
+TRANSFORMACIÓN DE DATOS
+
+temp = df.astype(diccionario_de_conversion)
+pd.to_datetime(df['published_date.numberLong'], unit='ms')
+pd.to_numeric(df['rank.numberInt'], errors='coerce')
+df['col'].str.replace('Descr:', "") - Reemplazar texto en toda una coolumna
+df['col'].str.strip() - Quitar espacios en blanco al inicio y al final del string
+df['col'].str.split(' ', expand=True) - Separa texto dependiendo el separador
+
+df['title'].str.lower()
+df['title'].str.upper()
+df['title'].str.title()
+
+df['rank.numberInt'].map(dicc).head(20)
+
+---
+
+API
+
+GET: Lo usamos cuando queremos pedir información
+POST: Lo usamos cuando queremos enviar información para crear algo (una cuenta de usuario, por ejemplo)
+PUT: Lo usamos cuando queremos sustituir algún dato por otro
+PATCH: Lo usamos cuando queremos modificar algún dato
+DELETE: Lo usamos cuando queremos eliminar algún dato
+
+200: Todo salió bien.
+201: Los recursos que querías crear fueron creados con éxito
+404: El recurso no fue encontrado en ese URL
+400: Los datos que enviaste son incorrectos
+500: Hubo un error interno en el servidor
+
+---- Codigo
+
+r.status_code - Obtener el estatus
+json = r.json() - Obtener el JSON de r y guardarlo en una variable
+json.keys() - Obtener keys
+data = json['near_earth_objects']
+normalized = pd.json_normalize(data) #Cada diccionario se hace una fila, y cada llave se hace un campo
+df = pd.DataFrame.from_dict(normalized) # 
+df.head()
+
 
 ```
 
