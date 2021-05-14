@@ -3,7 +3,7 @@
 https://github.com/beduExpert/B1-Procesamiento-de-Datos-con-Python-2020 
 
 El directorio de datasets es: `C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/xxxxx `
-
+read_csv : `df = pd.read_csv('C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/xxx.csv')`
 to_csv: `df.to_csv("C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/My_files/Reto_x.csv")`
 
 ```py
