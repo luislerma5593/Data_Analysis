@@ -114,6 +114,7 @@ df.dropna(axis=0, how='any/all') - Eliminar columnas (0) / filas (1) con NaNs
 df_no_nans['productos_vendidos'].fillna(0) - Reemplazar los NaNs
 df_dropped.reset_index() - Resetear index ( Y crea una columna con los indices antiguos)
 df_dropped.reset_index(drop = True) - Resetea index y deshecha indices anteriores
+df = df.set_index("columna", drop = True)
 
 df_renamed = df_dropped.rename(columns = diccionario) - 
 
@@ -137,7 +138,9 @@ df.dtypes - Información general
 df.info () - Información general
 df.columns - Obtener nombre de columnas
 
----
+
+--------------------------------------
+
 
 TRANSFORMACIÓN DE DATOS
 
@@ -154,10 +157,54 @@ df['title'].str.title()
 
 df['rank.numberInt'].map(dicc).head(20)
 
----
+- Apply
 
-API
+# Debe ser una tupla de al menos dos elementos, por eso se pone la coma
+df['col'].apply(weeks_on_list_percentage_of_maximum, args=(df['col'].max(),)) 
 
+- Filtros
+
+df['author'].str.startswith('R')
+filtro_precio_mayor_a_20 = df['price.numberDouble'] > 20
+filtro_rank_numero_uno = df['rank.numberInt'] == '1'
+df[filtro_precio_mayor_a_20 & filtro_rank_numero_uno].head()
+
+
+- Sort
+
+df.sort_values('price.numberDouble', ascending=False)
+
+df['publisher'].value_counts()
+
+
+
+
+CONEXIÓN A BASES DE DATOS
+
+- Revisar librería SQLAlchemy
+
+cnx = mysql.connector.connect(
+    host="bedu-llt-2101.cqoiqc8blzss.us-east-2.rds.amazonaws.com",
+    port=3306,
+    user="lldlt",
+    password='***',
+    database='proyecto'
+)
+
+cursor = cnx.cursor()
+
+query = """
+SELECT * 
+FROM horno1
+"""
+
+cursor.execute(query)
+
+result = cursor.fetchall()
+result
+```
+## API
+```py
 GET: Lo usamos cuando queremos pedir información
 POST: Lo usamos cuando queremos enviar información para crear algo (una cuenta de usuario, por ejemplo)
 PUT: Lo usamos cuando queremos sustituir algún dato por otro
@@ -169,9 +216,10 @@ DELETE: Lo usamos cuando queremos eliminar algún dato
 404: El recurso no fue encontrado en ese URL
 400: Los datos que enviaste son incorrectos
 500: Hubo un error interno en el servidor
+```
 
----- Codigo
-
+## JSON to Dataframe
+```py
 r.status_code - Obtener el estatus
 json = r.json() - Obtener el JSON de r y guardarlo en una variable
 json.keys() - Obtener keys
@@ -179,9 +227,9 @@ data = json['near_earth_objects']
 normalized = pd.json_normalize(data) #Cada diccionario se hace una fila, y cada llave se hace un campo
 df = pd.DataFrame.from_dict(normalized) # 
 df.head()
-
-
 ```
+
+---
 
 ```py
 
