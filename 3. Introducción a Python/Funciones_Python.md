@@ -8,9 +8,10 @@ read_csv : `df = pd.read_csv('C:/Users/LLerma/Google Drive/Analisis de Datos/M3 
 
 to_csv: `df.to_csv("C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/My_files/Reto_x.csv")`
 
-```py
-GENERAL
 
+## GENERAL
+
+```py
 print(list("luis")) - Separa un string en caracteres
 
 print(f'La suma de {var_3} y {var_4} es: {var_3 + var_4}')
@@ -26,18 +27,18 @@ x.insert(a,x) - Agrega el elemento 'x' en la posición 'a' de la lista
 Diccionarios
 
 importar pprint - "Pretty Print"
-
-Tabla
-
+```
+## Tabla
+```py
 print(f'Registro con id: {registro["id"]}\n')
 print(f'---------------------------------------\n')
 print(f'{("Nombre"):25} | {registro["nombre"]:25}')}
 
 list(map(función,lista)) - Realizar una oepración con cada elemento de una estructura
+```
 
-
-FILTRAR CON DOS FUNCIONES
-
+## Filtrar con dos funciones
+```py
 def numero_es_mayor_que_20(numero):
     if numero > 20:
         return True
@@ -48,24 +49,24 @@ def numero_es_menor_que_40(numero):
 
 def numero_es_mayor_que_20_y_menor_que_40(numero):
     return numero_es_mayor_que_20(numero) and numero_es_menor_que_40(numero)
+```
 
-
-INSTALACIÓN DE LIBRERÍAS
-
+## Instalación de librerías
+```py
 !pip install pandas - Se debe usar el ! para que se ejecute en consola.
 
 Puede ser que al instalar una librería, interfiera con otra y no funcione bien. Por eso se deben usar ambientes virtuales.
+```
 
-
-AMBIENTES VIRTUALES
-
+## Ambientes virtuales
+```py
 Se debe crear un ambiente en ANACONDA NAVIGATOR
 
 (base) C:\Users\LLerma>conda activate Test
 (Test) C:\Users\LLerma>conda deactivate
-
-PANDAS
-
+```
+## Pandas
+```py
 - Funciones
 
 https://interactivechaos.com/es/manual/tutorial-de-pandas/dataframes-metodos-de-agregacion-y-estadistica
@@ -91,9 +92,10 @@ df.sum(axis=1) - Suma por filas
 df["Nomre_Col"] = pd.Series(['a', 'b', 'c', 'd', 'e']) -  Crear nueva columna en DF
 
 df.drop(columns=['Nomre_Col']) - Eliminar columna
+```
 
-SERIES
-
+## Series
+```py
 Se pueden hacer operaciones a nivel vectorial
 
 np.sqrt(x)
@@ -103,11 +105,11 @@ serie.sum()
 serie.max()
 serie.min()
 seire.count()
-
-NUMPY
+```
+## NUMPY
 
 https://interactivechaos.com/es/manual/tutorial-de-numpy/funciones-universales-matematicas
-
+```py
 np.nan - NaN
 df.isna().sum(axis=0) - Para poder ver cuantos valores NaN existen en un df
 df.dropna(axis=0, how='any/all') - Eliminar columnas (0) / filas (1) con NaNs
@@ -117,9 +119,10 @@ df_dropped.reset_index(drop = True) - Resetea index y deshecha indices anteriore
 df = df.set_index("columna", drop = True)
 
 df_renamed = df_dropped.rename(columns = diccionario) - 
+```
 
-JSON
-
+## JSON
+```py
  A = json.load(f) - Asignar un json a una estructura
 df = pd.DataFrame.from_dict(A) - Crear un dataframe
 
@@ -128,22 +131,19 @@ Lectura de datos
 f = open('C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/zomato_reviews-clean.json', 'r')
 json_data = json.load(f)
 f.close()
-
-OTRO
-
+```
+## Otro
+```py
 df.shape - Dimensiones
 df.head() - Ver datos iniciales
 df.tail - Ver datos finales
 df.dtypes - Información general
 df.info () - Información general
 df.columns - Obtener nombre de columnas
+```
 
-
---------------------------------------
-
-
-TRANSFORMACIÓN DE DATOS
-
+## Transformación de datos
+```py
 temp = df.astype(diccionario_de_conversion)
 pd.to_datetime(df['published_date.numberLong'], unit='ms')
 pd.to_numeric(df['rank.numberInt'], errors='coerce')
@@ -156,33 +156,31 @@ df['title'].str.upper()
 df['title'].str.title()
 
 df['rank.numberInt'].map(dicc).head(20)
-
-- Apply
-
+```
+### Apply
+```py
 # Debe ser una tupla de al menos dos elementos, por eso se pone la coma
 df['col'].apply(weeks_on_list_percentage_of_maximum, args=(df['col'].max(),)) 
+```
 
-- Filtros
-
+### Filtros
+```py
 df['author'].str.startswith('R')
 filtro_precio_mayor_a_20 = df['price.numberDouble'] > 20
 filtro_rank_numero_uno = df['rank.numberInt'] == '1'
 df[filtro_precio_mayor_a_20 & filtro_rank_numero_uno].head()
+```
 
-
-- Sort
-
+### Sort
+```py
 df.sort_values('price.numberDouble', ascending=False)
 
 df['publisher'].value_counts()
-
-
-
-
-CONEXIÓN A BASES DE DATOS
+```
+## Conexión a DB
 
 - Revisar librería SQLAlchemy
-
+```py
 cnx = mysql.connector.connect(
     host="bedu-llt-2101.cqoiqc8blzss.us-east-2.rds.amazonaws.com",
     port=3306,
@@ -203,7 +201,9 @@ cursor.execute(query)
 result = cursor.fetchall()
 result
 ```
+
 ## API
+
 ```py
 GET: Lo usamos cuando queremos pedir información
 POST: Lo usamos cuando queremos enviar información para crear algo (una cuenta de usuario, por ejemplo)
