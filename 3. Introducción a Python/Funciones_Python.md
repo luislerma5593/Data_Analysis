@@ -190,7 +190,7 @@ pd.merge(rat_2500, mov, right_on='movie_id', left_on="movie_id")
 pd.merge(df2,mov[["movie_id","title"]])
 ```
 
-# Group by
+## Group by
 ```py
 users.groupby('gender').size()
 users.groupby('gender')['occupation'].value_counts()
