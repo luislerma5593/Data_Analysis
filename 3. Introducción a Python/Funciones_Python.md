@@ -161,6 +161,11 @@ df['rank.numberInt'].map(dicc).head(20)
 ```py
 # Debe ser una tupla de al menos dos elementos, por eso se pone la coma
 df['col'].apply(weeks_on_list_percentage_of_maximum, args=(df['col'].max(),)) 
+
+def in_list(x):
+    return x in rat_50
+
+df3["movie_id"].apply(in_list)
 ```
 
 ### Filtros
@@ -177,6 +182,24 @@ df.sort_values('price.numberDouble', ascending=False)
 
 df['publisher'].value_counts()
 ```
+
+## Merge
+```py
+users_full = pd.merge(users, occupations, left_on='occupation', right_index=True).sort_index()
+pd.merge(rat_2500, mov, right_on='movie_id', left_on="movie_id")
+pd.merge(df2,mov[["movie_id","title"]])
+```
+
+# Group by
+```py
+users.groupby('gender').size()
+users.groupby('gender')['occupation'].value_counts()
+users.groupby('gender')['occupation'].agg(pd.Series.mode)
+users.groupby('gender')[['age_range', 'occupation']].agg(pd.Series.mode)
+users.groupby('gender')['age_id'].agg(['mean', 'median', 'std'])
+users.groupby('gender')['age_id'].mean()
+```
+
 ## Conexión a DB
 
 - Revisar librería SQLAlchemy
