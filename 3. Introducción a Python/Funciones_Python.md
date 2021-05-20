@@ -8,6 +8,7 @@ read_csv : `df = pd.read_csv('C:/Users/LLerma/Google Drive/Analisis de Datos/M3 
 
 to_csv: `df.to_csv("C:/Users/LLerma/Google Drive/Analisis de Datos/M3 - Introduccion a Python/Files/My_files/Reto_x.csv")`
 
+Para mostrar todos los renlgones `pd.set_option("max_rows", None)`
 
 ## General
 
