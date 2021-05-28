@@ -1,6 +1,29 @@
 
 ## Sesión 02: Introducción a la visualización de datos: Distribuciones
 
+
+a) Asimetría (skewness)
+La asimetría nos da una medida de la falta de simetría en una distribución (duh). Una distribución es simétrica si se ve igual a la izquierda y derecha del punto central.
+
+Una asimetría de 0 indica que la simetría de la distribución es perfecta.
+
+Números positivos indican que hay una asimetría positiva, es decir que la cola de la derecha es más larga que la cola de la izquierda.
+
+Números negativos indican que hay una asimetría negativa, es decir que la cola de la izquierda es más larga que la cola de la derecha.
+
+b) Curtosis (kurtosis)
+La curtosis es una medida de la dispersión de nuestros datos. La curtosis nos dice qué tan escarpada o achatada está nuestra distribución.
+
+Curtosis de 0 indica que la dispersión de nuestros datos es normal (más adelante aprenderemos exactamente qué significa esto).
+
+Curtosis positiva indica que nuestra distribución está achatada. Esto implica que hay más dispersión de nuestros datos, que están más lejanos de nuestro punto central y que por lo tanto tenemos colas largas (comparadas con la cola normal).
+
+Curtosis negativa indica que nuestra distribución está escarpada. Esto implica que hay menos dispersión de nuestros datos, que están más cercanos a nuestro punto central y que por lo tanto tenemos colas cortas (comparadas con la cola normal).
+
+
+
+
+
 ### 1. Objetivos
 
 - Comprender el cocncepto de distribución e identificar la distribución de nuestros datos junto con su importancia.
