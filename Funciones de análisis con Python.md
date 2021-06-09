@@ -175,7 +175,7 @@ filtro_superior = df['price'] < df['price'].quantile(0.75) + (iqr * 1.5)
 
 df_filtrado = df[filtro_inferior & filtro_superior]
 sns.boxplot(df_filtrado['price'])
-```
+
 
 
 ## Modelo de regresión lineal simple
