@@ -22,6 +22,7 @@
 ### Repositorio
 
 - [Repositorio](https://github.com/beduExpert/B2-Analisis-de-Datos-con-Python-2020.git)  
+- Repositorio Javi: https://github.com/jaeem006/beduadp
 
 ### Instalaciones
 
