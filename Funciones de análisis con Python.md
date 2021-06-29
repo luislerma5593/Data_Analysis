@@ -184,6 +184,7 @@ sns.boxplot(df_filtrado['price'])
 
 ## Modelo de regresión lineal simple
 
+```py
 from sklearn.linear_model import LinearRegression
 
 lr = LinearRegression()
