@@ -53,7 +53,7 @@ df_insulin_no_outliers = df_no_zeros[filter_upper_outliers]
 df_filtered.corr()
 plt.figure(figsize=(8, 6))
 ax = sns.heatmap(df_filtered.corr(), vmin=-1, vmax=1, annot=True, cmap="YlGnBu", linewidths=.5);
-
+```
 
 ## VISUALIZACIONES
 
