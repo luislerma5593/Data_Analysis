@@ -101,3 +101,13 @@ Veamos esta gráfica con más detalle.
 ### 3. Postwork
 
 [**`Postwork Sesión 8`**](Postwork/Readme.md)
+
+![image](https://user-images.githubusercontent.com/78183885/124845480-6fc37d80-df5c-11eb-8942-739919f2cf8f.png)
+
+![image](https://user-images.githubusercontent.com/78183885/124845488-72be6e00-df5c-11eb-83fd-e80bbb142d4e.png)
+
+![image](https://user-images.githubusercontent.com/78183885/124845496-7651f500-df5c-11eb-87ec-cfc23b4d0161.png)
+
+
+
+
