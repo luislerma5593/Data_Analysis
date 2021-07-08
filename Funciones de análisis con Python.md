@@ -163,6 +163,19 @@ plt.figure(figsize=(5, 10))
 sns.boxplot(data=merged, x='sex', y='weight'); - 
 
 
+### Gráficas con ciclo for
+
+fig, ax = plt.subplots(ncols=4, nrows=2, figsize=(20,10))
+index = 0
+ax = ax.flatten()
+
+for col, value in X.items():
+    sns.distplot(value, color='g', ax=ax[index])
+    index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+plt.show()
+
+
 ## MATPLOTLIB
 
 plt.scatter(arr_1_1, arr_1_2, c='m'); - Graficar un scatterplot
