@@ -14,6 +14,13 @@ from scipy import stats
 stats.trim_mean(df['price'], 0.1) - Calcula la media truncada, quitando el 10% de los datos
 
 
+## Obtener pares e impares (obtener el resto de los resultados)
+
+v = pd.Series([1,2,3,4,5,6,7,8,9])
+par = v[v%2 == 0]
+impar = v.loc[~v.index.isin(par.index)]
+print(v,par,impar)
+
 PANDAS
 
 x.mean() - Promedio
@@ -27,6 +34,7 @@ df['price'].groupby(segmentos).count() - Agrupar por los rangos
 np.random.normal(loc=0, scale=5, size=10000) - Generar datos con distribucion normal 
 np.random.exponential(scale=1.0, size=10000) - Generar datos con distribución exponencial
 np.random.uniform(low=-1, high=0, size=10000) - Generar datos con distribución uniforme
+np.where(x[:,1] == 1, True, False) - Revisa si los elementos de un vector cumple con una condición, y asigna True o False
 
 - from scipy.stats import skew, kurtosis
 

@@ -24,6 +24,16 @@ print(x_val.shape)
 print(x_test.shape)
 ```
 
+## Matriz de confusión
+```py
+y_predichos = bosque.predict(X_test) #Ejemplo
+
+from sklearn.metrics import confusion_matrix
+
+resultado = confusion_matrix(y_test, y_predichos)
+print(resultado)
+```
+
 K means Ejemplo 1 - http://shabal.in/visuals/kmeans/1.html
 
 K means Ejemplo 2 - https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html
@@ -167,12 +177,77 @@ df_predicciones = df_predicciones.reset_index(drop = True)
 df_predicciones.head(10)
 ```
 
-
+## Árboles de decisión
 ```py
+from sklearn import tree as treeClassifier
+
+#Para las salidas, utilizaremos la variable Y
+y = ["Antonio", "Elly", "Patricia", "María", "Juana", "José", "Luis"]
+
+#Características: 
+#Cabello largo | Usa lentes | Usa sombrero | Es mujer | Tiene bigote | Tiene ojos claros
+x = np.array([
+     [0,1,0,0,0,0], #Antonio: No tiene cabello largo, usa lentes, no usa sombrero, no es mujer, no tiene bigote, no tiene ojos claros
+     [1,1,1,1,0,0], #Elly: Tiene cabello largo, usa lentes, usa sombrero, es mujer, no tiene bigote, no tiene ojos claros
+     [0,0,1,1,0,1], #Patricia: ...
+     [1,1,0,1,0,0], #Maria: ...
+     [0,0,1,1,0,0], #Juana: ...
+     [1,0,0,0,1,1], #José: ...
+     [0,1,1,0,0,1]  #Luis: ...
+    ], dtype=np.int16)
+
+arbol = treeClassifier.DecisionTreeClassifier()
+arbol = arbol.fit(x, y)
+
+plt.figure(figsize = (5,5), dpi = 300)
+treeClassifier.plot_tree(arbol,filled = True);
+plt.show()
+
+caracteristicas = np.array([[1,0,0,0,1,1]], dtype=np.int16)
+print("Nuestro sospechoso es")
+print(arbol.predict(caracteristicas))
 ```
 
-
+## Bosques aleatorios
 ```py
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn import tree as treeClassifier
+from sklearn.ensemble import RandomForestClassifier as forest
+
+#Para las salidas, utilizaremos la variable Y
+y = ["Antonio", "Elly", "Patricia", "María", "Juana", "José", "Luis"]
+
+#Características: 
+#Cabello largo | Usa lentes | Usa sombrero | Es mujer | Tiene bigote | Tiene ojos claros
+x = np.array([
+     [0,1,0,0,0,0], #Antonio: No tiene cabello largo, usa lentes, no usa sombrero, no es mujer, no tiene bigote, no tiene ojos claros
+     [1,1,1,1,0,0], #Elly: Tiene cabello largo, usa lentes, usa sombrero, es mujer, no tiene bigote, no tiene ojos claros
+     [0,0,1,1,0,1], #Patricia: ...
+     [1,1,0,1,0,0], #Maria: ...
+     [0,0,1,1,0,0], #Juana: ...
+     [1,0,0,0,1,1], #José: ...
+     [0,1,1,0,0,1]  #Luis: ...
+    ], dtype=np.int16)
+    
+random_seed = 12
+
+bosque = forest(n_estimators = 800, random_state = random_seed)
+bosque.fit(x, y)
+
+#Este sospechoso es José: Es exactamente igual a los datos del adivina quien.
+caracteristicas = np.array([[1,0,0,0,1,1]], dtype=np.int16)
+print("Nuestro sospechoso original es")
+print(bosque.predict(caracteristicas))
+
+#Se puede seleccionar uno de los árboles del bosque para poder graficarlo
+#Sientete libre de elegir alguno de los arboles:
+numeroArbol = 1
+arbolDelBosque = bosque.estimators_[numeroArbol]
+
+plt.figure(figsize = (5,5), dpi = 300)
+treeClassifier.plot_tree(arbolDelBosque,filled = True);
+plt.show()
 ```
 
 
