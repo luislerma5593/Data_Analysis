@@ -32,6 +32,13 @@ from sklearn.metrics import confusion_matrix
 
 resultado = confusion_matrix(y_test, y_predichos)
 print(resultado)
+
+tn, fp, fn, tp = resultado.ravel()
+
+print("Precision:",metrics.precision_score(y_test, y_pred))
+print("Exactitud:",metrics.accuracy_score(y_test, y_pred))
+print("Sensibilidad:",metrics.recall_score(y_test, y_pred))
+print("Especificidad:", tn / (tn + fp))
 ```
 
 K means Ejemplo 1 - http://shabal.in/visuals/kmeans/1.html
