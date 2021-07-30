@@ -257,6 +257,40 @@ treeClassifier.plot_tree(arbolDelBosque,filled = True);
 plt.show()
 ```
 
+## Clasificación con redes neuronales
+```py
+import numpy as np
+from sklearn.linear_model import SGDClassifier
+from sklearn.metrics import confusion_matrix
+
+# AND
+X = np.array([[0,0],[0,1],[1,0],[1,1]])
+Y = np.array([0,0,0,1])
+
+model = SGDClassifier(max_iter=1000, tol=1e-3)
+model.fit(X, Y)
+results = model.predict(X)
+print("Entradas:"+str(X))
+print("Resultados AND:"+str(results))
+print("Matriz de confusión:", confusion_matrix(Y, results), sep = "\n")
+
+# Con XOR no funciona
+X = np.array([[0,0],[0,1],[1,0],[1,1]])
+Y = np.array([0,1,1,0])
+
+model = SGDClassifier(max_iter=10000, tol=1e-3)
+model.fit(X, Y)
+results = model.predict(X)
+print("Entradas:"+str(X))
+print("Resultados XOR:"+str(results))
+print("Matriz de confusión:", confusion_matrix(Y, results), sep = "\n")
+```
+
+## Redes neuronales artificiales
+```py
+
+```
+Tensor flow, es la librería que se utiliza para aplicaciones más robustas de redes neuronales.
 
 ```py
 ```
@@ -265,13 +299,23 @@ plt.show()
 ```py
 ```
 
+## Clusterización (No supervisado)
 
-```py
-```
+- Kmeans 
+- Kmedias
+
+## Clasificación (Supervisado)
+
+- Árboles de decisión 
+- Bosques aleatorios
+- Redes neuronales artificiales
 
 
-```py
-```
+## Predicción (Supervisado)
 
+- Regresión lineal
+- Regresión lineal múltiple
+- Regresión polinominal
+- Regresión con series de tiempo
 
 
