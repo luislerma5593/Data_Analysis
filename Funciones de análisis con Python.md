@@ -18,6 +18,27 @@ data = r.content
 df = pd.read_csv(io.StringIO(data.decode('utf-8')))
 ```
 
+## API with JSON
+```py
+import requests
+import pandas as pd
+
+endpoint = 'https://api.nasa.gov/neo/rest/v1/neo/browse/'
+payload = {'api_key': 'SDMMZuqROlCSGfK29sSiCFUOcFSTLHKE3fFtDxeO'} # Es un identificador
+
+r = requests.get(endpoint, params=payload)
+
+json = r.json()
+
+json.keys() #Osbervar las llaves que tiene
+
+data = json['near_earth_objects'] #Seleccionara una llave
+
+normalized = pd.json_normalize(data) #Cada diccionario se hace una fila, y cada llave se hace un campo
+df = pd.DataFrame.from_dict(normalized) #No es necesaria, se usa cuando hay muchos valores anidados
+df.head()
+```
+
 ## GENERAL
 
 ```py
