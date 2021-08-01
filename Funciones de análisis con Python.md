@@ -2,7 +2,23 @@ DATA ANALYSIS
 
 ---
 
-GENERAL
+## API with CSV
+```py
+import requests
+import pandas as pd
+import io
+
+endpoint = 'https://www.quandl.com/api/v3/datasets/BDM/SF60653.csv?api_key=fZJDuxFPv7PHAXYsgzj6'
+payload = {'api_key': 'fZJDuxFPv7PHAXYsgzj6'} # Es un identificador
+
+r = requests.get(endpoint, params=payload)
+r.status_code
+
+data = r.content
+df = pd.read_csv(io.StringIO(data.decode('utf-8')))
+```
+
+## GENERAL
 
 ```py
 
