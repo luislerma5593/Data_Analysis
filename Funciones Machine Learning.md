@@ -286,10 +286,51 @@ print("Resultados XOR:"+str(results))
 print("Matriz de confusión:", confusion_matrix(Y, results), sep = "\n")
 ```
 
-## Redes neuronales artificiales
+## Redes neuronales artificiales con sklearn
+
 ```py
+from sklearn.neural_network import MLPClassifier
+X = np.array([[0,0],[0,1],[1,0],[1,1]])
+Y = np.array([0,1,1,0])
+
+
+redNeuronal = MLPClassifier(hidden_layer_sizes=(4,2), # Dos capas, una de 4 y otra de 2 neuronas respectivamente
+                            max_iter=20000,
+                            activation ='logistic',
+                            tol= 1e-7)
+
+redNeuronal.fit(X, Y)
+Y_pred = redNeuronal.predict(X)
+print(Y_pred)    
+```
+
+```py
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn.neural_network import MLPClassifier
+from sklearn.datasets import make_blobs
+from sklearn.model_selection import train_test_split
+
+x, y = make_blobs(n_samples=1000, centers=2, n_features=10)
+plt.scatter(x[:,0], x[:,1], c=y)
+plt.show()
+
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.4)
+
+
+redNeuronal = MLPClassifier(hidden_layer_sizes=(4,2),
+                            max_iter=20000,
+                            activation ='logistic',
+                            tol= 1e-7)
+
+redNeuronal.fit(x_train, y_train)
+y_pred = redNeuronal.predict(x_test)
+print("¡Entrenamiento completado!")
+
+
 
 ```
+
 Tensor flow, es la librería que se utiliza para aplicaciones más robustas de redes neuronales.
 
 ```py
