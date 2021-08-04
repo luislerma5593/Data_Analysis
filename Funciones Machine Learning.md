@@ -257,7 +257,7 @@ treeClassifier.plot_tree(arbolDelBosque,filled = True);
 plt.show()
 ```
 
-## Clasificación con redes neuronales
+## Clasificación con SGDClassifier
 ```py
 import numpy as np
 from sklearn.linear_model import SGDClassifier
@@ -287,23 +287,6 @@ print("Matriz de confusión:", confusion_matrix(Y, results), sep = "\n")
 ```
 
 ## Redes neuronales artificiales con sklearn
-
-```py
-from sklearn.neural_network import MLPClassifier
-X = np.array([[0,0],[0,1],[1,0],[1,1]])
-Y = np.array([0,1,1,0])
-
-
-redNeuronal = MLPClassifier(hidden_layer_sizes=(4,2), # Dos capas, una de 4 y otra de 2 neuronas respectivamente
-                            max_iter=20000,
-                            activation ='logistic',
-                            tol= 1e-7)
-
-redNeuronal.fit(X, Y)
-Y_pred = redNeuronal.predict(X)
-print(Y_pred)    
-```
-
 ```py
 import numpy as np
 from matplotlib import pyplot as plt
@@ -326,13 +309,60 @@ redNeuronal = MLPClassifier(hidden_layer_sizes=(4,2),
 redNeuronal.fit(x_train, y_train)
 y_pred = redNeuronal.predict(x_test)
 print("¡Entrenamiento completado!")
-
-
-
 ```
-
 Tensor flow, es la librería que se utiliza para aplicaciones más robustas de redes neuronales.
 
+## Máquinas de soporte vectorial
+```py
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.model_selection import train_test_split
+
+x, y = make_blobs(n_samples=1000, centers=2, n_features=10)
+plt.scatter(x[:,0], x[:,1], c=y)
+plt.show()
+
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.4)
+
+from sklearn.svm import SVC #Support Vector Classifier
+
+SupportVectorMachine = SVC()
+SupportVectorMachine.fit(x_train, y_train) 
+y_pred = SupportVectorMachine.predict(x_test) 
+
+resultado = confusion_matrix(y_test, y_pred)
+print(resultado)
+```
+
+## Naive Bayes Classificator
+```py
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.model_selection import train_test_split
+
+x, y = make_blobs(n_samples=1000, centers=2, n_features=10)
+plt.scatter(x[:,0], x[:,1], c=y)
+plt.show()
+
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.4)
+
+from sklearn.naive_bayes import GaussianNB
+
+NaiveBayes = GaussianNB()
+NaiveBayes.fit(x_train, y_train) 
+y_pred = NaiveBayes.predict(x_test) 
+
+resultado = confusion_matrix(y_test, y_pred)
+print(resultado)
+```
+
+
+```py
+```
+
+
 ```py
 ```
 
@@ -340,16 +370,25 @@ Tensor flow, es la librería que se utiliza para aplicaciones más robustas de r
 ```py
 ```
 
-## Clusterización (No supervisado)
+
+```py
+```
+
+
+
+## Clusterización / Agrupación (No supervisado)
 
 - Kmeans 
 - Kmedias
 
+
 ## Clasificación (Supervisado)
 
 - Árboles de decisión 
-- Bosques aleatorios
-- Redes neuronales artificiales
+- Bosques aleatorios (Cuando se puede usar un if/else, es decir, cuando hay una o varias condicionales. Además de cuando hay correlación entre variables y hay relación con la salida)
+- Redes neuronales artificiales (Cuando variables de entrada no tienen relación con la salida)
+- Máquinas de soporte vectorial (Support Vector Machine)
+- Teorema ingenuo de Bayes (Naive Bayes)
 
 
 ## Predicción (Supervisado)
