@@ -87,6 +87,9 @@ Igualmente, hemos visto cómo funcionan las redes neuronales artificiales. La me
 
 ## Clasificador 3: Support Vector Machine (SVM).
 
+![image](https://user-images.githubusercontent.com/78183885/128107625-e54ce754-dace-45cd-a243-17289aa4c14f.png)
+
+
 Este clasificador no lo hemos visto en sesiones pasadas y la razón es importante: Las matemáticas detrás de ellos son bastante complejas para que este clasificador pudiésemos considerarlo intuitivo. Sin embargo, trataremos brevemente la funcionalidad de la máquina de soporte vectorial. 
 
 Una máquina de soporte vectorial consiste en crear un hiperplano que separe óptimamente una clase de otra. En algunas ocasiones el hiperplano se genera haciendo proyecciones de dimensionalidad superior (lo sé, no es fácil de explicar a menos que estés bien versado en matemáticas. Pero puedes observar esta imagen para que te dé una idea de lo que hablo).
