@@ -358,22 +358,148 @@ resultado = confusion_matrix(y_test, y_pred)
 print(resultado)
 ```
 
+# Procesamiento de imágemes    
 
+## Leer imágenes
 ```py
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+imageOpenCV = cv2.imread("Imagenes/pueblacity.jpg", cv2.IMREAD_COLOR) #Se lee en BGR
+imagen = cv2.cvtColor(imageOpenCV, cv2.COLOR_BGR2RGB) #Para cambiar a RGB
+
+print(type(imagen))
+print("Tamaño de la imagen: (alto, ancho, canales)")
+print(imagen.shape)
+plt.figure(figsize=(40,40))
+plt.imshow(imagen)
 ```
 
-
+##Obtener una sola capa de una imagen
 ```py
+canal_rojo = imagen[:,:,0]
+print(canal_rojo.shape)
+
+#Volveremos los canales que ignoramos a 0.
+dummy_channel = np.zeros_like(canal_rojo)
+img_canal_rojo = np.dstack((canal_rojo, dummy_channel, dummy_channel))
+
+print(img_canal_rojo.shape)
+plt.figure(figsize=(40,40))
+plt.imshow(img_canal_rojo)
 ```
 
-
+## Imagen en escala de grises
 ```py
+imagen_grayscale = np.sum(imagen,axis = 2)
+imagen_grayscale = imagen_grayscale / 3
+print(imagen_grayscale.shape)
+plt.figure(figsize=(40,40))
+plt.imshow(imagen_grayscale,cmap=plt.cm.gray)       
 ```
 
-
+## Funciones
 ```py
+def obtenerNegativo(imagen):
+    negativo = np.abs(imagen - 255)
+    return negativo
+
+def reducirColores(imagenGris, cantidadDeColores):
+    if(cantidadDeColores <= 0):
+        return np.zeros_like(imagenGris)
+    
+    stepSize = int(255 / (cantidadDeColores))
+    for counter in range (0, 255, stepSize):
+        if(counter == 0):
+            buffer = np.zeros_like(imagenGris)
+        else:
+            imgFiltrada = np.where(((imagenGris > (counter - stepSize)) & (imagenGris <= counter)), counter, 0)
+            buffer = np.add(buffer, imgFiltrada)
+    return buffer
+    
+def binarizar(imagenGris, threshold):
+    imgBinaria = np.where(imagenGris > threshold, 255, 0)
+    return imgBinaria
+    
+def convertirAGrayScale(imagen):
+    imagenGris = np.sum(imagen, axis = 2) / 3    
+    return imagenGris
+
+imagenGris = convertirAGrayScale(imagen)
+plt.figure(figsize=(40,40))
+plt.imshow(imagenGris, cmap=plt.cm.gray)
 ```
 
+## Recortar imagen
+```py
+def recortar(imgOriginal, imgBinarizada):
+    patronBinario = np.where(imgBinarizada > 0, 0, 1) #negativo = np.abs(imagen - 255)
+    #patronBinario = obtenerNegativo(imgBinarizada) #negativo = np.abs(imagen - 255)
+    imgRecortada_rojo = np.multiply(imgOriginal[:,:,0],patronBinario)
+    imgRecortada_verde = np.multiply(imgOriginal[:,:,1],patronBinario)
+    imgRecortada_azul = np.multiply(imgOriginal[:,:,2],patronBinario)
+    imgRecortada = np.dstack((imgRecortada_rojo, imgRecortada_verde, imgRecortada_azul))
+    return imgRecortada
+
+manzana_recortada = recortar(imagenManzana, imagenManzana_bin)
+
+plt.figure(figsize=(7,7))
+plt.imshow(manzana_recortada)
+plt.show()
+```
+
+## Histograma de colores    
+```py
+def crearHistograma(imagen):
+    histograma = np.zeros((256))
+    imgEnArray = np.ravel(imagen)
+    for counter in range(0, len(imgEnArray)):
+        histograma[int(imgEnArray[counter])]+=1
+        
+    return histograma
+
+histograma = crearHistograma(imagen[:,:,0])
+print("Color mas usado:"+str(np.argmax(histograma))+". Usado "+str(np.max(histograma))+" veces.")
+
+histogramaRojo = crearHistograma(imagen[:,:,0])
+histogramaVerde = crearHistograma(imagen[:,:,1])
+histogramaAzul = crearHistograma(imagen[:,:,2])
+
+plt.bar(np.arange(len(histogramaRojo)),histogramaRojo, color='red')
+plt.show()
+plt.bar(np.arange(len(histogramaVerde)),histogramaVerde, color='green')
+plt.show()
+plt.bar(np.arange(len(histogramaAzul)),histogramaAzul, color='blue')
+plt.show()
+```
+
+## Crear descriptor
+```py
+def crearDescriptor(imagen):
+    histogramaRojo = crearHistograma(imagen[:,:,0])
+    histogramaVerde = crearHistograma(imagen[:,:,1])
+    histogramaAzul = crearHistograma(imagen[:,:,2])
+    
+    descriptor = np.concatenate([histogramaRojo, histogramaVerde, histogramaAzul])
+    print(descriptor.shape)
+    return descriptor
+    
+ descriptorManzana1 = crearDescriptor(imgManzana1)
+plt.ylim(0,500)
+plt.bar(np.arange(len(descriptorManzana1)),descriptorManzana1, color='red')
+plt.show()
+
+descriptorManzana2 = crearDescriptor(imgManzana2)
+plt.ylim(0,500)
+plt.bar(np.arange(len(descriptorManzana2)),descriptorManzana2, color='red')
+plt.show()
+
+descriptorManzana3 = crearDescriptor(imgManzana3)
+plt.ylim(0,500)
+plt.bar(np.arange(len(descriptorManzana3)),descriptorManzana3, color='red')
+plt.show()
+```
 
 
 ## Clusterización / Agrupación (No supervisado)
