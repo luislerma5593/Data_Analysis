@@ -72,6 +72,7 @@ np.random.normal(loc=0, scale=5, size=10000) - Generar datos con distribucion no
 np.random.exponential(scale=1.0, size=10000) - Generar datos con distribución exponencial
 np.random.uniform(low=-1, high=0, size=10000) - Generar datos con distribución uniforme
 np.where(x[:,1] == 1, True, False) - Revisa si los elementos de un vector cumple con una condición, y asigna True o False
+np.argmax(var) - Regresa la posición del valor máximo
 
 - from scipy.stats import skew, kurtosis
 
