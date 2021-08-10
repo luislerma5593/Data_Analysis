@@ -358,7 +358,7 @@ resultado = confusion_matrix(y_test, y_pred)
 print(resultado)
 ```
 
-# Procesamiento de imágemes    
+# Procesamiento de imágenes    
 
 ## Leer imágenes
 ```py
