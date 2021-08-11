@@ -648,23 +648,5 @@ plt.show()
 - Regresión polinominal
 - Regresión con series de tiempo
 
-##############################
 
-.describe() - Obtener estadísticas importantes de los datos
-labels, counts = np.unique(y, return_counts=True) - Regresa un vector de etiquetas y otro de las cuentas
-
-------------------
-La clasificación de spearman, se debe usar para aplicaciones de clasificación y hay variables cualitiativas
-
-Regresión → Pearson
-Clasificación → Spearman
-------------
-
-Investigar 
-
-- Preprocesamiento de datos
-- Análisis de componentes principales
-- Transformación a valor Z
-
---------------------------------
 
