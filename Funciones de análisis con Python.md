@@ -65,14 +65,16 @@ x.median() - Mediana
 x.std() - Desviación estándar muestral
 pd.cut(prices, 20) - Para poder obtener rangos de una serie
 df['price'].groupby(segmentos).count() - Agrupar por los rangos
+df.describe() - Obtener métricas principales de los datos
 
 #  NUMPY
 
 np.random.normal(loc=0, scale=5, size=10000) - Generar datos con distribucion normal 
 np.random.exponential(scale=1.0, size=10000) - Generar datos con distribución exponencial
 np.random.uniform(low=-1, high=0, size=10000) - Generar datos con distribución uniforme
-np.where(x[:,1] == 1, True, False) - Revisa si los elementos de un vector cumple con una condición, y asigna True o False
+np.where(x[:,1] == 1, X, Y) - Revisa si los elementos de un vector cumple con una condición, y asigna X o Y
 np.argmax(var) - Regresa la posición del valor máximo
+labels, counts = np.unique(y, return_counts=True) - Regresa un vector de etiquetas y otro del conteo
 
 - from scipy.stats import skew, kurtosis
 
@@ -149,6 +151,17 @@ ax = sns.barplot(counts.index, counts)
 ax.set_title('Conteo de Ratings de restaurantes')
 ax.set(ylabel='count');
 
+### Graficar subplots con ciclo
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index = 0
+ax = ax.flatten()
+
+for col, value in X.items():
+    sns.distplot(value, color='g', ax=ax[index])
+    index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+plt.show()
 
 ### Rotar etiquetas eje x
 

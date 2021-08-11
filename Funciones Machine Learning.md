@@ -358,7 +358,126 @@ resultado = confusion_matrix(y_test, y_pred)
 print(resultado)
 ```
 
-# Procesamiento de imágenes    
+## RandomizedSearchCV
+La función **RandomizedSearchCV** toma 3 argumentos principales: 
+1. La instancia del modelo a entrenar 
+2. Un diccionario con todos los hiperparámetros a probar 
+3. El número de validaciones cruzadas a realizar
+```py
+# Hiperparámetros
+n_neighbors = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+weights = ['uniform', 'distance']
+metric = ['euclidean', 'manhattan', 'minkowski']
+
+param_grid = {"n_neighbors": n_neighbors, "weights": weights, "metric": metric}
+
+# Instancia del modelo
+from sklearn.neighbors import KNeighborsClassifier
+KNN = KNeighborsClassifier()
+
+# Ajusta de hiperparámetros y entrenamiento
+KNN_cv = RandomizedSearchCV(KNN, param_grid, cv = 5)
+KNN_cv.fit(X_train, y_train)
+
+# Hiperparámetros que generan el mejor modelo
+print("K vecinos más cercanos con hiperparámetros ajustados: {}".format(KNN_cv.best_params_))
+
+# Evaluación del modelo
+print("Precisión del modelo en el subconjunto de entrenamiento: {}".format(KNN_cv.best_score_.round(2)))
+print("Precisión del modelo en el subconjunto de prueba: {}".format(KNN_cv.score(X_test, y_test).round(2)))
+```
+
+## Técnica de preprocesamiento de datos (Transformación → Power Transformer)
+
+Se usa para poder tratar de quitar los sesgos en los datos, es especial en regresión logística y el clasificador ingenuo de Bayes, que se basan en la distribución de los datos
+```py
+from sklearn.preprocessing import PowerTransformer 
+
+ss = PowerTransformer()
+X_scaled = ss.fit_transform(X)
+
+df_scaled = pd.DataFrame(X_scaled)
+print(df_scaled.describe().T.round(2))
+```
+
+## Técnica de preprocesamiento de datos (Transformación → Standard Scaler)
+```py
+from sklearn.preprocessing import StandardScaler
+
+# Estandarizar variables
+ss = StandardScaler()
+X_ss = ss.fit_transform(X) #Ajusta y transforma
+
+x_df = pd.DataFrame(X_ss)
+print(x_df.describe().T)
+```
+
+## Análisis de componentes principales 
+
+Revisar M5S9 - Sesión_9_NoSupervisado
+
+```py
+from sklearn.decomposition import PCA #Análisis de componentes principales
+
+# Crear la instancia PCA y ajustar los datos
+pca = PCA()
+pca.fit(X_ss)
+
+# Gráfica de varianza explicada
+features = range(pca.n_components_)
+plt.bar(features, pca.explained_variance_)
+plt.xlabel('PCA feature')
+plt.ylabel('variance')
+plt.xticks(features)
+plt.show()
+
+
+#Si deseamos explicar aproximadamente el 90% de la varianza original, deberiamos retener los primeros dos componentes principales, 
+#los cuales explican aproximadamente el 60% y 30% respectivamente.
+
+#Con base en este análisis, retenemos los dos componentes principales
+
+
+# Generemos la instancia indicando el número de componentes a retener
+pca = PCA(n_components = 2)
+
+# Ajustamos y transformamos los datos
+pca_features = pca.fit_transform(X_ss)
+print(pca_features)
+print(pca_features.shape)
+
+# Gráfica de varianza explicada (Ya nada mas con 2 componentes)
+features = range(pca.n_components_)
+plt.bar(features, pca.explained_variance_)
+plt.xlabel('PCA feature')
+plt.ylabel('variance')
+plt.xticks(features)
+plt.show()
+
+# Asignamos los componentes a dos variables
+xs = pca_features[:,0]
+ys = pca_features[:,1]
+
+#Extraemos las etiquetas de las entidades
+ent = df['entidad']
+ent = np.asarray(ent)
+
+# Generemos el diagrama de dispersión
+plt.figure(figsize=(15, 10))
+plt.scatter(xs, ys)
+
+for i, n in enumerate(ent):
+    plt.annotate(n, (xs[i], ys[i]))
+    
+plt.title('Finanzas Públicas - Entidades Federativas')
+plt.xlabel('PCA 1')
+plt.ylabel('PCA 2')
+
+plt.show()
+```
+
+
+# Procesamiento de imágemes    
 
 ## Leer imágenes
 ```py
@@ -499,13 +618,18 @@ descriptorManzana3 = crearDescriptor(imgManzana3)
 plt.ylim(0,500)
 plt.bar(np.arange(len(descriptorManzana3)),descriptorManzana3, color='red')
 plt.show()
-```
 
+```
 
 ## Clusterización / Agrupación (No supervisado)
 
 - Kmeans 
 - Kmedias
+
+
+## Técnica de reduccion de dimensiones (No supervisado)
+
+- Análisis de componentes principales
 
 
 ## Clasificación (Supervisado)
@@ -524,4 +648,23 @@ plt.show()
 - Regresión polinominal
 - Regresión con series de tiempo
 
+##############################
+
+.describe() - Obtener estadísticas importantes de los datos
+labels, counts = np.unique(y, return_counts=True) - Regresa un vector de etiquetas y otro de las cuentas
+
+------------------
+La clasificación de spearman, se debe usar para aplicaciones de clasificación y hay variables cualitiativas
+
+Regresión → Pearson
+Clasificación → Spearman
+------------
+
+Investigar 
+
+- Preprocesamiento de datos
+- Análisis de componentes principales
+- Transformación a valor Z
+
+--------------------------------
 

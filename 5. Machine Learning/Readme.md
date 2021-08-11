@@ -20,3 +20,18 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
  - [Sesión 7: Arena de Clasificadores ](./Sesion-07)
 
  - [Sesión 8: Fundamentos de procesamiento de imágenes ](./Sesion-08)
+
+---
+
+## Apuntes principales
+
+La clasificación de spearman, se debe usar para aplicaciones de clasificación y hay variables cualitiativas
+
+Regresión → Pearson
+Clasificación → Spearman
+
+#### Investigar 
+
+- Preprocesamiento de datos
+- Análisis de componentes principales
+- Transformación a valor Z
