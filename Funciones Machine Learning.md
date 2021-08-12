@@ -639,6 +639,7 @@ plt.show()
 - Redes neuronales artificiales (Cuando variables de entrada no tienen relación con la salida)
 - Máquinas de soporte vectorial (Support Vector Machine)
 - Teorema ingenuo de Bayes (Naive Bayes)
+- Regresión logística
 
 
 ## Predicción (Supervisado)
