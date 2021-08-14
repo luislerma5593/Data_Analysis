@@ -522,6 +522,8 @@ freq_dist_no_stop_words.plot(50, cumulative=True) - Graficar la proporción del 
 
 ## Análisis de sentimientos
 
+https://textblob.readthedocs.io/en/dev/
+
 from textblob import TextBlob
 TextBlob(grouped_by_title.iloc[100])
 TextBlob(grouped_by_title.iloc[100]).sentiment - Obtener análisis de sentimientos (polaridad y subjetividad)

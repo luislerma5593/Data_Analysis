@@ -650,4 +650,29 @@ plt.show()
 - Regresión con series de tiempo
 
 
+---
+
+Proyecto
+
+- analisis discriminatorio
+
+- Seleccionar el modelo una vez que se prueban los hperparámetros
+
+- Series de tiempo
+
+
+Investigar
+
+- Predictive hacks arima model in python
+
+- Visual studio
+
+- Mvs para regresión
+
+- Preprocesamiento de datos
+- Análisis de componentes principales
+- Transformación a valor Z
+- Transformaciones → normalización y la transformación logarítmica
+- Power Transformer
+- Standar Scaler
 
