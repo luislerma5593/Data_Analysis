@@ -326,3 +326,21 @@ ggplot(pag, aes(x = Var1, y = Freq)) +
   ylab("Probabilidades") +
   theme_minimal()
   ```
+  
+  ## Otras funciones
+  
+  ```r
+ file.choose() - Buscar el path de un archivo
+dmy() → #df = mutate(df, Date = as.Date(Date, "%d/%m/%y"))
+separate(col = Title, into = c("Titulo","Temporada","Episodio"), sep = ":") - Separa los strings
+
+  
+group_by(Titulo) %>% summarise(n = sum(n)) -Group funciona con summarise
+arrange(desc(n)) - Ordena el df
+
+maratones_vis = agrupacion%>%
+  top_n(10) %>%
+  ggplot(aes(x = reorder(Titulo,n), y = n)) + #Se tienen que ordenar
+
+
+  ```
