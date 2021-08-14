@@ -7,7 +7,7 @@ library(tidyr)
 library(lubridate)
 library(ggplot2)
 
-path = file.choose()
+path = "C:\\Users\\LLerma\\Documents\\GitHub\\Data_Analysis\\Ejercicios\\Datasets\\NetflixViewingHistory2.csv"
 
 df = read.csv(path)
 str(df)
