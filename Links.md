@@ -11,4 +11,16 @@
 
 ## 2. R
 
-- Github R - https://github.com/beduExpert/Programacion-con-R-2021
+- https://github.com/beduExpert/Programacion-con-R-2021
+
+## 3. Procesamiento de datos con Python
+
+- https://github.com/beduExpert/B1-Procesamiento-de-Datos-con-Python-2020-2021
+
+## 4. Análisis de datos con Python
+
+- https://github.com/beduExpert/B2-Analisis-de-Datos-con-Python-2020
+
+## 5. Machine Learning
+
+- https://github.com/beduExpert/C1-Machine-Learning-2020
