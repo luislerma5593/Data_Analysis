@@ -5,7 +5,6 @@ library(dplyr)
 library(zoo)
 library(tidyr)
 library(lubridate)
-library(ggplot2)
 
 path = "C:\\Users\\LLerma\\Documents\\GitHub\\Data_Analysis\\Ejercicios\\Datasets\\NetflixViewingHistory2.csv"
 
