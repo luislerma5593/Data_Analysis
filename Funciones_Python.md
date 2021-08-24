@@ -67,6 +67,7 @@ Se debe crear un ambiente en ANACONDA NAVIGATOR
 (Test) C:\Users\LLerma>conda deactivate
 ```
 ## Pandas
+
 ```py
 - Funciones
 
@@ -93,6 +94,16 @@ df.sum(axis=1) - Suma por filas
 df["Nomre_Col"] = pd.Series(['a', 'b', 'c', 'd', 'e']) -  Crear nueva columna en DF
 
 df.drop(columns=['Nomre_Col']) - Eliminar columna
+```
+
+### Cambiar índice df
+```py
+df.set_index(pd.Index(["2","4","6","8","10"]))
+```
+
+### Cambiar nombre de columnas df
+```py
+df.columns = ["A","B","C"]
 ```
 
 ## Series
