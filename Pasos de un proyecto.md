@@ -9,7 +9,7 @@ Más información en los postworks del módulo 3 "Introducción a Python"
 5. Limpieza de datos y agregaciones
 6. Automatización y APIs
 7. Transformación, filtración y ordenamiento de datos
-
+---
 ### Limpieza
 
 - Limpiar las columnas con demasiados nans
