@@ -66,7 +66,7 @@ La clasificación de spearman, se debe usar para aplicaciones de clasificación 
 
 Regresión → Pearson
 Clasificación → Spearman
-
+---
 #### Proyecto
 
 - Análisis discriminatorio
