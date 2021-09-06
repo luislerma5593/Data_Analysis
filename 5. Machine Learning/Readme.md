@@ -51,7 +51,7 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
 - Regresión polinominal
 - Regresión con series de tiempo
 - Regresión logística
-- 
+
 ---
 
 ### Transformaciones
