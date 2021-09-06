@@ -652,21 +652,15 @@ plt.show()
 
 ---
 
-Proyecto
+### Proyecto
 
-- analisis discriminatorio
-
-- Seleccionar el modelo una vez que se prueban los hperparámetros
-
+- Análisis discriminatorio
 - Series de tiempo
 
-
-Investigar
+### Investigar
 
 - Predictive hacks arima model in python
-
 - Visual studio
-
 - Mvs para regresión
 
 - Preprocesamiento de datos
