@@ -42,7 +42,7 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
 - Redes neuronales artificiales (Cuando variables de entrada no tienen relación con la salida)
 - Máquinas de soporte vectorial (Support Vector Machine)
 - Teorema ingenuo de Bayes (Naive Bayes)
-
+- Regresión logística
 
 ## Predicción (Supervisado)
 
@@ -50,7 +50,6 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
 - Regresión lineal múltiple
 - Regresión polinominal
 - Regresión con series de tiempo
-- Regresión logística
 
 ---
 
