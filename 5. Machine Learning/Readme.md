@@ -35,7 +35,6 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
 
 - Análisis de componentes principales
 
-
 ## Clasificación (Supervisado)
 
 - Árboles de decisión 
@@ -51,7 +50,8 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
 - Regresión lineal múltiple
 - Regresión polinominal
 - Regresión con series de tiempo
-
+- Regresión logística
+- 
 ---
 
 ### Transformaciones
@@ -67,7 +67,16 @@ La clasificación de spearman, se debe usar para aplicaciones de clasificación 
 Regresión → Pearson
 Clasificación → Spearman
 
+#### Proyecto
+
+- Análisis discriminatorio
+- Series de tiempo
+
 #### Investigar 
+
+- Predictive hacks arima model in python
+- Visual studio
+- Mvs para regresión
 
 - Preprocesamiento de datos
 - Análisis de componentes principales
