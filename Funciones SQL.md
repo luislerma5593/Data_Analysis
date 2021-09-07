@@ -50,7 +50,6 @@ columnN data_type(size)
 )
 
 # Example
-
 CREATE TABLE Users (
 id int NOT NULL AUTO_INCREMENT,
 username varchar(40) NOT NULL, 
@@ -81,6 +80,56 @@ CHAR(M) - Fixed-length character string. Size is specified in parenthesis. Max 2
 VARCHAR(M) - Variable-length character string. Max size is specified in parenthesis.
 BLOB - "Binary Large Objects" and are used to store large amounts of binary data, such as images or other types of files.
 TEXT - Large amount of text data.
+```
+
+### Modify a table
+```sql
+ALTER TABLE People ADD DateOfBirth date - Add column to a table
+ALTER TABLE People RENAME FirstName TO name - Rename a column in a table
+RENAME TABLE ​People TO Users - Rename a table
+```
+
+### Dropping
+```sql
+ALTER TABLE People DROP COLUMN DateOfBirth - Delete column
+DROP TABLE ​People - Drop table
+```
+
+### Modify table and update
+```sql
+ALTER TABLE cities ADD AttractivePlace varchar(100);
+
+UPDATE cities
+SET AttractivePlace = 'Belem Tower' WHERE name = 'Lisbon';
+UPDATE cities
+SET AttractivePlace = 'Plaza Mayor' WHERE name = 'Madrid';
+UPDATE cities
+SET AttractivePlace = 'Eiffel Tower' WHERE name = 'Paris';
+
+SELECT * FROM cities;
+```
+
+### Views
+```sql
+CREATE VIEW view_name AS
+SELECT column_name(s)
+FROM table_name
+WHERE condition;
+```
+
+### Create or replace View
+```sql
+CREATE OR REPLACE VIEW List AS
+SELECT FirstName, LastName, Salary
+FROM  Employees;
+```
+
+### Drop view
+```sql
+DROP VIEW ​List;
+```
+
+```sql
 ```
 
 ```sql
