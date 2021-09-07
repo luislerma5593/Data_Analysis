@@ -1,5 +1,6 @@
 # SQL Functions
 
+### Basic
 ```sql
 SHOW DATABASES - Show DB available
 SHOW TABLES - Show tables available
