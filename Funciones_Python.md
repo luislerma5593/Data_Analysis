@@ -238,7 +238,6 @@ result
 ```
 
 ## API
-
 ```py
 GET: Lo usamos cuando queremos pedir información
 POST: Lo usamos cuando queremos enviar información para crear algo (una cuenta de usuario, por ejemplo)
@@ -263,6 +262,79 @@ normalized = pd.json_normalize(data) #Cada diccionario se hace una fila, y cada 
 df = pd.DataFrame.from_dict(normalized) # 
 df.head()
 ```
+
+---
+
+## OOP (Object Oriented Programming)
+```py
+class Cat:
+    def __init__(self, color, legs):
+        self.color = color
+        self.legs = legs
+
+felix = Cat("ginger", 4)
+print(felix.legs)
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
