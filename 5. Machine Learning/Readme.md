@@ -55,6 +55,8 @@ Identificar, seleccionar, construir e implementar algoritmos de Machine Learning
 
 ### Transformaciones
 
+- https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
+
 Adicionalmente, importamos la función "StandardScaler" que nos será útil para estandarizar nuestros datos. Este paso es fundamental cuando van a utilizarse modelos de machine learning que se construyen sobre supuestos en la distribución de los datos, como puede ser la regresión logística y el clasificador ingenuo de Bayes. Modelos como las máquinas de soporte vectorial, los árboles de decisión o las redes neuronales no tienen este tipo de supuestos, sin embargo, ayuda mucho a agilizar el proceso.
 
 Otras técnicas de preprocesamiento son la normalización y la transformación logarítmica; te invito a que las investigues.
