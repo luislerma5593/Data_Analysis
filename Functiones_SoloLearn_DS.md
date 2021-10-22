@@ -14,9 +14,18 @@ np.nanmean(x) - Calculates the mean ignoring NaNs
 np.isnan(x) - Return True or False
 np.around(array,n) - Round the numbers of an array
 
+np.linalg.inv() - Return inverse when det != 0
+np.linalg.pinv() -Return inverse when det != 0 or pseudo inverse when det = 0
+
 np.sin(x) - Creates the values for y from x
 
 np.linspace(a,b,c) - Creates c numbers from a to b 
+```
+
+```py
+# Example to get two numbers in one line
+
+n, p = [int(x) for x in input().split()]
 ```
 
 # Pandas
@@ -110,9 +119,17 @@ To evalutae you cane either use:
 - R-squared
 
 Compare different models
+
+## Classification
+
+KN Neighbors Classifier
+- https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
 ```py
 ```
 
+## Clustering 
+
+- https://scikit-learn.org/stable/modules/clustering.html#overview-of-clustering-methods
 ```py
 ```
 

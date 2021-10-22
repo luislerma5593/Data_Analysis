@@ -387,6 +387,10 @@ print("Precisión del modelo en el subconjunto de entrenamiento: {}".format(KNN_
 print("Precisión del modelo en el subconjunto de prueba: {}".format(KNN_cv.score(X_test, y_test).round(2)))
 ```
 
+## Pre-procesamiento de datos
+
+- https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
+
 ## Técnica de preprocesamiento de datos (Transformación → Power Transformer)
 
 Se usa para poder tratar de quitar los sesgos en los datos, es especial en regresión logística y el clasificador ingenuo de Bayes, que se basan en la distribución de los datos
