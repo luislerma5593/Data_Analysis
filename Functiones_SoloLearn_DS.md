@@ -124,17 +124,15 @@ Compare different models
 
 KN Neighbors Classifier
 - https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
-```py
-```
 
 ## Clustering 
 
+### Clustering methods
 - https://scikit-learn.org/stable/modules/clustering.html#overview-of-clustering-methods
-```py
-```
 
-```py
-```
+### Pre-processing
+- https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
+
 
 
 
