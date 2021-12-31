@@ -141,7 +141,14 @@ END
 
 CALL insert_row("F",9, 2);
 ```
+
+## Examples
+
 ### REGEX
 ```sql
 SELECT DISTINCT(city) FROM station WHERE city REGEXP "^[aeiou]"
+```
+### Substract not null
+```sql
+SELECT count(*) - count(industry) AS missing FROM fortune500;
 ```
