@@ -141,3 +141,7 @@ END
 
 CALL insert_row("F",9, 2);
 ```
+### REGEX
+```sql
+SELECT DISTINCT(city) FROM station WHERE city REGEXP "^[aeiou]"
+```
