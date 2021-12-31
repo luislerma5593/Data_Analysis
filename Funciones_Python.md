@@ -1178,3 +1178,46 @@ def search(text,word):
  
 print(search(text, word))
 ```
+
+## Regex
+
+```py
+re.match(pattern,word) - Verify if the beginning of the word matches with the pattern
+re.search() - Finds a match of a pattern anywhere in the string
+re.findall() - Returns a list of all substrings that match a pattern
+re.finditer() - Does the same thing as re.findall, except it returns an iterator, rather than a list
+re.sub(pattern, "Amy", str) - Replace the pattern with "Amy" in the string
+
+# pattern ? r"pam"
+# "eggspamsausage"
+
+match.group() -> pam
+match.start() -> 4
+match.end() -> 7
+match.span() -> (4,7)
+```
+### Metacharacters
+```py
+. (dot) - Match any character
+^ - Starts with
+$ - Ends with
+[] - Match only one of a specific set of characters.
+[^...] - Invert a character class
+* - 0 or more occurrences of the preceding expression
++ - 1 or more occurrences of the preceding expression
+? - Zero or one repetitions
+{x,y} - Can be used to represent the number of repetitions between two numbers
+() - Creates a group
+| - Or
+\n (1-99) - Verifica si se repite n veces
+\d - Digit
+\s - Space
+\w - Word
+\D - Anythind not digit
+\S - Anything not space
+\W - Anything not word
+\A - Match the beginning if a string
+\Z - Match the end of a string
+\b - Match empty string or characters  between words or numbers 
+```
+
