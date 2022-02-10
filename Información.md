@@ -1,5 +1,7 @@
 # Data Science
 
+https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-your-organization-must-focus-on-the-finish/?sh=702b7ca03c3b
+
 ## Pasos de un proyecto
 
 1. Identificación de un problema
