@@ -31,6 +31,10 @@
 |**`expand.grid(v1,v2)`**|Genera un df con todas las opciones posibles de los vectores|
 |**`scan()`**|Lee un archivo y genera una lista o vector|
 
+## Útil
+```r
+lista <- lapply(dir(), read.csv) # Guardamos los archivos en lista
+```
 
 ## Instalación de paquetes
 
