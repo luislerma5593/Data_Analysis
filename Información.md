@@ -16,6 +16,7 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 
 1. Summary statistics
     - df.describe()
+    - df.info()
 
 2. Visualization
     - Histograms, plos, boxplots.
