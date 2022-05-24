@@ -54,6 +54,21 @@ Son los nuevos clientes que surgieron durante la pandemia y varía por regiones.
 
 ![image](https://user-images.githubusercontent.com/78183885/129826387-d1479726-fc67-4aec-aede-9da1e97d83fb.png)
 
+## Preprocesamiento de datos 
+
+- https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
+
+* Siempre es útil estandarizar las variables para métodos no supervisados
+
+Adicionalmente, importamos la función "StandardScaler" que nos será útil para estandarizar nuestros datos. Este paso es fundamental cuando van a utilizarse modelos de machine learning que se construyen sobre supuestos en la distribución de los datos, como puede ser la regresión logística y el clasificador ingenuo de Bayes. Modelos como las máquinas de soporte vectorial, los árboles de decisión o las redes neuronales no tienen este tipo de supuestos, sin embargo, ayuda mucho a agilizar el proceso.
+
+Otras técnicas de preprocesamiento son la normalización y la transformación logarítmica; te invito a que las investigues.
+
+
+* MinMaxScaler() - Sustrae el mínimo y luego se divide en6tre el rango. Se usa como primera opción salvo que se necesiten características específicas.
+* RobustScaler() - Sustrae la media y divide entre el rango intercuartil. Se usa cuando tenemos datos atípicos y no deseamos que tengan mucha influencia.
+* StandardScaler() - Sustrae la media y luego escala a la unidad de vaarianza (std), y la media de la distribución es 0, y std=1. Se usa cuando se requiere una distribución normal.
+* Normalizer() - Trabaja en filas, no en columnas y se usa normalización L2 (Euclidiana) por default. Transforma los valores entre -1 y 1.
 
 ## Tabla ANOVA
 
@@ -65,4 +80,28 @@ Se puede usar cuando se tiene una variable cuantitativa en función de una varia
   -  Gráficos de diagramas de error y diagramas de caja
   -  Calcular ANOVA. Si el valor p < 0.05, existen diferencias significativas en uno de los grupos
 
+## Clusterización / Agrupación (No supervisado)
 
+- Kmeans 
+- Kmedias
+
+
+## Técnica de reduccion de dimensiones (No supervisado)
+
+- Análisis de componentes principales
+
+## Clasificación (Supervisado)
+
+- Árboles de decisión 
+- Bosques aleatorios (Cuando se puede usar un if/else, es decir, cuando hay una o varias condicionales. Además de cuando hay correlación entre variables y hay relación con la salida)
+- Redes neuronales artificiales (Cuando variables de entrada no tienen relación con la salida)
+- Máquinas de soporte vectorial (Support Vector Machine)
+- Teorema ingenuo de Bayes (Naive Bayes)
+- Regresión logística
+
+## Predicción (Supervisado)
+
+- Regresión lineal
+- Regresión lineal múltiple
+- Regresión polinominal
+- Regresión con series de tiempo
