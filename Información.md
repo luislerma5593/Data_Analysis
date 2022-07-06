@@ -29,6 +29,7 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 
 ## Limpieza de datos
 
+- Quitar columnas que no sirven al análisis 
 - Limpiar las columnas con demasiados nans
 - Con isna().sum(), ver qué campos se pueden llenar con datos como 0 o "Unknown"
 - Separa columnas si es necesario
