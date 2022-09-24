@@ -12,22 +12,6 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 6. Automatización y APIs
 7. Transformación, filtración y ordenamiento de datos
 
-## Exploratory Data Analysis
-
-1. Summary statistics
-    - df.describe()
-    - df.info()
-
-2. Visualization
-    - Histograms, plos, boxplots.
-    - Remove outliers if necessary.
-
-3. Correlations
-    - df.corr() for the correlation matrix
-
-4. Data preparation
-    - Exploration with scatterplots
-
 ## Limpieza de datos
 
 - Quitar columnas que no sirven al análisis 
@@ -39,6 +23,48 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 - Filtros
 - Sort by
 
+---
+
+## Exploratory Data Analysis
+
+1. Summary statistics
+    - df.describe()
+    - df.info()
+
+2. Visualization
+    - Histograms, plots, boxplots.
+    - Remove outliers if necessary.
+
+3. Correlations
+    - df.corr() for the correlation matrix
+    - Scatterplots
+
+--- 
+
+## Prediction(Regression)
+
+    - Get x and y variables
+    - Split in train and test
+    - Train model
+    - Predict
+   
+## Data preparation for Classification
+    - Preprocess Data
+    - StandardScaler
+    
+## Classification
+    - Preprocess Data
+    - StandardScaler
+    - Get x and y variables
+    - Split in train and test
+    - Search parameters
+        - RandomizedSearchCV
+        - GridSearchCV        
+    - Train model
+    - Predict
+    - Evaluate model
+    - Confusion Matrix
+    
 ## Storytelling con los datos
 
 Storytelling
@@ -85,8 +111,6 @@ Se puede usar cuando se tiene una variable cuantitativa en función de una varia
 ## Clusterización / Agrupación (No supervisado)
 
 - Kmeans 
-- Kmedias
-
 
 ## Técnica de reduccion de dimensiones (No supervisado)
 
@@ -100,6 +124,7 @@ Se puede usar cuando se tiene una variable cuantitativa en función de una varia
 - Máquinas de soporte vectorial (Support Vector Machine)
 - Teorema ingenuo de Bayes (Naive Bayes)
 - Regresión logística
+- KNeighborsClassifier (KNN)
 
 ## Predicción (Supervisado)
 
