@@ -43,27 +43,27 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 
 ## Prediction(Regression)
 
-    - Get x and y variables
-    - Split in train and test
-    - Train model
-    - Predict
+- Get x and y variables
+- Split in train and test
+- Train model
+- Predict
    
 ## Data preparation for Classification
-    - Preprocess Data
-    - StandardScaler
+- Preprocess Data
+- StandardScaler
     
 ## Classification
-    - Preprocess Data
-    - StandardScaler
-    - Get x and y variables
-    - Split in train and test
-    - Search parameters
-        - RandomizedSearchCV
-        - GridSearchCV        
-    - Train model
-    - Predict
-    - Evaluate model
-    - Confusion Matrix
+- Preprocess Data
+- StandardScaler
+- Get x and y variables
+- Split in train and test
+- Search parameters
+    - RandomizedSearchCV
+    - GridSearchCV        
+- Train model
+- Predict
+- Evaluate model
+- Confusion Matrix
     
 ## Storytelling con los datos
 
