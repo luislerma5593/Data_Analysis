@@ -20,6 +20,7 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 
 2. Visualization
     - Histograms, plos, boxplots.
+    - Remove outliers if necessary.
 
 3. Correlations
     - df.corr() for the correlation matrix
