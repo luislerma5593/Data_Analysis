@@ -48,7 +48,7 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 - Train model
 - Predict
    
-## Data preparation for Classification
+## Data preparation for Classification and Clustering
 - Preprocess Data
 - StandardScaler
     
@@ -64,6 +64,15 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 - Predict
 - Evaluate model
 - Confusion Matrix
+
+## Clustering
+
+1. Preprocess data
+2. Look for optimal clusters
+3. Train model
+4. Assign to cluster
+
+---
     
 ## Storytelling con los datos
 
