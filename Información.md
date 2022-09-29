@@ -60,11 +60,11 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
    
 ## Data preparation for Classification and Clustering
 - Preprocess Data
-- StandardScaler
+- PowerTransform
     
 ## Classification
 - Preprocess Data
-- StandardScaler
+- PowerTransform
 - Get x and y variables
 - Split in train and test
 - Search parameters
@@ -77,7 +77,7 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 
 ## Clustering
 
-1. Preprocess data
+1. Preprocess data (StandardScaler)
 2. Look for optimal clusters
 3. Train model
 4. Assign to cluster
