@@ -12,6 +12,16 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 6. Automatización y APIs
 7. Transformación, filtración y ordenamiento de datos
 
+## Data Science Process
+
+1. Raw Data
+2. Data processing
+3. Clean Dataset
+4. EDA
+5. Models & Algorithms
+6. Reports
+7. Decision Making
+
 ## Limpieza de datos
 
 - Quitar columnas que no sirven al análisis 
