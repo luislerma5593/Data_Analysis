@@ -133,7 +133,10 @@ Se puede usar cuando se tiene una variable cuantitativa en función de una varia
 
 ## Técnica de reduccion de dimensiones (No supervisado)
 
-- Análisis de componentes principales
+- PCA (Principal Component Analysis)
+- Correlation with target
+- Tree-based
+- LASSO Regression
 
 ## Clasificación (Supervisado)
 
