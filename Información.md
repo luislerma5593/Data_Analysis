@@ -101,6 +101,14 @@ Son los nuevos clientes que surgieron durante la pandemia y varía por regiones.
 
 ![image](https://user-images.githubusercontent.com/78183885/129826387-d1479726-fc67-4aec-aede-9da1e97d83fb.png)
 
+## Convencer para entrar en acción
+
+1. Situación
+2. ¿Por qué ha cambiado?
+3. ¿Cuál es la evidencia?
+4. ¿Qué pasa si no hacemos nada?
+5. ¿Qué acciones podemos tomar?
+
 ## Preprocesamiento de datos 
 
 - https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
