@@ -10,7 +10,7 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
 4. Análisis exploratorio de datos
 5. Limpieza de datos y agregaciones
 6. Automatización y APIs
-7. Transformación, filtración y ordenamiento de datos
+7. Transformación, filtración y ordenamiento de datos 
 
 ## Data Science Process
 
@@ -41,11 +41,17 @@ https://www.forbes.com/sites/brentdykes/2022/01/12/data-analytics-marathon-why-y
     - df.describe()
     - df.info()
 
-2. Visualization
+2. Cleaning and validating
+    - Removing nans
+    - Check for missing values
+    - Replace
+    - Validate
+
+3. Visualization
     - Histograms, plots, boxplots.
     - Remove outliers if necessary.
 
-3. Correlations
+4. Correlations
     - df.corr() for the correlation matrix
     - Scatterplots
 
